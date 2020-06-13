@@ -2,8 +2,8 @@ include ../common/mixin
 include ../common/variable
 
 header
-    .header__container
-        .header__info
+    .header__info
+        .header__info__container
             ul.header__contact
                 li
                     i
@@ -30,11 +30,12 @@ header
                     a(href="#")
                         i
                             img(src="./images/icon/github.png", alt="github-icon")
-        .header__surf
-            h1
+    .header__surf
+        .header__surf__container
+            h1.logo
                 a(href="/")
                     img(src="./images/logo/logo.png", alt="marudepth-logo")
-            form(
+            form.search(
                 name="search"
                 method="POST"
             )

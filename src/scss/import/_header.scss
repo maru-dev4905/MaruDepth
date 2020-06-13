@@ -1,2 +1,60 @@
 @import "../common/mixin";
 @import "../common/variable";
+
+%headerContainer{
+    @include flex($jusCon:space-between,$aliItem:center);
+    max-width: 1000px;
+    width: 80%;
+    height: 100%;
+}
+
+header{
+    @include flex($dir:column,$jusCon:center,$aliItem:center);
+    @include position($pos:fixed,$t:0,$z:100);
+    width: 100vw;
+    height: 170px;
+    i img{
+        width: 24px;
+    }
+}
+
+.header__info{
+    @include flex($jusCon:center,$aliItem:center);
+    width: 100%;
+    height: 50px;
+    background-color: $white-2;
+    border-bottom: 1px solid $lightGray;
+    .header__info__container{
+        @extend %headerContainer;
+    }
+    .header__contact{
+        display: flex;
+    }
+    .header__sns{
+        display: flex;
+    }
+}
+.header__surf{
+    @include flex($jusCon:center,$aliItem:center);
+    width: 100%;
+    height: 120px;
+    background-color: $white-1;
+    border-bottom: 1px solid $lightGray;
+    box-shadow: 0 10px 10px $opBlack-1;
+    .header__surf__container{
+        @extend %headerContainer;
+        position: relative;
+        .logo{
+            position: absolute;
+            left: 0;
+            img{
+                width: 72px;
+            }
+        }
+        .search{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

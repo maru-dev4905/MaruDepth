@@ -1,2 +1,34 @@
 @import "../common/mixin";
 @import "../common/variable";
+
+.banner{
+    @include image($url:"../images/main/bg.jpg",$pos:center 20px,$size:cover,$rep:no-repeat);
+    @include position($pos:absolute,$t:0,$l:0,$z:1);
+    @include flex($jusCon:center,$aliItem:flex-end);
+    width: 100vw;
+    height: 100vh;
+    .banner__container{
+        @include grid($tCol:repeat(12,1fr),$tRow:64px,$cGap:20px,$jusCon:center);
+        width: 80%;
+        height: calc(100% - 170px);
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+.banner__nav{
+    border-radius: 0 0 10px 10px;
+    background-color: $purple;
+    grid-column: 1/13;
+    grid-row: 1;
+    ul{
+        @include flex($jusCon:space-around,$aliItem:center);
+        height: 100%;
+    }
+}
+.banner__content{
+    align-self: center;
+    border-radius: 10px;
+    background-color: $white-1;
+    grid-column: 1/5;
+    height: 60%;
+}
