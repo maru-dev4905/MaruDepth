@@ -1,0 +1,93 @@
+@import "../common/mixin";
+@import "../common/variable";
+
+.useful{
+    width: 100vw;
+    height: auto;
+    .useful__container{
+        @include grid($tCol:repeat(12,1fr),$tRow:2fr 1fr 3fr,$cGap:20px,$jusCon:center,$aliItem:center);
+        width: 80%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+.useful__summary{
+    @include flex($jusCon:center,$aliItem:center);
+    grid-column: 1/13;
+    .useful__summary__box{
+        @include flex($dir:row);
+    }
+}
+.useful__title{
+    @include flex($dir:column,$jusCon:center,$aliItem:center);
+    grid-column: 1/13;
+}
+
+.useful__site{
+    @include grid($tCol:repeat(12,1fr),$cGap:20px,$jusCon:center,$aliItem:center);
+    @include position($pos:relative);
+    grid-column: 1/13;
+    [class*="--btn"]{
+        width: 50px;
+        height: 50px;
+        background-color: $white-1;
+        position: absolute;
+        border-radius: 10px;
+        border: 1.5px solid $purple;
+        transition: 0.2s;
+        box-shadow: 2px 3px 5px $opBlack-3;
+        &:hover{
+            background-color: $purple;
+        }
+        &:first-child{
+            left: -100px;
+        }   
+        &:last-child{
+            right: -100px;
+        }
+    }
+    .useful__site__box{
+        @include flex($dir:column,$jusCon:center,$aliItem:center);
+        width: 100%;
+        .useful__img{
+            @include position($pos:relative,$z:1);
+            width: 100%;
+            height: 180px;
+            background-color: $black;
+            border-radius: 10px;
+        }
+        .useful__site__box__content{
+            @include flex($dir:column,$jusCon:center,$aliItem:center);
+            @include position($pos:absolute,$z:2);
+            width: 280px;
+            height: 130px;
+            background-color: $white-2;
+            bottom: -70px;
+            border-radius: 10px;
+            box-shadow: 2px 3px 5px $opBlack-3;
+        }
+        a{
+            @include position($pos:absolute,$z:3);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1.5px solid $purple;
+            background-color: $white-2;
+            bottom: -95px;
+            transition: 0.2s;
+            box-shadow: 2px 3px 5px $opBlack-3;
+            &:hover{
+                background-color: $purple;
+            }
+        }
+        &:nth-child(2){
+            grid-column: 1/5;
+        }
+        &:nth-child(3){
+            grid-column: 5/9;
+        }
+        &:nth-child(4){
+            grid-column: 9/13;
+        }
+    }
+}

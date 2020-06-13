@@ -3,7 +3,6 @@
 
 .banner{
     @include image($url:"../images/main/bg.jpg",$pos:center 20px,$size:cover,$rep:no-repeat);
-    @include position($pos:absolute,$t:0,$l:0,$z:1);
     @include flex($jusCon:center,$aliItem:flex-end);
     width: 100vw;
     height: 100vh;
