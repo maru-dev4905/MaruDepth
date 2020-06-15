@@ -3,6 +3,27 @@ include ../common/variable
 
 section.contact
     .contact__title
-        
+        .contact__title__container
+            i
+                img(src="./images/icon/lens.png", alt="lens-icon")
+            p Make a Request
+                span Now.
+            small Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, praesentium consequuntur commodi modi quisquam ex quibusdam vel harum quo, vitae in quam, perspiciatis sequi. Et magnam atque sint nostrum sed.
     .contact__content
-
+        form(
+            name="contact"
+            method="POST"
+        )
+            .contact__content__row
+                select#select-kind(name="kind")
+                    option(value="Video") Video
+                    option(value="Inquiry") Inquiry
+                    option(value="Errors") Errors
+                    option(value="Other") Other
+            .contact__content__column
+                input(type="text" placeholder="name")
+                input(type="text" placeholder="email")
+            .contact__content__row
+                textarea#textarea-text(name="text", cols="50", rows="10" placeholder="text")
+            .contact__content__row
+                button(type="submit" name="contact-button") send
