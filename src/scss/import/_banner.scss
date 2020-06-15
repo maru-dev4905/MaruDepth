@@ -1,5 +1,6 @@
 @import "../common/mixin";
 @import "../common/variable";
+@import "../components/button";
 
 .banner{
     @include image($url:"../images/main/bg.jpg",$pos:center 20px,$size:cover,$rep:no-repeat);
@@ -15,7 +16,7 @@
     }
 }
 .banner__nav{
-    border-radius: 0 0 10px 10px;
+    @include border($radius:0 0 10px 10px,$shadow: 0 3px 3px $opBlack-2);
     background-color: $purple;
     grid-column: 1/13;
     grid-row: 1;
@@ -23,16 +24,54 @@
         @include flex($jusCon:space-around,$aliItem:center);
         height: 100%;
         li{
+            width: 100px;
+            height: 100%;
             a{
-                
+                @include flex($jusCon:center,$aliItem:center);
+                @include font($size:15px,$color:$white-1,$align:center,$letter:1.2px,$family:SCD4);
+                padding: 0 20px;
+                width: 100%;
+                height: 100%;
+                transition: 0.3s;
+                &:hover{
+                    opacity: 0.5;
+                }
             }
         }
     }
 }
 .banner__content{
+    @include flex($dir:column,$jusCon:space-between);
+    @include border($radius:10px,$shadow:15px 30px 30px $opBlack-5);
+    padding: 37px;
     align-self: center;
-    border-radius: 10px;
     background-color: $white-1;
     grid-column: 1/5;
     height: 60%;
+    color: $black;
+    h4{
+        @include font($size:20px,$letter:2px,$family:TmonBold,$transform:uppercase);
+    }
+    p{
+        @include font($size:13px,$height:23px);
+    }
+    .banner__content__link{
+        @include flex($dir:row,$jusCon:space-between,$aliItem:center);
+        width: 100%;
+        a{
+            @include flex($jusCon:center,$aliItem:center);
+            position: relative;
+            box-shadow: 2px 3px 5px $opBlack-3;
+            span{
+                @include position($pos:absolute,$z:10);
+                @include font($size:12px,$letter:1.1px,$transform:uppercase,$family:SCD4,$weight:600);
+            }
+            &:first-child{
+                @include button($kind:"defaultBtn",$width:48%,$height:30px,$bgC:$purple,$color:$white-1);
+            }
+            &:last-child{
+                @include button($kind:"borderBtn",$width:48%,$height:30px,$bgC:$purple,$color:$black);
+            }
+        }
+    }
 }

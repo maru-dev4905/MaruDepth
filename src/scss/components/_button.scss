@@ -1,0 +1,67 @@
+@import "../common/mixin";
+@import "../common/variable";
+
+%active{
+    box-shadow: none;
+    &::before{
+        box-shadow: inset 2px 3px 5px $opBlack-4;
+    }
+}
+
+@mixin button ($kind:null,$width:null,$height:null,$bgC:null,$color:null,$text:null){
+    @include flex($jusCon:center,$aliItem:center);
+    width: $width;
+    height: $height;
+    transition: 0.3s;
+
+    @if $kind == "defaultBtn"{
+        @include border($shadow:2px 3px 5px $opBlack-3,$radius:5px);
+        position: relative;
+        color: $white-1;
+        background-color: $bgC;
+        &::before{
+            @include position($pos:absolute,$l:0,$z:1);
+            content: "";
+            transition: 0.4s;
+            background-color: $white-1;
+            width: 0;
+            height: 100%;
+            border-radius: 4.5px;
+        }
+        &:hover{
+            &::before{
+                width: 100%;
+            }
+            color: $black;
+        }
+        &:active{
+            @extend %active;
+        }
+
+    }
+    @else if $kind == "borderBtn" {
+        @include border($border:1.5px solid $bgC,$shadow:2px 3px 5px $opBlack-3,$radius:5px);
+        position: relative;
+        color: $black;
+        background-color: $white-1;
+        &::before{
+            @include position($pos:absolute,$l:0,$z:1);
+            content: "";
+            transition: 0.4s;
+            background-color: $bgC;
+            width: 0;
+            height: 100%;
+            border-radius: 4.5px;
+        }
+        &:hover{
+            &::before{
+                width: 100%;
+                border: 1px solid $purple;
+            }
+            color: $white-1;
+        }
+        &:active{
+            @extend %active;
+        }
+    }
+}
