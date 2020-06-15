@@ -1,6 +1,6 @@
 @import "../common/mixin";
 @import "../common/variable";
-
+@import "../components/input";
 %headerContainer{
     @include flex($jusCon:space-between,$aliItem:center);
     max-width: 1000px;
@@ -88,18 +88,7 @@ header{
         .search{
             width: 80%;
             input{
-                @include font($size:15px,$color:$black,$family:SCD4);
-                @include border($border:none,$radius:5px,$shadow:0 0 3px $opBlack-2);
-                width: 80%;
-                height: 50px;
-                padding: 0 40px;
-                &::placeholder{
-                    @include font($size:15px,$color:$gray,$family:SCD4,$letter:10px);
-                }
-                &:focus{
-                    @include border($color:$purple,$shadow: 0 0 3px $purple);
-                    outline: none !important;
-                }
+                @include input($width:80%,$height:50px,$padding: 0 40px);
             }
         }
     }

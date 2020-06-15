@@ -22,6 +22,11 @@
     ul{
         @include flex($jusCon:space-around,$aliItem:center);
         height: 100%;
+        li{
+            a{
+                
+            }
+        }
     }
 }
 .banner__content{
