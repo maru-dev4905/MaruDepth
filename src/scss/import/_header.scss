@@ -29,32 +29,78 @@ header{
     }
     .header__contact{
         display: flex;
+        li{
+            @include flex($jusCon:center,$aliItem:center);
+            height: 100%;
+            margin-right: 35px;
+            i{
+                margin-right: 10px;
+            }
+            span{
+                @include font($size:12px,$letter:0.5px,$color:$darkGray,$family:SCD5);
+                height: 100%;
+            }
+        }
     }
     .header__sns{
+        @include border($border-l:0.5px solid $opBlack-1,$border-r:0.5px solid $opBlack-1);
         display: flex;
+        height: 100%;
+        padding: 0 10px;
+        li{
+            height: 100%;
+            width: 50px;
+            margin-right: 5%;
+            &:last-child{
+                margin-right: 0;
+            }
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                opacity: 0.4;
+                transition: 0.3s;
+                &:hover{
+                    opacity: 1;
+                }
+                i{
+                    @include flex($jusCon:center,$aliItem:center);
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
     }
 }
 .header__surf{
     @include flex($jusCon:center,$aliItem:center);
+    @include border($border-b:1px solid $lightGray,$shadow:0 10px 10px $opBlack-1);
     width: 100%;
     height: 120px;
     background-color: $white-1;
-    border-bottom: 1px solid $lightGray;
-    box-shadow: 0 10px 10px $opBlack-1;
     .header__surf__container{
         @extend %headerContainer;
-        position: relative;
         .logo{
-            position: absolute;
-            left: 0;
             img{
                 width: 72px;
             }
         }
         .search{
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            width: 80%;
+            input{
+                @include font($size:15px,$color:$black,$family:SCD4);
+                @include border($border:none,$radius:5px,$shadow:0 0 3px $opBlack-2);
+                width: 80%;
+                height: 50px;
+                padding: 0 40px;
+                &::placeholder{
+                    @include font($size:15px,$color:$gray,$family:SCD4,$letter:10px);
+                }
+                &:focus{
+                    @include border($color:$purple,$shadow: 0 0 3px $purple);
+                    outline: none !important;
+                }
+            }
         }
     }
 }

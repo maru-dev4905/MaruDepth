@@ -41,7 +41,7 @@
     align-self: $aliSelf;
 }
 // font mixin
-@mixin font($size:null, $color:null, $weight:null, $transform:null, $letter:null, $break:null, $height:null, $align:null,$style:null) {
+@mixin font($size:null, $color:null, $weight:null, $transform:null, $letter:null, $break:null, $height:null, $align:null,$style:null,$family:null) {
     font-size: $size;
     color: $color;
     font-weight: $weight;
@@ -51,6 +51,7 @@
     line-height: $height;
     text-align: $align;
     font-style: $style;
+    font-family: $family;
 }
 // position mixin
 @mixin position($pos:null, $t:null, $l:null, $b:null, $r:null, $z:null) {
@@ -60,6 +61,19 @@
     right: $r;
     bottom: $b;
     z-index: $z;
+}
+// border mixin
+@mixin border($color:null,$size:null,$style:null,$border:null,$shadow:null,$border-t:null,$border-r:null,$border-l:null,$border-b:null,$radius:null){
+    border-color: $color;
+    border-width: $size;
+    border-style: $style;
+    border-top: $border-t;
+    border-left: $border-l;
+    border-right: $border-r;
+    border-bottom: $border-b;
+    border: $border;
+    box-shadow: $shadow;
+    border-radius: $radius;
 }
 // responsive mixin
 @mixin responsive($device) {
