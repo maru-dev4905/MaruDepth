@@ -1,6 +1,8 @@
 @import "../common/mixin";
 @import "../common/variable";
+@import "../common/animation";
 @import "../components/input";
+
 %headerContainer{
     @include flex($jusCon:space-between,$aliItem:center);
     max-width: 1000px;
@@ -8,7 +10,7 @@
     height: 100%;
 }
 
-header{
+.header{
     @include flex($dir:column,$jusCon:center,$aliItem:center);
     @include position($pos:fixed,$t:0,$z:100);
     width: 100vw;

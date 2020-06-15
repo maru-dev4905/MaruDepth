@@ -1,0 +1,16 @@
+@keyframes headerHide{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: -50px;
+    }
+}
+@keyframes headerShow{
+    0%{
+        top: -50px;
+    }
+    100%{
+        top: 0;
+    }
+}

@@ -13,6 +13,7 @@
         height: calc(100% - 170px);
         max-width: 1000px;
         margin: 0 auto;
+        transition: 0.3s;
     }
 }
 .banner__nav{
@@ -41,10 +42,9 @@
     }
 }
 .banner__content{
-    @include flex($dir:column,$jusCon:space-between);
+    @include flex($dir:column,$jusCon:space-between,$aliSelf:center);
     @include border($radius:10px,$shadow:15px 30px 30px $opBlack-5);
     padding: 37px;
-    align-self: center;
     background-color: $white-1;
     grid-column: 1/5;
     height: 60%;
