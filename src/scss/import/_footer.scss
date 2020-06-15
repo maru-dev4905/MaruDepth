@@ -1,2 +1,27 @@
 @import "../common/mixin";
 @import "../common/variable";
+
+.footer{
+    width: 100vw;
+    height: 150px;
+    background-color: $white-1;
+    .footer__container{
+        @include grid($tCol:repeat(12,1fr),$cGap:20px,$jusCon:center,$aliItem:center);
+        width: 80%;
+        max-width: 1000px;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .footer__copy{
+        grid-column: 1/-2;
+        height: 100%;
+    }
+    .footer__logo{
+        grid-column: -1;
+        height: 100%;
+        img{
+            width: 70px;
+            filter: grayscale(100%);
+        }
+    }
+}
