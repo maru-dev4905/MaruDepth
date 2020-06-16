@@ -30,12 +30,25 @@
             a{
                 @include flex($jusCon:center,$aliItem:center);
                 @include font($size:15px,$color:$white-1,$align:center,$letter:1.2px,$family:SCD4);
+                position: relative;
                 padding: 0 20px;
                 width: 100%;
                 height: 100%;
                 transition: 0.3s;
+                &::before{
+                    @include position($pos:absolute,$b:10px,$l:0);
+                    content: "";
+                    display: block;
+                    width: 0;
+                    height: 1.5px;
+                    transition: 0.3s;
+                    background-color: $white-1;
+                }
                 &:hover{
                     opacity: 0.5;
+                    &::before{
+                        width: 100%;
+                    }
                 }
             }
         }
