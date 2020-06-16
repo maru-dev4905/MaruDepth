@@ -16,7 +16,7 @@
 
     @if $kind == "defaultBtn"{
         @include border($shadow:2px 3px 5px $opBlack-3,$radius:5px);
-        position: relative;
+        position: relative; 
         color: $white-1;
         background-color: $bgC;
         &::before{
@@ -62,6 +62,23 @@
         }
         &:active{
             @extend %active;
+        }
+    }
+    @else if $kind == "circle-NextBtn"{
+        @include border($radius:50%,$border: 1.5px solid $bgC,$shadow:2px 3px 5px $opBlack-3);
+        background-color: $white-2;
+        @if $bgC == $purple{
+            @include image($url:"../images/icon/next-purple.png",$size:20px,$rep:no-repeat,$pos:center);
+            &:hover{
+                background-image: url("../images/icon/next-white.png");
+                background-color: $bgC;
+            }
+        }@else if $bgC == $black{
+            @include image($url:"../images/icon/next-black.png",$size:20px,$rep:no-repeat,$pos:center);
+            &:hover{
+                background-image: url("../images/icon/next-white.png");
+                background-color: $bgC;
+            }
         }
     }
 }
