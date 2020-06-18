@@ -2,7 +2,7 @@
 @import "../common/variable";
 @import "../components/button";
 @import "../components/title";
-
+@import "../components/bgText";
 .useful{
     width: 100vw;
     height: auto;
@@ -15,8 +15,7 @@
         padding: 120px 0;
     }
     .bgText{
-        @include position($pos:absolute,$t:45%,$r:-50px,$z:-100);
-        @include font($size:130px,$color:$lightPurple,$letter:1.3px,$family:TmonBold,$transform:uppercase);
+        @include bgText($t:45%,$r:-50px);
     }
 }
 .useful__summary{
