@@ -1,0 +1,20 @@
+mixin sectionTitle(sectionName, title, subText)
+    div(class= sectionName+"__title")
+        h2= title
+        p= subText
+
+mixin summaryCard(url, title, text)
+    .useful__summary__box
+        i.summary__box__icon
+            img(src= url, alt= title+"-icon")
+        .summary__box__content
+            strong= title
+            p= text
+
+mixin video(title, text, link)
+    .video__box
+        img.video__img(src= "./images/common/"+title+"-thumbmnail.png", alt= title+"-thumbmnail")
+        .video__content
+            h4= title
+            p= text
+        a.video__link(href= link)

@@ -4,6 +4,8 @@
 @import "../components/button";
 @import "../components/title";
 @import "../components/bgText";
+@import "../components/videoCard";
+
 $summaryNum: 4;
 
 .useful{
@@ -62,46 +64,8 @@ $summaryNum: 4;
     @include position($pos:relative);
     grid-column: 1/13;
     margin-bottom: 100px;
-    .useful__site__box{
-        @include flex($dir:column,$jusCon:center,$aliItem:center);
-        width: 100%;
-        &:nth-child(1){
-            grid-column: 1/5;
-        }
-        &:nth-child(2){
-            grid-column: 5/9;
-        }
-        &:nth-child(3){
-            grid-column: 9/13;
-        }
-        .useful__img{
-            @include position($pos:relative,$z:1);
-            width: 100%;
-            height: 180px;
-            background-color: $black;
-            border-radius: 10px;
-        }
-        .useful__site__box__content{
-            @include flex($dir:column,$aliItem:center);
-            @include position($pos:absolute,$z:2,$b:-70px);
-            @include border($radius:10px,$shadow:2px 3px 5px $opBlack-3);
-            width: 280px;
-            height: 130px;
-            background-color: $white-2;
-            padding: 0 15px;
-            h4{
-                @include font($size:16px,$letter:2px,$family:TmonBold,$align:center,$transform:uppercase);
-                margin-top: 25px;
-            }
-            p{
-                @include font($size:13px,$letter:0.3px,$family:SCD3,$align:center,$color:$gray,$height:20px);
-                margin-top: 10px;
-            }
-        }
-        a{
-            @include button($kind:"circle-NextBtn",$width:50px,$height:50px,$bgC:$purple);
-            @include position($pos:absolute,$z:3);
-            bottom: -95px;
-        }
+    .video__site__box{
+        @include videoCard;
+
     }
 }
