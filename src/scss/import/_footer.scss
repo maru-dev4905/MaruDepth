@@ -14,6 +14,7 @@
     }
     .footer__copy{
         @include flex($aliItem:center);
+        @include font($size:13px,$letter:1.1px,$family:SCD5);
         grid-column: 1/-2;
         height: 100%;
     }
