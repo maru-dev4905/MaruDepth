@@ -28,11 +28,11 @@ $menuNum: 6;
         height: 100%;
 
         li{
+            @include fade($kind:"fade-left");
             position: relative;
             width: 100px;
             height: 100%;
             opacity: 0;
-            animation: fade-left 1s ease forwards;
             @for $i from 1 to $menuNum {
                 &:nth-child(#{$i}){
                     animation-delay: $i * 0.25s;
@@ -68,14 +68,14 @@ $menuNum: 6;
 .banner__content{
     @include flex($dir:column,$jusCon:space-between,$aliSelf:center);
     @include border($radius:10px,$shadow:15px 30px 30px $opBlack-5);
+    @include fade($kind:"fade-up");
+    animation-delay: 1.2s;
+    grid-column: 1/5;
     position: relative;
     padding: 37px;
     background-color: $white-1;
-    grid-column: 1/5;
     height: 60%;
     opacity: 0;
-    animation: fade-up 1s ease forwards;
-    animation-delay: 1.2s;
     color: $black;
     h4{
         @include font($size:20px,$letter:2px,$family:TmonBold,$transform:uppercase);

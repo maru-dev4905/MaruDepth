@@ -1,0 +1,11 @@
+include ../common/mixin
+include ../common/variable
+
+mixin button(kind,text,link)
+    if kind == "a-defaultBtn"
+        a(href= link)
+            span= text
+    else if kind == "borderBtn"
+        a(href= link)
+    else if kind == "textBtn"
+        a.textBtn(href= link)= text
