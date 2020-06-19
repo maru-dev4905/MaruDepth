@@ -1,6 +1,8 @@
 @import "../common/mixin";
 @import "../common/variable";
+@import "../common/animation";
 @import "../components/button";
+$menuNum: 6;
 
 .banner{
     @include image($url:"../images/main/bg.jpg",$pos:center 20px,$size:cover,$rep:no-repeat);
@@ -24,9 +26,18 @@
     ul{
         @include flex($jusCon:space-around,$aliItem:center);
         height: 100%;
+
         li{
+            position: relative;
             width: 100px;
             height: 100%;
+            opacity: 0;
+            animation: fade-left 1s ease forwards;
+            @for $i from 1 to $menuNum {
+                &:nth-child(#{$i}){
+                    animation-delay: $i * 0.25s;
+                }
+            }
             a{
                 @include flex($jusCon:center,$aliItem:center);
                 @include font($size:15px,$color:$white-1,$align:center,$letter:1.2px,$family:SCD4);
@@ -57,10 +68,14 @@
 .banner__content{
     @include flex($dir:column,$jusCon:space-between,$aliSelf:center);
     @include border($radius:10px,$shadow:15px 30px 30px $opBlack-5);
+    position: relative;
     padding: 37px;
     background-color: $white-1;
     grid-column: 1/5;
     height: 60%;
+    opacity: 0;
+    animation: fade-up 1s ease forwards;
+    animation-delay: 1.2s;
     color: $black;
     h4{
         @include font($size:20px,$letter:2px,$family:TmonBold,$transform:uppercase);
