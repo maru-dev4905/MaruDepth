@@ -69,12 +69,13 @@ $summaryNum: 4;
 }
 
 .useful__site{
-    @include grid($tCol:repeat(12,1fr),$cGap:20px,$jusCon:center,$aliItem:center);
     @include position($pos:relative);
     grid-column: 1/13;
-    margin-bottom: 100px;
-    .video__site__box{
+    
+    .video__site__rows{
+        @include grid($tCol:repeat(12,1fr),$cGap:20px,$jusCon:center,$aliItem:center);
         @include videoCard;
-
+        grid-column: 1/13;
+        margin-bottom: 100px;
     }
 }
