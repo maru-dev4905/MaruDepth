@@ -4,9 +4,9 @@ include ../common/variable
 section.banner
     .banner__container
         nav.banner__nav
-            ul
+            ul.menu
                 each item in navigationText
-                    li
+                    li.menu__item
                         a(href="./"+item+".html")= item
 
         .banner__content

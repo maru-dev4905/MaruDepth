@@ -23,21 +23,23 @@ $menuNum: 6;
     background-color: $purple;
     grid-column: 1/13;
     grid-row: 1;
-    ul{
+    .menu{
         @include flex($jusCon:space-around,$aliItem:center);
         height: 100%;
-
-        li{
+        .menu__item.fade{
             @include fade($kind:"fade-left");
             position: relative;
-            width: 100px;
-            height: 100%;
-            opacity: 0;
             @for $i from 1 to $menuNum {
                 &:nth-child(#{$i}){
                     animation-delay: $i * 0.25s;
                 }
             }
+        }
+        .menu__item{
+            width: 100px;
+            height: 100%;
+            opacity: 0;
+
             a{
                 @include flex($jusCon:center,$aliItem:center);
                 @include font($size:15px,$color:$white-1,$align:center,$letter:1.2px,$family:SCD4);
@@ -65,13 +67,15 @@ $menuNum: 6;
         }
     }
 }
+.banner__content.fade{
+    @include fade($kind:"fade-up");
+    position: relative;
+    animation-delay:1.2s;
+}
 .banner__content{
     @include flex($dir:column,$jusCon:space-between,$aliSelf:center);
     @include border($radius:10px,$shadow:15px 30px 30px $opBlack-5);
-    @include fade($kind:"fade-up");
-    animation-delay: 1.2s;
     grid-column: 1/5;
-    position: relative;
     padding: 37px;
     background-color: $white-1;
     height: 60%;

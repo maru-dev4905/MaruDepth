@@ -27,6 +27,15 @@ $summaryNum: 4;
     @include grid($tCol:repeat(12,1fr),$cGap:20px);
     grid-column: 1/13;
     padding-bottom: 100px;
+    .useful__summary__box.fade{
+        @include fade($kind:"fade-left");
+        position: relative;
+        @for $i from 1 to 4 {
+            &:nth-child(#{$i}){
+                animation-delay: $i * 0.25s;
+            }
+        }
+    }
     .useful__summary__box{
         @include flex($dir:row);
         opacity: 0;
