@@ -3,11 +3,21 @@
 @import "../components/button";
 
 .trend{
+    @include position($pos:relative,$z:15);
     width: 100vw;
     height: auto;
-    background-color: $lightPurple;
+    outline: 1px solid $white-2;
+    outline-offset: -15px;
+    &:before{
+        @include position($pos:absolute,$l:0,$t:0,$z:-1);
+        @include image($url:"../images/common/trend-bg.jpg",$size:cover,$rep:no-repeat,$pos:center);
+        content: "";
+        width: 100%;
+        height: 100%;
+    }
     .trend__container{
         @include grid($tCol:repeat(12,1fr),$jusCon:center,$aliItem:center);
+        position: relative;
         width: 80%;
         max-width: 1000px;
         margin: 0 auto;
@@ -20,7 +30,8 @@
     font-family: TmonBold;
     height: 100%;
     p{
-        @include font($size:2rem,$letter:1px);
+        @include font($size:2rem,$letter:1px,$color:$white-2);
+        text-shadow: 5px 5px 5px $opBlack-5;
         margin-bottom: 32px;
         span{
             margin-right: 12px;
@@ -29,6 +40,8 @@
     }
     strong{
         @include font($size:8.25rem,$letter:10px);
+        color: $white-2;
+        text-shadow: 5px 5px 5px $opBlack-5;
     }
 }
 .trend__content{
@@ -40,6 +53,7 @@
         height: 250px;
         border-radius: 15px;
         margin-bottom: 20px;
+        box-shadow: 5px 5px 10px $opBlack-5;
     }
     .trend__link{
         @include button($kind:"textBtn");
