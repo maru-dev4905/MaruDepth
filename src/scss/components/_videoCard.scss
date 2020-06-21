@@ -1,12 +1,14 @@
 @import "../common/mixin";
 @import "../common/variable";
+@import "../common/animation";
 @import "../components/button";
 
 @mixin videoCard {
-    
         .video__box{
             @include flex($dir:column,$jusCon:center,$aliItem:center);
             width: 100%;
+            margin-bottom:50px;
+
             &:nth-child(1) {
                 grid-column: 1/5;
             }
@@ -25,12 +27,11 @@
             }
             .video__content {
                 @include flex($dir:column,$aliItem:center);
-                @include position($pos:absolute,$z:2,$b:0);
+                @include position($pos:absolute,$z:2,$t:60%);
                 @include border($radius:10px,$shadow:2px 3px 5px $opBlack-3);
-                width: 28%;
                 height: 50%;
                 background-color: $white-2;
-                padding: 0 15px;
+                padding: 0 5%;
                 h4 {
                     @include font($size:16px,$letter:2px,$family:TmonBold,$align:center,$transform:uppercase);
                     margin-top: 25px;
@@ -42,8 +43,7 @@
             }
             .video__link {
                 @include button($kind:"circle-NextBtn",$width:50px,$height:50px,$bgC:$purple);
-                @include position($pos:absolute,$z:3);
-                bottom: -10%;
+                @include position($pos:absolute,$z:3,$t:100%);
             }
         }
 }
