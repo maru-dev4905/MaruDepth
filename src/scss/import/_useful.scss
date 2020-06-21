@@ -19,6 +19,14 @@ $summaryNum: 4;
         margin: 0 auto;
         padding: 120px 0;
     }
+    .bgBar{
+        @include position($pos:absolute,$t:5%,$l:50%);
+        @include border($radius:25px,$shadow:0px 0px 10px $opBlack-3);
+        transform: translateX(-50%);
+        width: 10%;
+        height: 10px;
+        background-color: $black;
+    }
     .bgText {
         @include bgText($t:45%,$r:-50px);
     }

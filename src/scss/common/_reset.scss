@@ -83,3 +83,6 @@ img{
 h1,h2,h3,h4,h5,h6,strong, p{
 	color: $black;
 }
+section{
+	overflow-x: hidden;
+}

@@ -2,6 +2,7 @@
 @import "../common/variable";
 
 .footer{
+    @include position($pos:relative,$b:0,$z:15);
     width: 100vw;
     height: 100px;
     background-color: $white-1;
