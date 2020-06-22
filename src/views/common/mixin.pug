@@ -18,3 +18,16 @@ mixin video(title, text, link)
             h4= title
             p= text
         a.video__link(href= link)
+
+mixin kindCard(link, img, kind, title, text)
+    article.kind__card
+        a.kind__card__img(href= link)
+            img.kind__img(src="./images/common/"+img+".png", alt= img)
+            .kind__img__text
+                span= kind
+        .kind__card__content
+            h3= title
+            p= text
+        .kind__card__link
+            a(href= link) Go to Site!
+

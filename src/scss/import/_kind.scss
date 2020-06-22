@@ -1,5 +1,6 @@
 @import "../common/mixin";
 @import "../common/variable";
+@import "../common/animation";
 @import "../components/button";
 @import "../components/title";
 @import "../components/bgText";
@@ -19,15 +20,32 @@
         @include bgText($t:20%,$l:-45px);
     }
 }
+.kind__title.fade{
+    @include fade($kind:"fade-in");
+    position: relative;
+}
 .kind__title{
     @include title;
+    opacity: 0;
 }
 .kind__content{
     @include grid($tCol:repeat(12,1fr),$cGap:20px);
     grid-column: 1/13;
+    .kind__card.fade{
+        @include fade($kind:"fade-left");
+        @for $i from 1 to 4 {
+            &:nth-child(#{$i}){
+                animation-delay: $i * 0.25s;
+            }
+        }
+        position: relative;
+        opacity: 0;
+
+    }
     .kind__card{
         @include flex($dir:column,$jusCon:space-between);
         width: 100%;
+
         .kind__card__img{
             position: relative;
             width: 100%;

@@ -18,6 +18,13 @@ const animation = function() {
         videoBox,
         videoTop,
 
+        // kind
+        kindTitle,
+        kindTitleTop,
+        kindCard,
+        kindContent,
+        kindCardTop,
+
         winH
 
     const initModule = function() {
@@ -35,6 +42,11 @@ const animation = function() {
         videoRows = document.querySelectorAll(".video__site__rows");
         videoBox = document.querySelectorAll(".video__box");
 
+        // kind section
+        kindTitle = document.querySelector(".kind__title");
+        kindCard = document.querySelectorAll(".kind__card");
+        kindContent = document.querySelector(".kind__content");
+
         winH = window.innerHeight;
 
         _addEventHandlers();
@@ -51,6 +63,8 @@ const animation = function() {
         summaryTop = summary.getBoundingClientRect().top;
         usefulTitleTop = usefulTitle.getBoundingClientRect().top;
         videoTop = videoRows[0].getBoundingClientRect().top;
+        kindTitleTop = kindTitle.getBoundingClientRect().top;
+        kindCardTop = kindContent.getBoundingClientRect().top;
 
         while( winH > bannerTop ){
             for(let i = 0; i < menuItem.length; i++){
@@ -72,6 +86,16 @@ const animation = function() {
         while( winH > videoTop ){
             for(let i = 0; i < videoRows.length; i++){
                 videoRows[i].classList.add("fade");
+            }
+            break;
+        }
+        while( winH > kindTitleTop ){
+            kindTitle.classList.add("fade");
+            break;
+        }
+        while( winH > kindCardTop ){
+            for(let i = 0; i < kindCard.length; i++){
+                kindCard[i].classList.add("fade");
             }
             break;
         }

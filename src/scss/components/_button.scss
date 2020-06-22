@@ -7,7 +7,6 @@
         box-shadow: inset 2px 3px 5px $opBlack-4;
     }
 }
-
 @mixin button ($kind:null,$width:null,$height:null,$bgC:null,$color:null,$text:null){
     @include flex($jusCon:center,$aliItem:center);
     width: $width;
