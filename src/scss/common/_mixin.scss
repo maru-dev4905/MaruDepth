@@ -1,11 +1,12 @@
 @import "../common/variable";
 
 // background-image mixin
-@mixin image ($url, $size:null, $pos:null, $rep:null) {
+@mixin image ($url, $size:null, $pos:null, $rep:null,$att:null) {
     background-image: url($url);
     background-size: $size;
     background-position: $pos;
     background-repeat: $rep;
+    background-attachment: $att;
 }
 // display flex mixin
 @mixin flex($dir:null, $jusCon:null, $aliCon:null, $jusItem:null, $aliItem:null, $jusSelf:null, $aliSelf:null,$wrap:null) {
