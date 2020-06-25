@@ -45,12 +45,13 @@ $menuNum: 6;
             opacity: 0;
             &:nth-child(2) a{
                 &::after{
-                    @include image($url:"../icon/dropdown-ico.png",$size:contain,$pos:center,$rep:no-repeat);
+                    @include image($url:"../images/icon/dropdown-ico.png",$size:contain,$pos:center,$rep:no-repeat);
+                    @include position($pos:absolute,$t:45%,$r:5px);
                     content: "";
-                    display: inline-block;
-                    position: absolute;
-                    right: 15px;
-                    
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    transform: rotate(180deg);
                 }
             }
             a{

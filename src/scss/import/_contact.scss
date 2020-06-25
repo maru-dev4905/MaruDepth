@@ -1,6 +1,7 @@
 @import "../common/mixin";
 @import "../common/variable";
 @import "../components/button";
+@import "../components/input";
 
 .contact{
     @include flex();
@@ -49,14 +50,15 @@
         .contact__content__column{
             @include flex($dir:row,$jusCon:space-between,$aliItem:center);
         }
-        select, textarea, input{
+        select, textarea{
             @include font($size:14px,$family:SCD4,$color:$gray);
-            @include border($radius:5px,$border:none,$shadow:2px 2px 1px $opBlack-1);
+            @include border($border:none,$radius:5px,$shadow:2px 2px 1px $opBlack-1);
             background-color: $white-1;
             transition: 0.3s;
             &:focus{
                 outline: none !important;
-                box-shadow: 2.5px 2.5px 1px $opPurple-3;
+                color: $purple;
+                box-shadow: 2px 2px 1px $opPurple-3;
             }
         }
         textarea{
@@ -67,9 +69,7 @@
             min-height: 100px;
         }
         input{
-            width: 48%;
-            padding: 0 20px;
-            height: 50px;
+            @include input($kind:"form",$width:48%,$height:50px, $padding: 0 20px);
             margin-bottom: 20px;
         }
         select{

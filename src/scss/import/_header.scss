@@ -90,7 +90,7 @@
         .search{
             width: 80%;
             input{
-                @include input($width:80%,$height:50px,$padding: 0 40px);
+                @include input($kind:"search",$width:80%,$height:50px,$padding: 0 40px);
             }
         }
     }

@@ -1,17 +1,29 @@
 @import "../common/mixin";
 @import "../common/variable";
 
-@mixin input($width:null,$height:null,$padding:null) {
+@mixin input($kind:null,$width:null,$height:null,$padding:null) {
+    @if($kind == "form"){
+        @include border($border:none,$radius:5px,$shadow:2px 2px 1px $opBlack-1);
+    }
+    @else if($kind == "search"){
+        @include border($border:none,$radius:5px,$shadow:0 0 3px $opBlack-2);
+    }
     @include font($size:15px,$color:$black,$family:SCD4);
-    @include border($border:none,$radius:5px,$shadow:0 0 3px $opBlack-2);
     width: $width;
     height: $height;
     padding: $padding;
+    transition: 0.3s;
     &::placeholder{
-        @include font($size:15px,$color:$gray,$family:SCD4,$letter:10px);
+        @include font($size:14px,$color:$gray,$family:SCD4,$letter:1.1px);
     }
     &:focus{
-        @include border($color:$purple,$shadow: 0 0 3px $purple);
         outline: none !important;
+        color: $purple;
+        @if($kind == "form"){
+            box-shadow: 2px 2px 1px $opPurple-3;
+        }
+        @else if($kind == "search"){
+            box-shadow: 0px 0px 3px $purple;
+        }
     }
 }
