@@ -5,31 +5,13 @@ header.header
     .header__info
         .header__info__container
             ul.header__contact
-                li
-                    i
-                        img(src="./images/icon/call.png", alt="call-icon")
-                    span 010-2269-0763
-                li
-                    i
-                        img(src="./images/icon/mail.png", alt="mail-icon")
-                    span marudev4905@gmail.com
+                +headerItem("contact","call","010-2269-0763","")
+                +headerItem("contact","mail","marudev4905@gmail.com","")
             ul.header__sns
-                li
-                    a(href="#")
-                        i
-                            img(src="./images/icon/kakao.png", alt="kakaotalk-icon")
-                li
-                    a(href="#")
-                        i
-                            img(src="./images/icon/instagram.png", alt="instagram-icon")
-                li
-                    a(href="#")
-                        i
-                            img(src="./images/icon/facebook.png", alt="facebook-icon")
-                li
-                    a(href="#")
-                        i
-                            img(src="./images/icon/github.png", alt="github-icon")
+                +headerItem("sns","kakao","kakaotalk","#")
+                +headerItem("sns","instagram","instagram","#")
+                +headerItem("sns","facebook","facebook","#")
+                +headerItem("sns","github","github","#")
     .header__surf
         .header__surf__container
             h1.logo

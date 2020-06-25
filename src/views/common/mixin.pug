@@ -31,3 +31,13 @@ mixin kindCard(link, img, kind, title, text)
         .kind__card__link
             a(href= link) Go to Site!
 
+mixin headerItem(kind, img, text, link)
+    li
+        if kind == "contact"
+            i
+                img(src="./images/icon/"+img+".png", alt=img+"-icon")
+            span= text
+        else if kind == "sns"
+            a(href= link)
+                i
+                    img(src="./images/icon/"+img+".png", alt=img+"-icon")
