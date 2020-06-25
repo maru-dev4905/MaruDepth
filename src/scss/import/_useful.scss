@@ -13,14 +13,7 @@ $summaryNum: 4;
     height: auto;
     position: relative;
     .useful__container {
-        @include responsive("tablet"){
-            @include grid($tCol:repeat(6,1fr),$cGap:20px,$jusCon:center,$aliItem:center);
-        }
-        @include grid($tCol:repeat(12,1fr),$cGap:20px,$jusCon:center,$aliItem:center);
-        width: 80%;
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 120px 0;
+        @extend %usefulContainer;
     }
     .bgBar{
         @include responsive("tablet-l"){

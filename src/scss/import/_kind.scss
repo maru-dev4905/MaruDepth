@@ -10,15 +10,7 @@
     height: auto;
     position: relative;
     .kind__container {
-        @include responsive("tablet") {
-            @include grid($tCol:repeat(6,1fr),$cGap:20px,$jusCon:center,$aliItem:center);
-            padding: 80px 0;
-        }
-        @include grid($tCol:repeat(12,1fr),$cGap:20px,$jusCon:center,$aliItem:center);
-        width: 80%;
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 100px 0;
+        @extend %kindContainer;
     }
     .bgText {
         @include responsive("tablet") {

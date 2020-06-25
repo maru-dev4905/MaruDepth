@@ -7,11 +7,7 @@
     height: 100px;
     background-color: $white-1;
     .footer__container{
-        @include grid($tCol:repeat(12,1fr),$cGap:20px,$jusCon:center,$aliItem:center);
-        width: 80%;
-        max-width: 1000px;
-        height: 100%;
-        margin: 0 auto;
+        @extend %footerContainer;
     }
     .footer__copy{
         @include flex($aliItem:center);

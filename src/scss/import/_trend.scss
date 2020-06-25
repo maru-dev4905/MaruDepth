@@ -16,19 +16,7 @@
         height: 100%;
     }
     .trend__container{
-        @include responsive("tablet"){
-            @include grid($tCol:repeat(6,1fr),$jusCon:center,$aliItem:center);
-            padding: 70px 0;
-        }
-        @include responsive("iphone"){
-            padding: 50px 0;
-        }
-        @include grid($tCol:repeat(12,1fr),$jusCon:center,$aliItem:center);
-        position: relative;
-        width: 80%;
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 100px 0;
+        @extend %trendContainer;
     }
 }
 .trend__title{

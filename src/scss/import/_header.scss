@@ -3,12 +3,6 @@
 @import "../common/animation";
 @import "../components/input";
 
-%headerContainer{
-    @include flex($jusCon:space-between,$aliItem:center);
-    max-width: 1000px;
-    width: 80%;
-    height: 100%;
-}
 .header.show{
     animation: headerShow 0.3s forwards;
 }

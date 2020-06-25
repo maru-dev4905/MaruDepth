@@ -18,21 +18,7 @@ $menuNum: 6;
         height: calc(100% - 120px);
     }
     .banner__container{
-
-        @include responsive("tablet"){
-            @include grid($tCol:repeat(6,1fr),$tRow:64px,$cGap:20px,$jusCon:center);
-            height: calc(100% - 120px);
-        }
-        @include responsive("iphone"){
-            @include grid($tCol:repeat(6,1fr),$tRow:none,$cGap:20px,$jusCon:center,$aliItem:center);
-            width: 90%;
-        }
-        @include grid($tCol:repeat(12,1fr),$tRow:64px,$cGap:20px,$jusCon:center);
-        width: 80%;
-        height: calc(100% - 170px);
-        max-width: 1000px;
-        margin: 0 auto;
-        transition: 0.3s;
+        @extend %bannerContainer;
     }
 }
 .banner__nav{
