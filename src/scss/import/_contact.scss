@@ -53,9 +53,10 @@
             @include font($size:14px,$family:SCD4,$color:$gray);
             @include border($radius:5px,$border:none,$shadow:2px 2px 1px $opBlack-1);
             background-color: $white-1;
+            transition: 0.3s;
             &:focus{
-                @include border($color:$purple,$shadow: 0 0 3px $purple);
                 outline: none !important;
+                box-shadow: 2.5px 2.5px 1px $opPurple-3;
             }
         }
         textarea{

@@ -43,7 +43,16 @@ $menuNum: 6;
             width: 100px;
             height: 100%;
             opacity: 0;
-
+            &:nth-child(2) a{
+                &::after{
+                    @include image($url:"../icon/dropdown-ico.png",$size:contain,$pos:center,$rep:no-repeat);
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    right: 15px;
+                    
+                }
+            }
             a{
                 @include flex($jusCon:center,$aliItem:center);
                 @include font($size:15px,$color:$white-1,$align:center,$letter:1.2px,$family:SCD4);
@@ -52,6 +61,7 @@ $menuNum: 6;
                 width: 100%;
                 height: 100%;
                 transition: 0.3s;
+                
                 &::before{
                     @include position($pos:absolute,$b:10px,$l:0);
                     content: "";
