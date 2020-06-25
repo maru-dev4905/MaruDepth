@@ -7,7 +7,8 @@
         .video__box{
             @include flex($dir:column,$jusCon:center,$aliItem:center);
             width: 100%;
-            margin-bottom:50px;
+            margin-bottom:40%;
+            position: relative;
 
             &:nth-child(1) {
                 grid-column: 1/5;
@@ -18,6 +19,28 @@
             &:nth-child(3) {
                 grid-column: 9/13;
             }
+                        
+            @include responsive("tablet"){
+                &:nth-child(1){
+                    grid-column: 1/4;
+                }
+                &:nth-child(2){
+                    grid-column: 4/7;
+                }
+                &:nth-child(3){
+                    grid-column: 1/-1;
+                    margin-bottom: 0;
+                    .video__img{
+                        height: 280px;
+                    }
+                    .video__content{
+                        height: 50%;
+                    }
+                    .video__link{
+                        top: 112.5%;
+                    }
+                }
+            }
             .video__img {
                 @include position($pos:relative,$z:1);
                 width: 100%;
@@ -26,10 +49,16 @@
                 border-radius: 10px;
             }
             .video__content {
+                @include responsive("tablet"){
+                    width: 80%;
+                    height: 70%;
+                    top: 70%;
+                }
                 @include flex($dir:column,$aliItem:center);
-                @include position($pos:absolute,$z:2,$t:60%);
+                @include position($pos:absolute,$z:2,$t:80%);
                 @include border($radius:10px,$shadow:2px 3px 5px $opBlack-3);
-                height: 50%;
+                width: 80%;
+                height: 70%;
                 background-color: $white-2;
                 padding: 0 5%;
                 h4 {
@@ -42,8 +71,11 @@
                 }
             }
             .video__link {
+                @include responsive("tablet"){
+                    top: 125%;
+                }
                 @include button($kind:"circle-NextBtn",$width:50px,$height:50px,$bgC:$purple);
-                @include position($pos:absolute,$z:3,$t:100%);
+                @include position($pos:absolute,$z:3,$t:135%);
             }
         }
 }

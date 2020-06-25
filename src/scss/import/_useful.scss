@@ -13,6 +13,9 @@ $summaryNum: 4;
     height: auto;
     position: relative;
     .useful__container {
+        @include responsive("tablet"){
+            @include grid($tCol:repeat(6,1fr),$cGap:20px,$jusCon:center,$aliItem:center);
+        }
         @include grid($tCol:repeat(12,1fr),$cGap:20px,$jusCon:center,$aliItem:center);
         width: 80%;
         max-width: 1000px;
@@ -32,8 +35,12 @@ $summaryNum: 4;
     }
 }
 .useful__summary {
+    @include responsive("tablet"){
+        @include grid($tCol:repeat(6,1fr),$cGap:20px);
+        grid-column: 1/-1;
+    }
     @include grid($tCol:repeat(12,1fr),$cGap:20px);
-    grid-column: 1/13;
+    grid-column: 1/-1;
     padding-bottom: 100px;
     .useful__summary__box.fade {
         @include fade($kind:"fade-left");
@@ -46,6 +53,9 @@ $summaryNum: 4;
         }
     }
     .useful__summary__box {
+        @include responsive("tablet"){
+            margin-bottom: 50px;
+        }
         @include flex($dir:row);
         .summary__box__icon img {
             width: 42px;
@@ -62,12 +72,22 @@ $summaryNum: 4;
             }
         }
         &:nth-child(1) {
+            @include responsive("tablet"){
+                grid-column: 1/-1;   
+            }
             grid-column: 1/5;
         }
         &:nth-child(2) {
+            @include responsive("tablet"){
+                grid-column: 1/-1;   
+            }
             grid-column: 5/9;
         }
         &:nth-child(3) {
+            @include responsive("tablet"){
+                grid-column: 1/-1;
+                margin-bottom: 0;
+            }
             grid-column: 9/13;
         }
     }
@@ -83,12 +103,15 @@ $summaryNum: 4;
 
 .useful__site {
     @include position($pos:relative);
-    grid-column: 1/13;
+    grid-column: 1/-1;
 
     .video__site__rows {
+        @include responsive("tablet"){
+            @include grid($tCol:repeat(6,1fr),$cGap:20px,$jusCon:center,$aliItem:center);
+        }
         @include grid($tCol:repeat(12,1fr),$cGap:20px,$jusCon:center,$aliItem:center);
         @include videoCard;
-        grid-column: 1/13;
+        grid-column: 1/-1;
         margin-bottom: 100px;
         opacity: 0;
     }

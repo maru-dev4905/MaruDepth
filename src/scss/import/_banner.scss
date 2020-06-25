@@ -128,6 +128,7 @@ $menuNum: 6;
             &:first-child{
                 @include responsive("tablet"){
                     width: 100%;
+                    height: 35px;
                     margin-bottom: 10px;
                 }
                 @include button($kind:"defaultBtn",$width:48%,$height:30px,$bgC:$purple,$color:$white-1);
@@ -135,6 +136,7 @@ $menuNum: 6;
             &:last-child{
                 @include responsive("tablet"){
                     width: 100%;
+                    height: 35px;
                 }
                 @include button($kind:"borderBtn",$width:48%,$height:30px,$bgC:$purple,$color:$black);
             }

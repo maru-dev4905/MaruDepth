@@ -3,7 +3,7 @@
 
 @mixin title{
     @include flex($dir:column,$jusCon:center,$aliItem:center);
-    grid-column: 1/13;
+    grid-column: 1/-1;
     padding-bottom: 70px;
     h2{
         @include font($size:2rem,$letter:1.2px,$family:TmonBold);
