@@ -94,12 +94,25 @@
         @extend %headerContainer;
         .logo{
             img{
+                @include responsive("iphone-l"){
+                    width: 52px;
+                    margin-right: 10px;
+                }
+                @include responsive("tablet"){
+                    width: 62px;
+                }
                 width: 72px;
             }
         }
         .search{
+            @include responsive("iphone-l"){
+                width: 100%;
+            }
             width: 80%;
             input{
+                @include responsive("iphone-l"){
+                    @include input($kind:"search",$width:100%,$height:50px,$padding: 0 20px);
+                }
                 @include input($kind:"search",$width:80%,$height:50px,$padding: 0 40px);
             }
         }
