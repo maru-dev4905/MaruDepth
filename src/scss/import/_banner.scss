@@ -43,17 +43,7 @@ $menuNum: 6;
             width: 100px;
             height: 100%;
             opacity: 0;
-            &:nth-child(2) a{
-                &::after{
-                    @include image($url:"../images/icon/dropdown-ico.png",$size:contain,$pos:center,$rep:no-repeat);
-                    @include position($pos:absolute,$t:45%,$r:5px);
-                    content: "";
-                    display: block;
-                    width: 10px;
-                    height: 10px;
-                    transform: rotate(180deg);
-                }
-            }
+            
             a{
                 @include flex($jusCon:center,$aliItem:center);
                 @include font($size:15px,$color:$white-1,$align:center,$letter:1.2px,$family:SCD4);
