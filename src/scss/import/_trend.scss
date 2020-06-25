@@ -16,6 +16,10 @@
         height: 100%;
     }
     .trend__container{
+        @include responsive("tablet"){
+            @include grid($tCol:repeat(6,1fr),$jusCon:center,$aliItem:center);
+            padding: 70px 0;
+        }
         @include grid($tCol:repeat(12,1fr),$jusCon:center,$aliItem:center);
         position: relative;
         width: 80%;
@@ -25,6 +29,10 @@
     }
 }
 .trend__title{
+    @include responsive("tablet"){
+        grid-column: 1/-1;
+        margin-bottom: 35px;
+    }
     @include flex($dir:column,$jusCon:center);
     grid-column: 1/8;
     font-family: TmonBold;
@@ -39,20 +47,21 @@
         }
     }
     strong{
-        @include font($size:8.25rem,$letter:10px);
-        color: $white-2;
+        @include font($size:8.25rem,$letter:10px,$color:$white-2);
         text-shadow: 5px 5px 5px $opBlack-5;
     }
 }
 .trend__content{
+    @include responsive("tablet"){
+        grid-column: 1/-1;
+    }
     @include flex($dir:column,$jusCon:center,$aliItem:center);
-    grid-column: 8/13;
+    grid-column: 8/-1;
     .trend__img{
         @include image($url:"../images/common/trend.png",$pos:center,$size:cover,$rep:no-repeat);
+        @include border($radius:15px, $shadow:5px 5px 10px $opBlack-5);
         width: 100%;
         height: 250px;
-        border-radius: 15px;
         margin-bottom: 20px;
-        box-shadow: 5px 5px 10px $opBlack-5;
     }
 }

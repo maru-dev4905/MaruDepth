@@ -31,7 +31,8 @@ $summaryNum: 4;
         background-color: $black;
     }
     .bgText {
-        @include bgText($t:45%,$r:-50px);
+        @include bgText($t:45%,$l:50%);
+        transform: translateX(-50%);
     }
 }
 .useful__summary {
