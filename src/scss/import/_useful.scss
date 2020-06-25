@@ -23,6 +23,14 @@ $summaryNum: 4;
         padding: 120px 0;
     }
     .bgBar{
+        @include responsive("tablet-l"){
+            top: 3%;
+            width: 15%;
+        }
+        @include responsive("iphone-l"){
+            top: 2%;
+            width: 20%;
+        }
         @include position($pos:absolute,$t:5%,$l:50%);
         @include border($radius:25px,$shadow:0px 0px 10px $opBlack-3);
         transform: translateX(-50%);
