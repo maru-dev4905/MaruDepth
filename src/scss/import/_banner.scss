@@ -18,9 +18,14 @@ $menuNum: 6;
         height: calc(100% - 120px);
     }
     .banner__container{
+
         @include responsive("tablet"){
             @include grid($tCol:repeat(6,1fr),$tRow:64px,$cGap:20px,$jusCon:center);
             height: calc(100% - 120px);
+        }
+        @include responsive("iphone-l"){
+            @include grid($tCol:repeat(6,1fr),$tRow:none,$cGap:20px,$jusCon:center,$aliItem:center);
+            width: 90%;
         }
         @include grid($tCol:repeat(12,1fr),$tRow:64px,$cGap:20px,$jusCon:center);
         width: 80%;
@@ -31,6 +36,9 @@ $menuNum: 6;
     }
 }
 .banner__nav{
+    @include responsive("iphone-l"){
+        display: none;
+    }
     @include border($radius:0 0 10px 10px,$shadow: 0 3px 3px $opBlack-2);
     background-color: $purple;
     grid-column: 1/-1;
@@ -86,13 +94,15 @@ $menuNum: 6;
     animation-delay:1.2s;
 }
 .banner__content{
-    
     @include responsive("tablet-l"){
         grid-column: 1/6;   
         height: 65%;
     }
     @include responsive("tablet"){
         grid-column: 1/5;
+    }
+    @include responsive("iphone-l"){
+        height: 50%;
     }
     @include flex($dir:column,$jusCon:space-between,$aliSelf:center);
     @include border($radius:10px,$shadow:15px 30px 30px $opBlack-5);
@@ -109,7 +119,7 @@ $menuNum: 6;
         @include responsive("tablet-l"){
             line-height: 20px;
         }
-        @include font($size:13px,$height:23px,$family:SCD4);
+        @include font($size:13px,$height:23px,$family:SCD4,$break:keep-all);
     }
     .banner__content__link{
         @include responsive("tablet"){
