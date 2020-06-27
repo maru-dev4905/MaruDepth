@@ -1,6 +1,20 @@
 include ../common/mixin
 include ../common/variable
 
+.hamburger__content
+    ul.hamburger__nav
+        each item in navigationText
+            li.hamburger__nav__item
+                a(href="./"+item+".html")= item
+    ul.menu__sns
+        +headerItem("sns","kakao","kakaotalk","#")
+        +headerItem("sns","instagram","instagram","#")
+        +headerItem("sns","facebook","facebook","#")
+        +headerItem("sns","github","github","#")
+    .menu__bg-1
+    .menu__bg-2
+    .menu__bg-3
+    .menu__bg-4
 button#menu--toggle
     #hamburger
         span

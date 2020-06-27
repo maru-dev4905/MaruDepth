@@ -2,30 +2,27 @@
 @import "../common/variable";
 @import "../common/animation";
 
-#menu--toggle.show{
+#menu--toggle.show {
     right: 20px;
 }
-#menu--toggle.hide{
+#menu--toggle.hide {
     right: -100px;
 }
-#menu--toggle{
-    @include border(
-        $radius:50%,
-        $shadow:0px 0px 5px $opBlack-4
-    );
+#menu--toggle {
+    @include border($radius:50%, $shadow:0px 0 5px $opBlack-4);
     @include position($pos:fixed,$r:-100px,$b:10px,$z:200);
     width: 70px;
     height: 70px;
     margin: 50px auto;
     cursor: pointer;
     transition: 0.625s ease-in-out;
-    span{
+    span {
         display: block;
         background-color: $black;
         transition: 0.3s ease-in-out;
         border-radius: 2px;
     }
-    #hamburger{
+    #hamburger {
         @include position($pos:absolute,$t:0,$l:0);
         @include flex($dir:column,$jusCon:center,$aliItem:flex-start);
         width: 100%;
@@ -34,75 +31,73 @@
         border-radius: 50%;
         transition: 1s ease-in-out;
 
-        span{
+        span {
             @include position($pos:relative,$l:25%);
             width: 50%;
             height: 4px;
             margin: 3px 0;
-            &:nth-child(1){
-                transition-delay: .5s;
-            }
-            &:nth-child(2){
-                transition-delay: .625s;
-            }
-            &:nth-child(3){
-                transition-delay: .75s;
+            @for $i from 1 to 4 {
+                &:nth-child(#{$i}) {
+                    transition-delay: 0.5s + $i / 10;
+                }
             }
         }
     }
-    #cross{
+    #cross {
         @include position($pos:absolute,$t:0,$l:0);
         height: 100%;
         width: 100%;
         transform: rotate(45deg);
         border-radius: 50%;
-        span{
-            background-color: $white-2;
+        span {
             @include position($pos:absolute,$t:50%,$l:50%);
             transform: translate(-50%,-50%);
+            background-color: $white-2;
 
-            &:nth-child(1){
-                height: 0%;
+            &:nth-child(1) {
+                height: 0;
                 width: 4px;
-                transition-delay:0s;
+                transition-delay: 0s;
             }
-            &:nth-child(2){
-                width: 0%;
+            &:nth-child(2) {
+                width: 0;
                 height: 4px;
-                transition-delay:.25s;
+                transition-delay: 0.25s;
             }
         }
     }
 }
-#menu--toggle.open{
-    #hamburger{
+#menu--toggle.open {
+    #hamburger {
         background-color: $purple;
-
-        span{
-            width: 0%;
-            &:nth-child(1){
-                transition-delay: 0s;
-            }
-            &:nth-child(2){
-                transition-delay: .125s;
-            }
-            &:nth-child(3){
-                transition-delay: .25s;
+        span {
+            width: 0;
+            @for $i from 1 to 4 {
+                &:nth-child(#{$i}) {
+                    transition-delay: $i * 0.1s;
+                }
             }
         }
     }
-    #cross{
-        span{
-            &:nth-child(1){
+    #cross {
+        span {
+            &:nth-child(1) {
                 height: 50%;
-                transition-delay: .625s;
+                transition-delay: 0.625s;
             }
-        }
-        span{
-            &:nth-child(2){
+            &:nth-child(2) {
                 width: 50%;
-                transition-delay: .375s;
+                transition-delay: 0.375s;
             }
         }
     }
+}
+
+.hamburger__content {
+    @include position($pos:fixed,$t:0,$l:0,$z:150);
+
+    [class*="menu__bg"] {
+        @include position($pos:absolute,$t:0,$l:0);
+    }
+    @include menu-bg-border();
 }

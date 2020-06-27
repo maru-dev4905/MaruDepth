@@ -76,6 +76,21 @@
     box-shadow: $shadow;
     border-radius: $radius;
 }
+
+// hamburger menu mixin
+@mixin menu-bg-border {
+    @each $size, $color in $hamburgerMenu {
+        $i: $i + 1;
+        .menu__bg-#{$i}{
+            @include border(
+                $border-t: $size solid $color,
+                $border-r: $size solid transparent
+            );
+            z-index: $i * -1;
+        }
+    }
+}
+
 // responsive mixin
 @mixin responsive($device) {
     @if $device == "iphone" {
