@@ -15,29 +15,40 @@ $summaryNum: 4;
     .useful__container {
         @extend %usefulContainer;
     }
-    .bgBar{
-        @include responsive("tablet-l"){
+    .bgBar {
+        @include responsive("tablet-l") {
             top: 3%;
             width: 15%;
         }
-        @include responsive("iphone-l"){
+        @include responsive("iphone-l") {
             top: 2%;
             width: 20%;
         }
         @include position($pos:absolute,$t:5%,$l:50%);
-        @include border($radius:25px,$shadow:0px 0px 10px $opBlack-3);
+        @include border($radius:25px,$shadow:0px 0 10px $opBlack-3);
         transform: translateX(-50%);
         width: 10%;
         height: 10px;
         background-color: $black;
     }
     .bgText {
-        @include bgText($t:45%,$l:50%);
-        transform: translateX(-50%);
+        @include responsive("tablet") {
+            top: 40%;
+            left: 50%;
+            right: auto;
+            transform: translateX(-50%);
+        }
+        @include responsive("iphone") {
+            top: 35%;
+            left: 50%;
+            right: auto;
+            transform: translateX(-50%);
+        }
+        @include bgText($t:40%,$r:-45px);
     }
 }
 .useful__summary {
-    @include responsive("tablet"){
+    @include responsive("tablet") {
         @include grid($tCol:repeat(6,1fr),$cGap:20px);
         grid-column: 1/-1;
     }
@@ -55,7 +66,7 @@ $summaryNum: 4;
         }
     }
     .useful__summary__box {
-        @include responsive("tablet"){
+        @include responsive("tablet") {
             margin-bottom: 50px;
         }
         @include flex($dir:row);
@@ -74,19 +85,19 @@ $summaryNum: 4;
             }
         }
         &:nth-child(1) {
-            @include responsive("tablet"){
-                grid-column: 1/-1;   
+            @include responsive("tablet") {
+                grid-column: 1/-1;
             }
             grid-column: 1/5;
         }
         &:nth-child(2) {
-            @include responsive("tablet"){
-                grid-column: 1/-1;   
+            @include responsive("tablet") {
+                grid-column: 1/-1;
             }
             grid-column: 5/9;
         }
         &:nth-child(3) {
-            @include responsive("tablet"){
+            @include responsive("tablet") {
                 grid-column: 1/-1;
                 margin-bottom: 0;
             }
@@ -94,7 +105,7 @@ $summaryNum: 4;
         }
     }
 }
-.useful__title.fade{
+.useful__title.fade {
     @include fade($kind:"fade-in");
     animation-delay: 0.25s;
 }
@@ -108,7 +119,7 @@ $summaryNum: 4;
     grid-column: 1/-1;
 
     .video__site__rows {
-        @include responsive("tablet"){
+        @include responsive("tablet") {
             @include grid($tCol:repeat(6,1fr),$cGap:20px,$jusCon:center,$aliItem:center);
         }
         @include grid($tCol:repeat(12,1fr),$cGap:20px,$jusCon:center,$aliItem:center);
@@ -121,7 +132,7 @@ $summaryNum: 4;
         @include fade($kind:"fade-up");
         position: relative;
         @for $i from 1 to 6 {
-            &:nth-child(#{$i}){
+            &:nth-child(#{$i}) {
                 animation-delay: $i * 0.2s;
             }
         }

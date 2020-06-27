@@ -14,9 +14,12 @@
     }
     .bgText {
         @include responsive("tablet") {
-            top: 17%;
+            top: 7%;
             left: 50%;
             transform: translateX(-50%);
+        }
+        @include responsive("iphone") {
+            top: 7%;
         }
         @include bgText($t:20%,$l:-45px);
     }
