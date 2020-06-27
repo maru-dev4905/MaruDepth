@@ -2,17 +2,18 @@ const scroll = function () {
     let delta,
         nowScroll,
         lastScroll,
-        winWidth;
+        winWidth,
+        headerCheck;
 
     const header = document.querySelector(".header"),
           nav = document.querySelector(".banner__container"),
           TABLET_SIZE = 768;
-          IPHONE_SIZE = 475;
 
     const initModule = function () {
         delta = false;
         lastScroll = 0;
         winWidth = window.innerWidth;
+        headerCheck = header.classList.contains("show");
 
         _addEventHandlers();
     }
@@ -23,13 +24,20 @@ const scroll = function () {
         window.addEventListener("resize", initModule);
     }
 
-    const _checkPosition = function () {
+          const _checkPosition = function () {
         if(winWidth < TABLET_SIZE){
-            return false;
+            _changeHeaderReset();
         }else if(winWidth > TABLET_SIZE){
             _changeHeaderPosition();
         }
 
+    }
+    const _changeHeaderReset = function () {
+        if(headerCheck == true){
+            nav.classList.replace("show","hide");
+        }else if(headerCheck == false){
+            header.classList.replace("hide","show");
+        }
     }
     const _changeHeaderPosition = function () {
         nowScroll = window.scrollY;
