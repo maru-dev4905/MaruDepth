@@ -7,6 +7,7 @@ const scroll = function () {
     const header = document.querySelector(".header"),
           nav = document.querySelector(".banner__container"),
           TABLET_SIZE = 768;
+          IPHONE_SIZE = 475;
 
     const initModule = function () {
         delta = false;

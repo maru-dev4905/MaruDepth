@@ -34,3 +34,12 @@
     }
     animation: $kind 1s ease forwards;
 }
+
+@keyframes hamburger-bar{
+    0%{
+        width: 60px;
+    }
+    100%{
+        width: 0px;
+    }
+}
