@@ -9,67 +9,8 @@
     @include position($pos:fixed,$l:0,$t:0,$z:91);
     width: 100vw;
     height: 100vh;
-    .banner__container.show{
-        height: calc(100% - 170px);
-    }
-    .banner__container.hide{
-        height: calc(100% - 120px);
-    }
     .banner__container{
         @extend %bannerContainer;
-    }
-}
-.banner__nav{
-    @include responsive("iphone"){
-        display: none;
-    }
-    @include border($radius:0 0 10px 10px,$shadow: 0 3px 3px $opBlack-2);
-    background-color: $purple;
-    grid-column: 1/-1;
-    grid-row: 1;
-    .menu{
-        @include flex($jusCon:space-around,$aliItem:center);
-        height: 100%;
-        .menu__item.fade{
-            @include fade($kind:"fade-left");
-            position: relative;
-            @for $i from 1 to $menuNum {
-                &:nth-child(#{$i}){
-                    animation-delay: $i * 0.25s;
-                }
-            }
-        }
-        .menu__item{
-            width: 100px;
-            height: 100%;
-            opacity: 0;
-            
-            a{
-                @include flex($jusCon:center,$aliItem:center);
-                @include font($size:15px,$color:$white-1,$align:center,$letter:1.2px,$family:SCD4);
-                position: relative;
-                padding: 0 20px;
-                width: 100%;
-                height: 100%;
-                transition: 0.3s;
-                
-                &::before{
-                    @include position($pos:absolute,$b:10px,$l:0);
-                    content: "";
-                    display: block;
-                    width: 0;
-                    height: 1.5px;
-                    transition: 0.3s;
-                    background-color: $white-1;
-                }
-                &:hover{
-                    opacity: 0.5;
-                    &::before{
-                        width: 100%;
-                    }
-                }
-            }
-        }
     }
 }
 .banner__content.fade{
@@ -86,14 +27,14 @@
         grid-column: 1/5;
     }
     @include responsive("iphone-l"){
-        height: 50%;
+        height: 70%;
     }
     @include flex($dir:column,$jusCon:space-between,$aliSelf:center);
     @include border($radius:10px,$shadow:15px 30px 30px $opBlack-5);
     grid-column: 1/5;
     padding: 37px;
     background-color: $white-1;
-    height: 60%;
+    height: 70%;
     opacity: 0;
     color: $black;
     h4{

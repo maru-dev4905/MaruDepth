@@ -3,12 +3,6 @@ include ../common/variable
 
 section.banner
     .banner__container
-        nav.banner__nav
-            ul.menu
-                each item in navigationText
-                    li.menu__item
-                        a(href="./"+item+".html")= item
-
         .banner__content
             h4 maru depth
             p= bannerContentText

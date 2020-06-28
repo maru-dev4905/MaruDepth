@@ -5,7 +5,7 @@ const animation = function() {
         bannerContent,
         menuItem,
         bannerTop,
-
+        
         // useful
         summary,
         usefulBox,
@@ -25,29 +25,37 @@ const animation = function() {
         kindContent,
         kindCardTop,
 
-        winH
+        winH,
+        path;
 
     const initModule = function() {
-        // banner section
-        banner = document.querySelector(".banner");
-        bannerContent = document.querySelector(".banner__content");
-        menuItem = document.querySelectorAll(".menu__item");
+        winH = window.innerHeight;
+        path = window.location.pathname;
+        path = path.split("/").pop();
         
-        // useful section
-        usefulBox = document.querySelectorAll(".useful__summary__box");
-        usefulTitle = document.querySelector(".useful__title");
-        summary = document.querySelector(".useful__summary");
+        if(path == "index.html" && "/"){
+            // useful section
+            usefulBox = document.querySelectorAll(".useful__summary__box");
+            usefulTitle = document.querySelector(".useful__title");
+            summary = document.querySelector(".useful__summary");
+
+            // kind section
+            kindTitle = document.querySelector(".kind__title");
+            kindCard = document.querySelectorAll(".kind__card");
+            kindContent = document.querySelector(".kind__content");
+
+            
+            // banner section
+            banner = document.querySelector(".banner");
+            bannerContent = document.querySelector(".banner__content");
+        }
+        
+        menuItem = document.querySelectorAll(".menu__item");
 
         // video section
         videoRows = document.querySelectorAll(".video__site__rows");
         videoBox = document.querySelectorAll(".video__box");
 
-        // kind section
-        kindTitle = document.querySelector(".kind__title");
-        kindCard = document.querySelectorAll(".kind__card");
-        kindContent = document.querySelector(".kind__content");
-
-        winH = window.innerHeight;
 
         _addEventHandlers();
     }
@@ -59,43 +67,51 @@ const animation = function() {
     }
     
     const _checkPosition = function() {
-        bannerTop = banner.getBoundingClientRect().top;        
-        summaryTop = summary.getBoundingClientRect().top;
-        usefulTitleTop = usefulTitle.getBoundingClientRect().top;
-        videoTop = videoRows[0].getBoundingClientRect().top;
-        kindTitleTop = kindTitle.getBoundingClientRect().top;
-        kindCardTop = kindContent.getBoundingClientRect().top;
+        
+        if(path == "index.html" && "/"){
+            
+            summaryTop = summary.getBoundingClientRect().top;
+            usefulTitleTop = usefulTitle.getBoundingClientRect().top;
+            kindTitleTop = kindTitle.getBoundingClientRect().top;
+            kindCardTop = kindContent.getBoundingClientRect().top;
+            videoTop = videoRows[0].getBoundingClientRect().top;
+            bannerTop = banner.getBoundingClientRect().top;      
 
-        while( winH > bannerTop ){
-            for(let i = 0; i < menuItem.length; i++){
-                menuItem[i].classList.add("fade");
+            while ( winH > summaryTop ){
+                for(let i = 0; i < usefulBox.length; i++){
+                    usefulBox[i].classList.add("fade");
+                }
+                break;
             }
-            bannerContent.classList.add("fade");
-            break;
-        }
-        while ( winH > summaryTop ){
-            for(let i = 0; i < usefulBox.length; i++){
-                usefulBox[i].classList.add("fade");
+            while ( winH > usefulTitleTop ){
+                usefulTitle.classList.add("fade");
+                break;
             }
-            break;
+            while( winH > kindTitleTop ){
+                kindTitle.classList.add("fade");
+                break;
+            }
+            while( winH > kindCardTop ){
+                for(let i = 0; i < kindCard.length; i++){
+                    kindCard[i].classList.add("fade");
+                }
+                break;
+            }
+        
+            while( winH > bannerTop ){
+                for(let i = 0; i < menuItem.length; i++){
+                }
+                bannerContent.classList.add("fade");
+                break;
+            }
         }
-        while ( winH > usefulTitleTop ){
-            usefulTitle.classList.add("fade");
-            break;
+        for(let i = 0; i < menuItem.length; i++){
+            menuItem[i].classList.add("fade");
         }
+
         while( winH > videoTop ){
             for(let i = 0; i < videoRows.length; i++){
                 videoRows[i].classList.add("fade");
-            }
-            break;
-        }
-        while( winH > kindTitleTop ){
-            kindTitle.classList.add("fade");
-            break;
-        }
-        while( winH > kindCardTop ){
-            for(let i = 0; i < kindCard.length; i++){
-                kindCard[i].classList.add("fade");
             }
             break;
         }

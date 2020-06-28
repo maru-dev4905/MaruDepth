@@ -16,7 +16,7 @@
     @include flex($dir:column,$jusCon:center,$aliItem:center);
     @include position($pos:fixed,$t:0,$z:93);
     width: 100vw;
-    height: 170px;
+    height: 225px;
     i img{
         width: 24px;
     }
@@ -108,6 +108,60 @@
                     @include input($kind:"search",$width:100%,$height:50px,$padding: 0 20px);
                 }
                 @include input($kind:"search",$width:80%,$height:50px,$padding: 0 40px);
+            }
+        }
+    }
+}
+
+.header__nav{
+    @include responsive("iphone"){
+        display: none;
+    }
+    @include border($radius:0 0 10px 10px,$shadow: 0 3px 3px $opBlack-2);
+    background-color: $purple;
+    max-width: 80%;
+    width: 1000px;
+    .menu{
+        @include flex($jusCon:space-around,$aliItem:center);
+        height: 55px;
+        .menu__item.fade{
+            @include fade($kind:"fade-left");
+            position: relative;
+            @for $i from 1 to $menuNum {
+                &:nth-child(#{$i}){
+                    animation-delay: $i * 0.25s;
+                }
+            }
+        }
+        .menu__item{
+            width: 100px;
+            height: 100%;
+            opacity: 0;
+            
+            a{
+                @include flex($jusCon:center,$aliItem:center);
+                @include font($size:15px,$color:$white-1,$align:center,$letter:1.2px,$family:SCD4);
+                position: relative;
+                padding: 0 20px;
+                width: 100%;
+                height: 100%;
+                transition: 0.3s;
+                
+                &::before{
+                    @include position($pos:absolute,$b:10px,$l:0);
+                    content: "";
+                    display: block;
+                    width: 0;
+                    height: 1.5px;
+                    transition: 0.3s;
+                    background-color: $white-1;
+                }
+                &:hover{
+                    opacity: 0.5;
+                    &::before{
+                        width: 100%;
+                    }
+                }
             }
         }
     }

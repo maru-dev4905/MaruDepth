@@ -41,14 +41,7 @@
 }
 
 %bannerContainer{
-    @include responsive("tablet"){
-        height: calc(100% - 120px);
-    }
-    @include responsive("iphone"){
-        grid-template-rows: none;
-    }
     @extend %gridLayout;
-    grid-template-rows: 64px;
     align-items: none;
     height: calc(100% - 170px);
     padding: 0;
