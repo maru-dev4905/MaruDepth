@@ -1,0 +1,48 @@
+@import "../common/mixin";
+@import "../common/variable";
+@import "../common/animation";
+@import "../components/button";
+@import "../components/title";
+@import "../components/bgText";
+@import "../components/videoCard";
+
+.video{
+    width: 100vw;
+    height: auto;
+    position: relative;
+    .video__container{
+        @extend %videoContainer;
+    }
+    .video__title.fade{
+        @include fade($kind:"fade-in");
+        animation-delay: 0.25s;
+    }
+    .video__title{
+        @include title;
+        opacity: 0;
+    }
+    .video__site{
+        @include position($pos:relative);
+        grid-column: 1/-1;
+
+        .video__site__rows{
+            @include responsive("tablet") {
+                @include grid($tCol:repeat(6,1fr),$cGap:20px,$jusCon:center,$aliItem:center);
+            }
+            @include grid($tCol:repeat(12,1fr),$cGap:20px,$jusCon:center,$aliItem:center);
+            @include videoCard;
+            grid-column: 1/-1;
+            margin-bottom: 100px;
+            opacity: 0;
+        }
+        .video__site__rows.fade{
+            @include fade($kind:"fade-up");
+            position: relative;
+            @for $i from 1 to 6 {
+                &:nth-child(#{$i}) {
+                    animation-delay: $i * 0.2s;
+                }
+            }
+        }
+    }
+}

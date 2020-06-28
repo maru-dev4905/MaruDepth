@@ -1,5 +1,8 @@
 const animation = function() {
     let 
+        main,
+        mainTop,
+
         // banner
         banner,
         bannerContent,
@@ -17,6 +20,7 @@ const animation = function() {
         videoRows,
         videoBox,
         videoTop,
+        videoTitle,
 
         // kind
         kindTitle,
@@ -49,13 +53,16 @@ const animation = function() {
             banner = document.querySelector(".banner");
             bannerContent = document.querySelector(".banner__content");
         }
-        
+        if(path == "video.html"){
+            videoTitle = document.querySelector(".video__title");
+        }
         menuItem = document.querySelectorAll(".menu__item");
 
         // video section
         videoRows = document.querySelectorAll(".video__site__rows");
         videoBox = document.querySelectorAll(".video__box");
 
+        main = document.querySelector(".main");
 
         _addEventHandlers();
     }
@@ -105,6 +112,10 @@ const animation = function() {
                 break;
             }
         }
+        mainTop = main.getBoundingClientRect().top;
+        if(path == "video.html"){
+            videoTop = videoRows[0].getBoundingClientRect().top;
+        }
         for(let i = 0; i < menuItem.length; i++){
             menuItem[i].classList.add("fade");
         }
@@ -113,6 +124,10 @@ const animation = function() {
             for(let i = 0; i < videoRows.length; i++){
                 videoRows[i].classList.add("fade");
             }
+            break;
+        }
+        while( winH > mainTop){
+            videoTitle.classList.add("fade");
             break;
         }
     }
