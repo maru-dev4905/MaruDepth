@@ -4,6 +4,8 @@ const hamburger = function(){
 
     const hamburgerBtn = document.querySelector("#menu--toggle"),
           hamburgerMenu = document.querySelector(".hamburger__content"),
+          hamburgerItem = document.querySelectorAll(".hamburger__nav__item"),
+          hamburgerSns = document.querySelector(".hamburger__sns"),
           IPHONE_SIZE = 475;
 
           
@@ -40,10 +42,18 @@ const hamburger = function(){
             hamburgerBtn.classList.add("open");
             hamburgerMenu.classList.add("open");
             hamburgerMenu.classList.remove("hide");
+            for(let i = 0; i < hamburgerItem.length; i++){
+                hamburgerItem[i].classList.add("fade");
+            }
+            hamburgerSns.classList.add("fade");
         }else if(toggle == false){
             hamburgerBtn.classList.remove("open");
             hamburgerMenu.classList.remove("open");
             hamburgerMenu.classList.add("hide");
+            for(let i = 0; i < hamburgerItem.length; i++){
+                hamburgerItem[i].classList.remove("fade");
+            }
+            hamburgerSns.classList.remove("fade");
         }
     }
     return {

@@ -2,7 +2,6 @@
 @import "../common/variable";
 @import "../common/animation";
 @import "../components/button";
-$menuNum: 6;
 
 .banner{
     @include image($url:"../images/main/bg.jpg",$pos:top 20px,$size:cover,$rep:no-repeat);

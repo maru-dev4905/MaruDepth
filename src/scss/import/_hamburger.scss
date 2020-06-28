@@ -111,6 +111,69 @@
     [class*="menu__bg"] {
         @include position($pos:absolute,$t:0,$l:0);
         transform: skew(-45deg);
-        box-shadow: 0 0 15px 10px $opBlack-5;
+    }
+    .hamburger__nav{
+        padding: 70px 30px;
+        .hamburger__nav__item.fade{
+            @include fade($kind:"fade-left");
+            position: relative;
+            @for $i from 1 to $menuNum {
+                &:nth-child(#{$i}){
+                    animation-delay: $i * 0.25s;
+                }
+            }
+        }
+        .hamburger__nav__item{
+            opacity: 0;
+        }
+        a{
+            @include font($size:28px,$letter:2px,$color:$white-2,$family:SCD6);
+            display: inline-block;
+            padding: 40px 0;
+            position: relative;
+            transition: 0.3s;
+            &:first-child{
+                padding-top: 0;
+            }
+            &::before{
+                @include position($pos:absolute,$b:10px,$l:0);
+                content: "";
+                display: block;
+                width: 0;
+                height: 1.5px;
+                transition: 0.3s;
+                background-color: $white-2;
+            }
+            &:hover{
+                opacity: 0.5;
+                &::before{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .hamburger__sns.fade{
+        @include fade($kind:"fade-right");
+        animation-delay: 0.25s;
+    }
+    .hamburger__sns{
+        @include flex($dir:row,$jusCon:center,$aliItem:center);
+        @include position($pos:absolute,$t:0,$r:0);
+        opacity: 0;
+        margin: 5px 5px 0 0 ;
+        a{
+            display: block;
+            padding: 10px;
+            opacity: 0.3;
+            transition: 0.3s;
+            
+            &:hover{
+                opacity: 1;
+            }
+        }
+        img{
+            width: 30px;
+            height: 30px;
+        }
     }
 }
