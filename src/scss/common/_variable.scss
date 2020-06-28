@@ -21,22 +21,10 @@ $blue:              #17C0EB;
 $i : 0;
 
 $hamburgerMenu:
-    100vh $purple,
-    110vh #7B7BC0,
-    120vh #B0B0CA,
-    200vh #CECECE;
-    
-$menuSize:
-    100vh ,
-    110vh,
-    120vh,
-    200vh;
-
-$menuBg: 
-    $purple,
-    #7B7BC0,
-    #B0B0CA,
-    #CECECE;
+    125vh $purple,
+    133vh #7B7BC0,
+    141vh #B0B0CA,
+    149vh #CECECE;
 
 // opacity color variable
 $opBlack-1:            rgba($color:$black, $alpha:0.1);

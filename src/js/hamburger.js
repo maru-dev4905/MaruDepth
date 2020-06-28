@@ -3,6 +3,7 @@ const hamburger = function(){
         winWidth;
 
     const hamburgerBtn = document.querySelector("#menu--toggle"),
+          hamburgerMenu = document.querySelector(".hamburger__content"),
           IPHONE_SIZE = 475;
 
           
@@ -37,8 +38,12 @@ const hamburger = function(){
 
         if(toggle == true){
             hamburgerBtn.classList.add("open");
+            hamburgerMenu.classList.add("open");
+            hamburgerMenu.classList.remove("hide");
         }else if(toggle == false){
             hamburgerBtn.classList.remove("open");
+            hamburgerMenu.classList.remove("open");
+            hamburgerMenu.classList.add("hide");
         }
     }
     return {

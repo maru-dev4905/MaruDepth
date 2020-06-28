@@ -78,18 +78,35 @@
 }
 
 // hamburger menu mixin
-@mixin menu-bg-border {
+@mixin menu-bg-show {
     @each $size, $color in $hamburgerMenu {
         $i: $i + 1;
         .menu__bg-#{$i}{
-            @include border(
-                $border-t: $size solid $color,
-                $border-r: $size solid transparent
-            );
+            width: $size;
+            height: $size;
+            background-color: $color;
+            transition: $i * 0.3s ease-in-out;
+            z-index: $i * -1;
+            top: -30vh;
+            left: -75vh;
+        }
+    }
+}
+@mixin menu-bg-hide {
+    @each $size, $color in $hamburgerMenu {
+        $i: $i + 1;
+        .menu__bg-#{$i}{
+            width: 0;
+            height: 0;
+            background-color: transparent;
+            transition: $i * 0.3s ease-in-out;
+            top: 0;
+            left: 0;
             z-index: $i * -1;
         }
     }
 }
+
 
 // responsive mixin
 @mixin responsive($device) {
