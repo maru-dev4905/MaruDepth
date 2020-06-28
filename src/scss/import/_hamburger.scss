@@ -96,18 +96,20 @@
 .hamburger__content.open {
     @include menu-bg-show;
     background-color: #e7e7e7;
+    z-index: 100;
 }
 
 .hamburger__content.hide{
     @include menu-bg-hide;
     background-color: transparent;
+    z-index: 90;
 }
 
 .hamburger__content {
-    @include position($pos:fixed,$t:0,$l:0,$z:150);
+    @include position($pos:fixed,$t:0,$l:0);
     width: 100vw;
     height: 100vh;
-    transition: 0.3s ease-out;
+    transition: 0.5s ease-out;
     [class*="menu__bg"] {
         @include position($pos:absolute,$t:0,$l:0);
         transform: skew(-45deg);

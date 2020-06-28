@@ -38,6 +38,6 @@ mixin headerItem(kind, img, text, link)
                 img(src="./images/icon/"+img+".png", alt=img+"-icon")
             span= text
         else if kind == "sns"
-            a(href= link)
+            a(href= link target="_blank")
                 i
                     img(src="./images/icon/"+img+".png", alt=img+"-icon")
