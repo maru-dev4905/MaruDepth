@@ -37,6 +37,11 @@ const animation = function() {
         path = window.location.pathname;
         path = path.split("/").pop();
         
+        // banner section
+        banner = document.querySelector(".banner");
+        bannerContent = document.querySelector(".banner__content");
+        menuItem = document.querySelectorAll(".menu__item");
+        
         if(path == "index.html" && "/"){
             // useful section
             usefulBox = document.querySelectorAll(".useful__summary__box");
@@ -47,18 +52,9 @@ const animation = function() {
             kindTitle = document.querySelector(".kind__title");
             kindCard = document.querySelectorAll(".kind__card");
             kindContent = document.querySelector(".kind__content");
-
-            
-            // banner section
-            banner = document.querySelector(".banner");
-            bannerContent = document.querySelector(".banner__content");
         }
-        if(path == "video.html"){
-            videoTitle = document.querySelector(".video__title");
-        }
-        menuItem = document.querySelectorAll(".menu__item");
-
         // video section
+        videoTitle = document.querySelector(".video__title");
         videoRows = document.querySelectorAll(".video__site__rows");
         videoBox = document.querySelectorAll(".video__box");
 
@@ -73,8 +69,8 @@ const animation = function() {
         window.addEventListener("resize", initModule);
     }
     
-    const _checkPosition = function() {
-        
+    const _checkPosition = function() {                
+
         if(path == "index.html" && "/"){
             
             summaryTop = summary.getBoundingClientRect().top;
@@ -82,7 +78,7 @@ const animation = function() {
             kindTitleTop = kindTitle.getBoundingClientRect().top;
             kindCardTop = kindContent.getBoundingClientRect().top;
             videoTop = videoRows[0].getBoundingClientRect().top;
-            bannerTop = banner.getBoundingClientRect().top;      
+            mainTop = main.getBoundingClientRect().top;
 
             while ( winH > summaryTop ){
                 for(let i = 0; i < usefulBox.length; i++){
@@ -104,28 +100,29 @@ const animation = function() {
                 }
                 break;
             }
-        
-            while( winH > bannerTop ){
-                for(let i = 0; i < menuItem.length; i++){
-                }
-                bannerContent.classList.add("fade");
-                break;
-            }
+
         }
         mainTop = main.getBoundingClientRect().top;
-        if(path == "video.html"){
-            videoTop = videoRows[0].getBoundingClientRect().top;
-        }
+        bannerTop = banner.getBoundingClientRect().top;      
+        videoTop = videoRows[0].getBoundingClientRect().top;
+
         for(let i = 0; i < menuItem.length; i++){
             menuItem[i].classList.add("fade");
         }
 
+        while( winH > bannerTop ){
+            for(let i = 0; i < menuItem.length; i++){
+            }
+            bannerContent.classList.add("fade");
+            break;
+        }   
         while( winH > videoTop ){
             for(let i = 0; i < videoRows.length; i++){
                 videoRows[i].classList.add("fade");
             }
             break;
         }
+        
         while( winH > mainTop){
             videoTitle.classList.add("fade");
             break;

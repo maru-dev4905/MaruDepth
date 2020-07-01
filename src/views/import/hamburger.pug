@@ -3,6 +3,8 @@ include ../common/variable
 
 .hamburger__content.hide
     ul.hamburger__nav
+        li.menu__item
+            a(href="./index.html") HOME
         each item in navigationText
             li.hamburger__nav__item
                 a(href="./"+item+".html")= item

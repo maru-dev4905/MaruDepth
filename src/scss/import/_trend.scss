@@ -10,7 +10,7 @@
     outline-offset: -15px;
     &:before{
         @include position($pos:absolute,$l:0,$t:0,$z:-1);
-        @include image($url:"../images/common/trend-bg.jpg",$size:cover,$rep:no-repeat,$pos:center,$att:fixed);
+        @include image($url:"../images/common/trend-bg.jpg",$size:cover,$rep:no-repeat,$pos:center);
         content: "";
         width: 100%;
         height: 100%;
