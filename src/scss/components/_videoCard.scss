@@ -5,57 +5,19 @@
 
 @mixin videoCard {
         .video__box{
+            @include responsive("iphone"){
+                width: 100%;
+            }
+            @include responsive("tablet-l"){
+                margin-bottom: 30%;
+            }
             @include flex($dir:column,$jusCon:center,$aliItem:center);
-            width: 100%;
-            margin-bottom:50%;
+            width: 30%;
+            min-width: 300px;
+            margin-bottom:15%;
+            display: inline-flex;
             position: relative;
-            &:nth-child(1) {
-                @include responsive("tablet"){
-                    grid-column: 1/4;
-                }
-                @include responsive("iphone"){
-                    grid-column: 1/-1;
-                }
-                grid-column: 1/5;
-            }
-            &:nth-child(2) {
-                @include responsive("tablet"){
-                    grid-column: 4/7;
-                }
-                @include responsive("iphone"){
-                    grid-column: 1/-1;
-                }
-                grid-column: 5/9;
-            }
-            &:nth-child(3) {
-                @include responsive("tablet"){
-                    grid-column: 1/-1;
-                    margin-bottom: 0;
-                    .video__img{
-                        height: 280px;
-                    }
-                    .video__content{
-                        height: 50%;
-                    }
-                    .video__link{
-                        top: 112.5%;
-                    }
-                }
-                @include responsive("iphone"){
-                    grid-column: 1/-1;
-                    margin-bottom: 70px;
-                    .video__img{
-                        height: 200px;
-                    }
-                    .video__content{
-                        height: 70%;
-                    }
-                    .video__link{
-                        top: 125%;
-                    }
-                }
-                grid-column: 9/13;
-            }
+            transition: 0.3s;
             .video__tag{
                 display: none;
             }

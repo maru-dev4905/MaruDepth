@@ -17,15 +17,9 @@ header.header
             h1.logo
                 a(href="/index.html")
                     img(src="./images/logo/logo.png", alt="marudepth-logo")
-            form.search(
-                name="search"
-                method="GET"
+            input(
+                id="search--input"
+                type="text"
+                placeholder="#"
             )
-                input(
-                    id="value"
-                    type="text"
-                    name="tag"
-                    placeholder="#"
-                    onkeyup="filter()"
-                )
     include ../components/nav
