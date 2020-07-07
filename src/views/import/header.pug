@@ -22,8 +22,10 @@ header.header
                 method="GET"
             )
                 input(
+                    id="value"
                     type="text"
                     name="tag"
                     placeholder="#"
+                    onkeyup="filter()"
                 )
     include ../components/nav

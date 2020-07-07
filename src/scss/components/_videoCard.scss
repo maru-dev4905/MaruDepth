@@ -56,6 +56,9 @@
                 }
                 grid-column: 9/13;
             }
+            .video__tag{
+                display: none;
+            }
             .video__img {
                 @include responsive("tablet"){
                     height: 150px;
