@@ -27,6 +27,5 @@
         @include flex($jusCon:space-around,$aliItem:center,$wrap:wrap);
         grid-column: 1/-1;
         width: 100%;
-        transition: 0.3s;
     }
 }

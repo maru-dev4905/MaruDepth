@@ -116,25 +116,8 @@ $summaryNum: 4;
 
 .useful__site {
     @include position($pos:relative);
+    @include videoCard;
+    @include flex($jusCon:space-around,$aliItem:center,$wrap:wrap);
+    width: 100%;
     grid-column: 1/-1;
-
-    .video__site__rows {
-        @include responsive("tablet") {
-            @include grid($tCol:repeat(6,1fr),$cGap:20px,$jusCon:center,$aliItem:center);
-        }
-        @include grid($tCol:repeat(12,1fr),$cGap:20px,$jusCon:center,$aliItem:center);
-        @include videoCard;
-        grid-column: 1/-1;
-        margin-bottom: 100px;
-        opacity: 0;
-    }
-    .video__site__rows.fade {
-        @include fade($kind:"fade-up");
-        position: relative;
-        @for $i from 1 to 6 {
-            &:nth-child(#{$i}) {
-                animation-delay: $i * 0.2s;
-            }
-        }
-    }
 }
