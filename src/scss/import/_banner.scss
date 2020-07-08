@@ -29,7 +29,7 @@
     @include responsive("iphone-l"){
         height: 70%;
     }
-    @include flex($dir:column,$jusCon:space-between,$aliSelf:center);
+    @include flex($dir:column,$jusCon:space-around,$aliSelf:center);
     @include border($radius:10px,$shadow:15px 30px 30px $opBlack-5);
     grid-column: 1/5;
     padding: 37px;
@@ -45,36 +45,5 @@
             line-height: 20px;
         }
         @include font($size:13px,$height:23px,$family:SCD4,$break:keep-all);
-    }
-    .banner__content__link{
-        @include responsive("tablet"){
-            flex-direction: column;
-        }
-        @include flex($dir:row,$jusCon:space-between,$aliItem:center);
-        width: 100%;
-        a{
-            @include flex($jusCon:center,$aliItem:center);
-            position: relative;
-            box-shadow: 2px 3px 5px $opBlack-3;
-            span{
-                @include position($pos:absolute,$z:10);
-                @include font($size:12px,$letter:1.1px,$transform:uppercase,$family:SCD4,$weight:600);
-            }
-            &:first-child{
-                @include responsive("tablet"){
-                    width: 100%;
-                    height: 35px;
-                    margin-bottom: 10px;
-                }
-                @include button($kind:"defaultBtn",$width:48%,$height:30px,$bgC:$purple,$color:$white-1);
-            }
-            &:last-child{
-                @include responsive("tablet"){
-                    width: 100%;
-                    height: 35px;
-                }
-                @include button($kind:"borderBtn",$width:48%,$height:30px,$bgC:$purple,$color:$black);
-            }
-        }
     }
 }
