@@ -112,11 +112,10 @@ const animation = function() {
             break;
         }  
         
-        while( winH > mainTop){
-            if(path == "search.html"){
-                break;
-            }else{
+        if(path == "Video.html" && "search.html"){
+            while( winH > mainTop){
                 videoTitle.classList.add("fade");
+                break;
             }
         }
     }

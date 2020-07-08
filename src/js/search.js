@@ -12,14 +12,18 @@ const search = function(){
     const initModule = function(){
         path = window.location.pathname.split("/").pop().toLowerCase();
 
-        params = (new URL(document.location)).searchParams;
-        value = params.get("searchInput").toUpperCase();
+        if(path == "search.html"){
+            params = (new URL(document.location)).searchParams;
+            value = params.get("searchInput").toUpperCase();
+        }
 
         _addEventHandlers();
     }
     
     const _addEventHandlers = function(){
-        window.addEventListener("load",show_video);
+        if(path == "search.html"){
+            window.addEventListener("load",show_video);
+        }
     }
 
     const show_video = function(){
