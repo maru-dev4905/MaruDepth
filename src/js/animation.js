@@ -113,8 +113,11 @@ const animation = function() {
         }  
         
         while( winH > mainTop){
-            videoTitle.classList.add("fade");
-            break;
+            if(path == "search.html"){
+                break;
+            }else{
+                videoTitle.classList.add("fade");
+            }
         }
     }
     return {

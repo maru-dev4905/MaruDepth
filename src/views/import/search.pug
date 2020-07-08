@@ -1,12 +1,10 @@
 include ../common/mixin
 include ../common/variable
-include ../components/input
 
 section.video
     .video__container
-        +sectionTitle("video","Video","Take a variety of useful information!")
+        h3.search__text
         .video__site
-                +input("filtering")
                 .video__error
                     img(src="./images/common/error-img.png", alt="error-img")
                 +video("flaticon"

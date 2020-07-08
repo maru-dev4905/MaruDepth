@@ -1,30 +1,32 @@
-const filter = function(){
-    let 
+const search = function(){
+    let
+        i,
+        path,
+        params,
         value,
-        tag,
-        name,
         item,
         tags,
-        i,
-        path;
-
-    const 
-        input = document.querySelector("#filtering--input");
+        tag,
+        name;
 
     const initModule = function(){
         path = window.location.pathname.split("/").pop().toLowerCase();
-        
+
+        params = (new URL(document.location)).searchParams;
+        value = params.get("searchInput").toUpperCase();
+
         _addEventHandlers();
     }
     
     const _addEventHandlers = function(){
-        if(path == "video.html"){
-            input.addEventListener("keyup", show_videoFilter);
-        }
+        window.addEventListener("load",show_video);
     }
-    
-    const show_videoFilter = function(){
-        value = input.value.toUpperCase();
+
+    const show_video = function(){
+        document.querySelector(".search__text").innerText = "#" + value;
+        _filter();
+    }
+    const _filter = function(){
         tags = document.querySelectorAll(".video__tag");
         item = document.querySelectorAll(".video__box");
 
@@ -41,8 +43,9 @@ const filter = function(){
             }
         }
     }
+
     return {
         init : initModule
     }
 }
-filter().init();
+search().init();

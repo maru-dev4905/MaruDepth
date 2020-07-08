@@ -1,5 +1,6 @@
 include ../common/mixin
 include ../common/variable
+include ../components/input
 
 header.header
     .header__info
@@ -17,9 +18,5 @@ header.header
             h1.logo
                 a(href="/index.html")
                     img(src="./images/logo/logo.png", alt="marudepth-logo")
-            input(
-                id="search--input"
-                type="text"
-                placeholder="#"
-            )
+            +input("search")
     include ../components/nav
