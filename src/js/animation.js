@@ -17,9 +17,7 @@ const animation = function() {
         summaryTop,
 
         // video
-        videoRows,
         videoBox,
-        videoTop,
         videoTitle,
 
         // kind

@@ -28,4 +28,13 @@
         grid-column: 1/-1;
         width: 100%;
     }
+    .video__error{
+        @include flex($jusCon:center,$aliItem:center);
+        display: none;
+        width: 100%;
+        img{
+            width: 100%;
+            max-width: 420px;
+        }
+    }
 }
