@@ -1,0 +1,44 @@
+mixin sectionTitle(sectionName, title, subText)
+    div(class= sectionName+"__title")
+        h2= title
+        p= subText
+
+mixin summaryCard(url, title, text)
+    .useful__summary__box
+        i.summary__box__icon
+            img(src= url, alt= title+"-icon")
+        .summary__box__content
+            strong= title
+            p= text
+
+mixin video(title, text, link, tag)
+    .video__box
+        span.video__tag= tag
+        img.video__img(src= "./images/common/"+title+"-thumbmnail.jpg", alt= title+"-thumbmnail")
+        .video__content
+            h4.video__name= title
+            p= text
+        a.video__link(href= link)
+
+mixin kindCard(link, img, kind, title, text)
+    article.kind__card
+        a.kind__card__img(href= link)
+            img.kind__img(src="./images/common/"+img+".png", alt= img)
+            .kind__img__text
+                span= kind
+        .kind__card__content
+            h3= title
+            p= text
+        .kind__card__link
+            a(href= link) Go to Site!
+
+mixin headerItem(kind, img, text, link)
+    li
+        if kind == "contact"
+            i
+                img(src="./images/icon/"+img+".png", alt=img+"-icon")
+            span= text
+        else if kind == "sns"
+            a(href= link target="_blank")
+                i
+                    img(src="./images/icon/"+img+".png", alt=img+"-icon")

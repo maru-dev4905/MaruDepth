@@ -1,0 +1,14 @@
+include ../common/mixin
+include ../common/variable
+
+section.kind
+    .kind__container
+        .kind__title
+            h2 Useful Site
+            p Don't abuse it and use it wisely!
+        .kind__content
+            +kindCard("./design.html","design-img","design",kindDesignTitle,kindDesignText)
+            +kindCard("./dev.html","programming-img","programming",kindDevTitle,kindDevText)
+            +kindCard("./useful.html","useful-img","useful",kindUsefulTitle,kindUsefulText)
+            
+    span.bgText useful

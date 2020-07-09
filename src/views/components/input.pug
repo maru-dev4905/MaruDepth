@@ -1,0 +1,14 @@
+include ../common/mixin
+include ../common/variable
+
+mixin input(kind)
+    if kind == "search"
+        form(
+            action="search.html"
+            method="GET"
+            name="searchForm"
+            )
+            input#search--input(type="text" name="searchInput" placeholder="#")
+            button(type="submit")
+    else if kind == "filtering"
+        input#filtering--input(type="text" placeholder="filter")

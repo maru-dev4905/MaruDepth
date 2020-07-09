@@ -1,0 +1,10 @@
+include ../common/mixin
+include ../common/variable
+
+nav.header__nav
+    ul.menu
+        li.menu__item
+            a(href="./index.html") HOME
+        each item in navigationText
+            li.menu__item
+                a(href="./"+item+".html")= item

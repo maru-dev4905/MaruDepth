@@ -1,0 +1,27 @@
+include ../common/mixin
+include ../common/variable
+
+.hamburger__content.hide
+    ul.hamburger__nav
+        li.menu__item
+            a(href="./index.html") HOME
+        each item in navigationText
+            li.hamburger__nav__item
+                a(href="./"+item+".html")= item
+    ul.hamburger__sns
+        +headerItem("sns","kakao","kakaotalk","https://open.kakao.com/o/sWmoRNBb")
+        +headerItem("sns","instagram","instagram","https://www.instagram.com/maru_dev49/?hl=ko")
+        +headerItem("sns","facebook","facebook","https://www.facebook.com/profile.php?id=100016921872562")
+        +headerItem("sns","github","github","https://github.com/maru-dev4905")
+    .menu__bg-1
+    .menu__bg-2
+    .menu__bg-3
+    .menu__bg-4
+button#menu--toggle
+    #hamburger
+        span
+        span
+        span
+    #cross
+        span
+        span

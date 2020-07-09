@@ -1,2 +1,49 @@
 @import "../common/mixin";
 @import "../common/variable";
+@import "../common/animation";
+@import "../components/button";
+
+.banner{
+    @include image($url:"../images/main/bg.jpg",$pos:top 20px,$size:cover,$rep:no-repeat);
+    @include flex($jusCon:center,$aliItem:flex-end);
+    @include position($pos:fixed,$l:0,$t:0,$z:91);
+    width: 100vw;
+    height: 100vh;
+    .banner__container{
+        @extend %bannerContainer;
+    }
+}
+.banner__content.fade{
+    @include fade($kind:"fade-up");
+    position: relative;
+    animation-delay:1.2s;
+}
+.banner__content{
+    @include responsive("tablet-l"){
+        grid-column: 1/6;   
+        height: 65%;
+    }
+    @include responsive("tablet"){
+        grid-column: 1/5;
+    }
+    @include responsive("iphone-l"){
+        height: 70%;
+    }
+    @include flex($dir:column,$jusCon:space-around,$aliSelf:center);
+    @include border($radius:10px,$shadow:15px 30px 30px $opBlack-5);
+    grid-column: 1/5;
+    padding: 37px;
+    background-color: $white-1;
+    height: 70%;
+    opacity: 0;
+    color: $black;
+    h4{
+        @include font($size:20px,$letter:2px,$family:TmonBold,$transform:uppercase);
+    }
+    p{
+        @include responsive("tablet-l"){
+            line-height: 20px;
+        }
+        @include font($size:13px,$height:23px,$family:SCD4,$break:keep-all);
+    }
+}

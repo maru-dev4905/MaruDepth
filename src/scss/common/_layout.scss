@@ -1,0 +1,72 @@
+@import "../common/mixin";
+@import "../common/variable";
+
+%flexLayout{
+    @include responsive("tablet-l"){width: 90%;}
+    @include flex(
+        $dir:row,
+        $jusCon:center,
+        $aliItem:center
+    );
+    width: 80%;
+    max-width: 1000px;
+    height: 100%;
+}
+
+%gridLayout{
+    @include responsive("tablet"){
+        grid-template-columns: repeat(6,1fr);
+        width: 90%;
+        padding: 80px 0;
+    }
+    @include responsive("iphone"){
+        padding: 70px 0;
+    }
+    @include grid(
+        $tCol:repeat(12,1fr),
+        $cGap:20px,
+        $jusCon:center,
+        $aliItem:center
+    );
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 0;
+    transition: 0.3s;
+}
+
+%headerContainer{
+    @extend %flexLayout;
+    @include flex($jusCon:space-between,$aliItem:center);
+}
+
+%bannerContainer{
+    @extend %gridLayout;
+    align-items: none;
+    height: calc(100% - 170px);
+    padding: 0;
+}
+
+%usefulContainer{
+    @extend %gridLayout;
+    padding: 120px 0;
+}
+
+%trendContainer{
+    @extend %gridLayout;
+    position: relative;
+}
+
+%kindContainer{
+    @extend %gridLayout;
+}
+
+%footerContainer{
+    @extend %gridLayout;
+    padding: 0;
+    height: 100%;
+}
+
+%videoContainer{
+    @extend %gridLayout;
+}
