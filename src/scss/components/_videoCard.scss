@@ -4,6 +4,9 @@
 @import "../components/button";
 
 @mixin videoCard {
+        .video__box.fade{
+            @include fade($kind:"fade-up");
+        }
         .video__box{
             @include responsive("iphone"){
                 width: 100%;

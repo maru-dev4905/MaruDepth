@@ -21,8 +21,12 @@ const search = function(){
     }
     
     const _addEventHandlers = function(){
-        if(path != "contact.html" && "index.html"){
+        if(path != "contact.html"){
             window.addEventListener("load",show_video);
+        }else if(path == "Video.html"){
+            return;
+        }else if(path == "index.html" && "/"){
+            return;
         }
     }
 
@@ -34,7 +38,7 @@ const search = function(){
             document.querySelector(".search__text").innerText = "design";
         }else if(path == "useful.html"){
             document.querySelector(".search__text").innerText = "useful";
-        }else{
+        }else if(path != "index.html"){
             document.querySelector(".search__text").innerText = "#" + value;
         }
 
@@ -80,6 +84,8 @@ const search = function(){
                     item[i].style.display = "none";
                 }
             }
+        }else if(path == "index.html"){
+            return;
         }else{
             for(i = 0; i < item.length; i++){
             
