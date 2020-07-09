@@ -103,6 +103,12 @@
             width: 100%;
             position: relative;
             button{
+                @include responsive("iphone"){
+                    right: 5%;
+                }
+                @include responsive("iphone-l"){
+                    right: 10%;
+                }
                 @include image($url:"../images/icon/search.png",$pos:center,$size:contain,$rep:no-repeat);
                 @include position($pos:absolute,$r:15%);
                 width: 26px;
