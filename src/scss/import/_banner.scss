@@ -21,20 +21,17 @@
 .banner__content{
     @include responsive("tablet-l"){
         grid-column: 1/6;   
-        height: 65%;
+        height: 55%;
     }
     @include responsive("tablet"){
         grid-column: 1/5;
-    }
-    @include responsive("iphone-l"){
-        height: 70%;
     }
     @include flex($dir:column,$jusCon:space-around,$aliSelf:center);
     @include border($radius:10px,$shadow:15px 30px 30px $opBlack-5);
     grid-column: 1/5;
     padding: 37px;
     background-color: $white-1;
-    height: 70%;
+    height: 50%;
     opacity: 0;
     color: $black;
     h4{
