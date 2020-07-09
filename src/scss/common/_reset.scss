@@ -31,6 +31,9 @@ body {
 	overflow-x: hidden;
 	font-family: brandon-grotesque,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Arial,sans-serif;
 }
+::-webkit-scrollbar{
+	display: none;
+}
 html{
 	@include responsive("tablet-l"){
 		font-size: 14px;
