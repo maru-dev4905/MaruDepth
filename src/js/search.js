@@ -21,29 +21,77 @@ const search = function(){
     }
     
     const _addEventHandlers = function(){
-        if(path == "search.html"){
+        if(path != "contact.html" && "index.html"){
             window.addEventListener("load",show_video);
         }
     }
 
     const show_video = function(){
-        document.querySelector(".search__text").innerText = "#" + value;
+
+        if(path == "dev.html"){
+            document.querySelector(".search__text").innerText = "develop";
+        }else if(path == "design.html"){
+            document.querySelector(".search__text").innerText = "design";
+        }else if(path == "useful.html"){
+            document.querySelector(".search__text").innerText = "useful";
+        }else{
+            document.querySelector(".search__text").innerText = "#" + value;
+        }
+
         _filter();
     }
     const _filter = function(){
         tags = document.querySelectorAll(".video__tag");
         item = document.querySelectorAll(".video__box");
 
-        for(i = 0; i < item.length; i++){
+        if(path == "dev.html"){
+            for(let i = 0; i < item.length; i++){
+                tag = tags[i].innerText.toUpperCase();
+                name = item[i].querySelector(".video__name").innerText.toUpperCase();
             
-            tag = tags[i].innerText.toUpperCase();
-            name = item[i].querySelector(".video__name").innerText.toUpperCase();
-
-            if(name.indexOf(value) > -1 || tag.indexOf(value) > -1){
-                item[i].style.display = "inline-flex";
+                if(tag.indexOf("DEV") > -1 ){
+                    item[i].style.display = "inline-flex";
+                }
+                else if(tag.indexOf("DEV") <= -1){
+                    item[i].style.display = "none";
+                }
             }
-            else if(name.indexOf(value) <= -1 || tag.indexOf(value) <= -1){
-                item[i].style.display = "none";
+        }else if(path == "design.html"){
+            for(let i = 0; i < item.length; i++){
+                tag = tags[i].innerText.toUpperCase();
+                name = item[i].querySelector(".video__name").innerText.toUpperCase();
+            
+                if(tag.indexOf("DESIGN") > -1 ){
+                    item[i].style.display = "inline-flex";
+                }
+                else if(tag.indexOf("DESIGN") <= -1){
+                    item[i].style.display = "none";
+                }
+            }
+        }else if(path == "useful.html"){
+            for(let i = 0; i < item.length; i++){
+                tag = tags[i].innerText.toUpperCase();
+                name = item[i].querySelector(".video__name").innerText.toUpperCase();
+            
+                if(tag.indexOf("USEFUL") > -1 ){
+                    item[i].style.display = "inline-flex";
+                }
+                else if(tag.indexOf("USEFUL") <= -1){
+                    item[i].style.display = "none";
+                }
+            }
+        }else{
+            for(i = 0; i < item.length; i++){
+            
+                tag = tags[i].innerText.toUpperCase();
+                name = item[i].querySelector(".video__name").innerText.toUpperCase();
+    
+                if(name.indexOf(value) > -1 || tag.indexOf(value) > -1){
+                    item[i].style.display = "inline-flex";
+                }
+                else if(name.indexOf(value) <= -1 || tag.indexOf(value) <= -1){
+                    item[i].style.display = "none";
+                }
             }
         }
     }
