@@ -15,6 +15,7 @@ const animation = function() {
         usefulTitle,
         usefulTitleTop,
         summaryTop,
+        usefulSite,
 
         // video
         videoBox,
@@ -44,6 +45,7 @@ const animation = function() {
             // useful section
             usefulBox = document.querySelectorAll(".useful__summary__box");
             usefulTitle = document.querySelector(".useful__title");
+            usefulSite = document.querySelector(".useful__site");
             summary = document.querySelector(".useful__summary");
 
             // kind section
@@ -84,6 +86,7 @@ const animation = function() {
             }
             while ( winH > usefulTitleTop ){
                 usefulTitle.classList.add("fade");
+                usefulSite.classList.add("fade");
                 break;
             }
             while( winH > kindTitleTop ){

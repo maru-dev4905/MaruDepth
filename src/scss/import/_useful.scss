@@ -114,6 +114,9 @@ $summaryNum: 4;
     opacity: 0;
 }
 
+.useful__site.fade{
+    @include fade($kind:"fade-up");
+}
 .useful__site {
     @include position($pos:relative);
     @include videoCard;

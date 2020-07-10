@@ -100,7 +100,7 @@
             width: 0;
             height: 0;
             background-color: transparent;
-            transition: $i * 0.3s ease-in-out;
+            transition: $i * 0.3s ease;
             top: 0;
             left: 0;
             z-index: $i * -1;
