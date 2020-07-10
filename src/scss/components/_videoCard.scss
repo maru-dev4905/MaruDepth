@@ -23,6 +23,9 @@
             transition: 0.3s;
             .video__tag{
                 display: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
             }
             .video__img {
                 @include responsive("tablet"){
