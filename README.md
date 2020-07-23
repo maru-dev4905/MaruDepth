@@ -20,4 +20,4 @@ No library used
 ### host link
 [Maru Depth] (https://maru-dev.000webhostapp.com/MaruDepth/index.html)
 
-![MaruDepth](https://user-images.githubusercontent.com/60824564/88265579-ba76c600-cd08-11ea-9375-0eb8e2f0e12a.jpg
+![MaruDepth](https://user-images.githubusercontent.com/60824564/88265579-ba76c600-cd08-11ea-9375-0eb8e2f0e12a.jpg)
