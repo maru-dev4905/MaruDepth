@@ -8,7 +8,6 @@ import bro from "gulp-bro";
 import babelify from "babelify";
 import autoprefixer from "gulp-autoprefixer";
 import gPug from "gulp-pug";
-import favicons from "gulp-favicons";
 
 sass.compiler = require("node-sass");
 
@@ -37,7 +36,7 @@ const routes = {
         dest: "build/fonts"
     },
     favicon:{
-        src: "src/favicon.png",
+        src: "src/favicons/*.{png,xml,ico,json}",
         dest: "build/favicons"
     }
 };
@@ -82,27 +81,7 @@ const images = () =>
 const favicon = () =>
         gulp
             .src(routes.favicon.src)
-            .pipe(
-                favicons({
-                    appName: 'MaruDepth',
-                    appShortName: 'Depth',
-                    appDescription: 'A useful video recommended by Maru',
-                    developerName: 'Maru',
-                    developerURL:'http://marudepth.com',
-                    background: '#5758BB',
-                    path:'favicons/',
-                    url:'http://marudepth.com/',
-                    display:'standalone',
-                    oriention:'portrait',
-                    scope:'/',
-                    start_url:'/?homescreen=1',
-                    version:'1.0',
-                    logging: false,
-                    html:'index.html',
-                    pipeHTML:true,
-                    replace:true
-                })
-            )
+            .pipe(image())
             .pipe(gulp.dest(routes.favicon.dest));
 
 const fonts = () =>
