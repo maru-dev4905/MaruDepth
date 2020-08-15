@@ -20,6 +20,7 @@ const PUB_SRC = "dest";
 const paths = {
     "dev" : {
          "js"  : DEV_SRC + "/js/*.js"
+        ,"json": DEV_SRC + "/js/*.json"
         ,"css" : DEV_SRC + "/css/depth.scss"
         ,"img" : DEV_SRC + "/images/**/**"
         ,"font": DEV_SRC + "/fonts/**"
@@ -28,6 +29,7 @@ const paths = {
     },
     "pub" : {
           "js"   : PUB_SRC + "/js"
+         ,"json" : PUB_SRC + "/js"
          ,"css"  : PUB_SRC + "/css"
          ,"img"  : PUB_SRC + "/images"
          ,"font" : PUB_SRC + "/fonts"
@@ -36,6 +38,7 @@ const paths = {
     },
     "watch" : {
           "js"   : DEV_SRC + "/js/*.js"
+         ,"json" : DEV_SRC + "/js/*.json"
          ,"css"  : DEV_SRC + "/css/**/**/*.scss"
          ,"img"  : DEV_SRC + "/images/**"
          ,"html" : DEV_SRC + "/html/**/**/*.pug"
@@ -53,6 +56,11 @@ const gulp_js = () =>
         )
         .pipe(concat("all.js"))
         .pipe(gulp.dest(paths.pub.js))
+
+const gulp_json = () =>
+    gulp
+        .src(paths.dev.json)
+        .pipe(gulp.dest(paths.pub.json))
 
 const gulp_css = () =>
     gulp
@@ -90,6 +98,7 @@ const gulp_fonts = () =>
         
 const gulp_watch = () =>
     gulp.watch(paths.watch.js, gulp_js);
+    gulp.watch(paths.watch.json, gulp_json);
     gulp.watch(paths.watch.css, gulp_css);
     gulp.watch(paths.watch.html, gulp_html);
     gulp.watch(paths.watch.img, gulp_image);
@@ -105,7 +114,7 @@ const clean = () => del([PUB_SRC + "/*"]);
 
 const prepare = gulp.series([clean, gulp_image, gulp_favicon, gulp_fonts]);
 
-const assets = gulp.series([gulp_html, gulp_css, gulp_js]);
+const assets = gulp.series([gulp_html, gulp_css, gulp_js, gulp_json]);
 
 const live = gulp.parallel([webserver, gulp_watch]);
 
