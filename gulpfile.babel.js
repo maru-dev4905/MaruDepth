@@ -1,103 +1,112 @@
 import gulp from "gulp";
 import del from "del";
-import ws from "gulp-webserver";
 import image from "gulp-imagemin";
 import sass from "gulp-sass";
-import csso from "gulp-csso";
 import bro from "gulp-bro";
 import babelify from "babelify";
 import autoprefixer from "gulp-autoprefixer";
 import gPug from "gulp-pug";
+import concat from "gulp-concat";
+import connect from "gulp-connect";
+import changed from "gulp-changed";
+import cleanCSS from "gulp-clean-css";
+import sourcemaps from "gulp-sourcemaps";
 
 sass.compiler = require("node-sass");
 
-const routes = {
-    pug: {
-        watch: "src/**/**/*.pug",
-        src: "src/*.pug",
-        dest:"build"
+const DEV_SRC = "src";
+const PUB_SRC = "dest";
+
+const paths = {
+    "dev" : {
+         "js"  : DEV_SRC + "/js/*.js"
+        ,"css" : DEV_SRC + "/css/depth.scss"
+        ,"img" : DEV_SRC + "/images/**/**"
+        ,"font": DEV_SRC + "/fonts/**"
+        ,"html": DEV_SRC + "/html/*.pug"
+        ,"favicons" : DEV_SRC + "/favicons/**"
     },
-    img:{
-        src: "src/images/**/**",
-        dest: "build/images"
+    "pub" : {
+          "js"   : PUB_SRC + "/js"
+         ,"css"  : PUB_SRC + "/css"
+         ,"img"  : PUB_SRC + "/images"
+         ,"font" : PUB_SRC + "/fonts"
+         ,"html" : PUB_SRC + "/"
+         ,"favicons" : PUB_SRC + "/favicons"
     },
-    sass:{
-        watch: "src/scss/**/**/*.scss",
-        src:"src/scss/depth.scss",
-        dest:"build/css"
-    },
-    js:{
-        watch: "src/js/**/*.js",
-        src: "src/js/*.js",
-        dest: "build/js"
-    },
-    font:{
-        src: "src/fonts/*.{ttf,otf}",
-        dest: "build/fonts"
-    },
-    favicon:{
-        src: "src/favicons/*.{png,xml,ico,json}",
-        dest: "build/favicons"
+    "watch" : {
+          "js"   : DEV_SRC + "/js/*.js"
+         ,"css"  : DEV_SRC + "/css/**/**/*.scss"
+         ,"img"  : DEV_SRC + "/images/**"
+         ,"html" : DEV_SRC + "/html/**/**/*.pug"
     }
-};
+}
 
-const view = () =>
+const gulp_js = () => 
     gulp
-        .src(routes.pug.src)
-        .pipe(gPug())
-        .pipe(gulp.dest(routes.pug.dest));
-
-const style = () =>
-    gulp
-        .src(routes.sass.src)
-        .pipe(sass().on("error",sass.logError))
-        .pipe(autoprefixer())
-        .pipe(csso())
-        .pipe(gulp.dest(routes.sass.dest));
-
-const clean = () => del(["build/"]);
-
-const webserver = () =>
-    gulp
-        .src("build/")
-        .pipe(ws({livereload:true, open:true}));
-
-const js = () =>
-    gulp
-        .src(routes.js.src)
+        .src(paths.dev.js)
         .pipe(bro({
             transform:[
                 babelify.configure({presets:["@babel/preset-env"]}),
                 ["uglifyify",{global:true}]
-            ]
-        })
-    ).pipe(gulp.dest(routes.js.dest));
+            ]})
+        )
+        .pipe(concat("all.js"))
+        .pipe(gulp.dest(paths.pub.js))
 
-const images = () =>
-        gulp
-            .src(routes.img.src)
-            .pipe(image())
-            .pipe(gulp.dest(routes.img.dest));
-const favicon = () =>
-        gulp
-            .src(routes.favicon.src)
-            .pipe(image())
-            .pipe(gulp.dest(routes.favicon.dest));
+const gulp_css = () =>
+    gulp
+        .src(paths.dev.css)
+        .pipe(sass().on("error",sass.logError))
+        .pipe(autoprefixer())
+        .pipe(sourcemaps.init())
+        .pipe(cleanCSS())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(paths.pub.css))
 
-const fonts = () =>
-        gulp
-            .src(routes.font.src)
-            .pipe(gulp.dest(routes.font.dest));
+const gulp_html = () =>
+    gulp
+        .src(paths.dev.html)
+        .pipe(gPug())
+        .pipe(gulp.dest(paths.pub.html))
 
-const watch = () =>
-        gulp.watch(routes.pug.watch, view);
-        gulp.watch(routes.sass.watch, style);
-        gulp.watch(routes.js.watch, js);
+const gulp_image = () =>
+    gulp
+        .src(paths.dev.img)
+        .pipe(changed(paths.pub.img))
+        .pipe(image())
+        .pipe(gulp.dest(paths.pub.img))
 
-const prepare = gulp.series([clean, images, favicon]);
+const gulp_favicon = () =>
+    gulp
+        .src(paths.dev.favicons)
+        .pipe(image())
+        .pipe(gulp.dest(paths.pub.favicons))
 
-const assets = gulp.series([view, style, js, fonts]);
+const gulp_fonts = () =>
+    gulp
+        .src(paths.dev.font)
+        .pipe(gulp.dest(paths.pub.font))
+        
+const gulp_watch = () =>
+    gulp.watch(paths.watch.js, gulp_js);
+    gulp.watch(paths.watch.css, gulp_css);
+    gulp.watch(paths.watch.html, gulp_html);
+    gulp.watch(paths.watch.img, gulp_image);
 
-const live = gulp.parallel([webserver, watch]);
+const webserver = () =>
+    connect.server({
+          root : PUB_SRC
+        , livereload : true
+        , port : 8001
+    })
 
-export const dev = gulp.series([prepare, assets, live]);
+const clean = () => del([PUB_SRC + "/*"]);
+
+const prepare = gulp.series([clean, gulp_image, gulp_favicon, gulp_fonts]);
+
+const assets = gulp.series([gulp_html, gulp_css, gulp_js]);
+
+const live = gulp.parallel([webserver, gulp_watch]);
+
+export const build = gulp.series([prepare, assets, live]);

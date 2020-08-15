@@ -14,7 +14,7 @@ mixin summaryCard(url, title, text)
 mixin video(title, text, link, tag)
     .video__box
         span.video__tag= tag
-        img.video__img(src= "./images/common/thumbnail/"+title+"-thumbnail.png", alt= title+"-thumbnail")
+        img.video__img(src= "../images/common/thumbnail/"+title+"-thumbnail.png", alt= title+"-thumbnail")
         .video__content
             h4.video__name= title
             p= text
@@ -23,7 +23,7 @@ mixin video(title, text, link, tag)
 mixin kindCard(link, img, kind, title, text)
     article.kind__card
         a.kind__card__img(href= link)
-            img.kind__img(src="./images/common/"+img+".png", alt= img)
+            img.kind__img(src="../images/common/"+img+".png", alt= img)
             .kind__img__text
                 span= kind
         .kind__card__content
@@ -36,9 +36,9 @@ mixin headerItem(kind, img, text, link)
     li
         if kind == "contact"
             i
-                img(src="./images/icon/"+img+".png", alt=img+"-icon")
+                img(src="../images/icon/"+img+".png", alt=img+"-icon")
             span= text
         else if kind == "sns"
             a(href= link target="_blank")
                 i
-                    img(src="./images/icon/"+img+".png", alt=img+"-icon")
+                    img(src="../images/icon/"+img+".png", alt=img+"-icon")
