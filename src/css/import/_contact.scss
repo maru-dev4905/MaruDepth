@@ -19,7 +19,7 @@
         background-size: cover;
         background-position: center center;
     }
-    @include image($url:"./images/common/contact-img.png",$size:contain,$pos:center 220px,$rep:no-repeat);
+    @include image($url:"../images/common/contact-img.png",$size:contain,$pos:center 220px,$rep:no-repeat);
     @include flex($jusCon:center,$aliItem:center);
     width: 50%;
     height: 100%;

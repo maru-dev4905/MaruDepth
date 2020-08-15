@@ -109,7 +109,7 @@
                 @include responsive("iphone-l"){
                     right: 10%;
                 }
-                @include image($url:"./images/icon/search.png",$pos:center,$size:contain,$rep:no-repeat);
+                @include image($url:"../images/icon/search.png",$pos:center,$size:contain,$rep:no-repeat);
                 @include position($pos:absolute,$r:15%);
                 width: 26px;
                 height: 26px;

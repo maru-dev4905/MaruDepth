@@ -4,7 +4,7 @@
 @import "../components/button";
 
 .banner{
-    @include image($url:"./images/main/bg.jpg",$pos:top 20px,$size:cover,$rep:no-repeat);
+    @include image($url:"../images/main/bg.jpg",$pos:top 20px,$size:cover,$rep:no-repeat);
     @include flex($jusCon:center,$aliItem:flex-end);
     @include position($pos:fixed,$l:0,$t:0,$z:91);
     width: 100vw;
