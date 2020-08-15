@@ -6,8 +6,8 @@ const search = function(){
         value,
         item,
         tags,
-        tag,
-        name;
+        pathName;
+    
 
     const initModule = function(){
         path = window.location.pathname.split("/").pop().toLowerCase();
@@ -21,11 +21,10 @@ const search = function(){
     }
     
     const _addEventHandlers = function(){
-        if(path != "contact.html"){
+        if(path == "Video.html" || path == "search.html"){
             window.addEventListener("load",show_video);
-        }else if(path == "Video.html"){
             return;
-        }else if(path == "index.html" && "/"){
+        }if(path == "index.html" && "/"){
             return;
         }
     }
@@ -38,68 +37,105 @@ const search = function(){
             document.querySelector(".search__text").innerText = "design";
         }else if(path == "useful.html"){
             document.querySelector(".search__text").innerText = "useful";
-        }else if(path != "index.html"){
-            document.querySelector(".search__text").innerText = "#" + value;
+        }else if(path == "search.html"){
         }
 
         _filter();
     }
+
+    const jsonFilter = function(pathName){
+        const json = require("../js/video.json");
+        let jsonItem = [];
+        for(item in json){
+            for(let i = 0; i < json[item].length; i++){
+
+                json[item][i].siteTags.forEach(tags => {
+                    tags = tags.toUpperCase();
+
+                    if(tags === pathName){
+                        jsonItem.push(json[item][i]);
+                    }else if(tags === pathName){
+                        jsonItem.push(json[item][i]);
+                    }else if(tags === pathName){
+                        jsonItem.push(json[item][i]);
+                    }
+                });
+            }
+        }
+        return jsonItem;
+    }
+
     const _filter = function(){
+
+        const span = document.createElement("span");
+        span.classList.add("video__tag");
+
         tags = document.querySelectorAll(".video__tag");
         item = document.querySelectorAll(".video__box");
 
         if(path == "dev.html"){
-            for(let i = 0; i < item.length; i++){
-                tag = tags[i].innerText.toUpperCase();
-                name = item[i].querySelector(".video__name").innerText.toUpperCase();
-            
-                if(tag.indexOf("DEV") > -1 ){
-                    item[i].style.display = "inline-flex";
-                }
-                else if(tag.indexOf("DEV") <= -1){
-                    item[i].style.display = "none";
-                }
-            }
+            pathName = "DEV";
+            let devJson = jsonFilter(pathName);
+
+            devJson.forEach(devItem => {
+                add_site_card(devItem.siteName, devItem.siteText, devItem.siteLink);
+            });
+
         }else if(path == "design.html"){
-            for(let i = 0; i < item.length; i++){
-                tag = tags[i].innerText.toUpperCase();
-                name = item[i].querySelector(".video__name").innerText.toUpperCase();
+            pathName = "DESIGN";
             
-                if(tag.indexOf("DESIGN") > -1 ){
-                    item[i].style.display = "inline-flex";
-                }
-                else if(tag.indexOf("DESIGN") <= -1){
-                    item[i].style.display = "none";
-                }
-            }
+            let designJson = jsonFilter(pathName);
+            designJson.forEach(designItem => {
+                add_site_card(designItem.siteName, designItem.siteText, designItem.siteLink);
+            });
         }else if(path == "useful.html"){
-            for(let i = 0; i < item.length; i++){
-                tag = tags[i].innerText.toUpperCase();
-                name = item[i].querySelector(".video__name").innerText.toUpperCase();
+            pathName = "USEFUL";
             
-                if(tag.indexOf("USEFUL") > -1 ){
-                    item[i].style.display = "inline-flex";
-                }
-                else if(tag.indexOf("USEFUL") <= -1){
-                    item[i].style.display = "none";
-                }
-            }
+            let usefulJson = jsonFilter(pathName);
+            usefulJson.forEach(usefulItem => {
+                add_site_card(usefulItem.siteName, usefulItem.siteText, usefulItem.siteLink);
+            });
         }else if(path == "index.html"){
             return;
-        }else{
-            for(i = 0; i < item.length; i++){
-            
-                tag = tags[i].innerText.toUpperCase();
-                name = item[i].querySelector(".video__name").innerText.toUpperCase();
-    
-                if(name.indexOf(value) > -1 || tag.indexOf(value) > -1){
-                    item[i].style.display = "inline-flex";
-                }
-                else if(name.indexOf(value) <= -1 || tag.indexOf(value) <= -1){
-                    item[i].style.display = "none";
-                }
-            }
+        }else if(path == "search.html"){
+            // document.querySelector(".search__text").innerText = "#" + value;
+            // searchText.innerText = "검색 정보가 없습니다."
         }
+    }
+    const add_site_card = function(name,text,link){
+        const siteGroup = document.querySelector(".video__site");
+        
+        const box = document.createElement("div");
+        box.classList.add("video__box");
+        
+        const a = document.createElement("a");
+        a.classList.add("video__link");
+        a.setAttribute("target","_blank");
+
+        const boxContent = document.createElement("div");
+        boxContent.classList.add("video__content");
+
+        const siteName = document.createElement("h4");
+        siteName.classList.add("video__name");
+
+        const siteText = document.createElement("p");
+
+        const img = document.createElement("img");
+        img.classList.add("video__img");
+        
+        img.setAttribute("src","../images/common/thumbnail/"+name+"-thumbnail.png");
+        img.setAttribute("alt",name+"-thumbnail");
+        a.setAttribute("href",link);
+        siteName.innerText = name;
+        siteText.innerText = text;
+        
+        boxContent.appendChild(siteName);
+        boxContent.appendChild(siteText);
+        box.appendChild(img);
+        box.appendChild(boxContent);
+        box.appendChild(a);
+        
+        siteGroup.appendChild(box);
     }
 
     return {
