@@ -101,11 +101,11 @@
             height: 100%;
             margin: 20px 0;
             h3 {
-                @include font($size:20px,$letter:1.2px,$family:SCD8);
+                @include font($size:20px,$letter:1.2px,$weight:600);
                 padding-bottom: 10px;
             }
             p {
-                @include font($size:14px,$letter:0.5px,$height:25px,$family:SCD4);
+                @include font($size:15px,$letter:0.5px,$height:25px);
             }
         }
         .kind__card__link {

@@ -4,7 +4,7 @@
 @import "../components/button";
 
 .banner{
-    @include image($url:"./images/main/bg.jpg",$pos:top 20px,$size:cover,$rep:no-repeat);
+    @include image($url:"../images/main/bg.jpg",$pos:top 20px,$size:cover,$rep:no-repeat);
     @include flex($jusCon:center,$aliItem:flex-end);
     @include position($pos:fixed,$l:0,$t:0,$z:91);
     width: 100vw;
@@ -29,18 +29,18 @@
     @include flex($dir:column,$jusCon:space-around,$aliSelf:center);
     @include border($radius:10px,$shadow:15px 30px 30px $opBlack-5);
     grid-column: 1/5;
-    padding: 37px;
+    padding: 10%;
     background-color: $white-1;
     height: 50%;
     opacity: 0;
     color: $black;
-    h4{
-        @include font($size:20px,$letter:2px,$family:TmonBold,$transform:uppercase);
+    h2{
+        @include font($size:30px,$letter:2px,$transform:uppercase,$weight:bold,$family:'Noto Sans');
     }
     p{
         @include responsive("tablet-l"){
             line-height: 20px;
         }
-        @include font($size:13px,$height:23px,$family:SCD4,$break:keep-all);
+        @include font($size:16px,$height:26px,$break:keep-all,$weight:400);
     }
 }

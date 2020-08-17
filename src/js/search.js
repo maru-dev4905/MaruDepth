@@ -11,7 +11,6 @@ const search = function(){
 
     const initModule = function(){
         path = window.location.pathname.split("/").pop().toLowerCase();
-
         if(path == "search.html"){
             params = (new URL(document.location)).searchParams;
             value = params.get("searchInput").toUpperCase();
@@ -21,7 +20,11 @@ const search = function(){
     }
     
     const _addEventHandlers = function(){
-        if(path == "Video.html" || path == "search.html"){
+        if( path === "Video.html" || 
+            path === "search.html" ||
+            path === "dev.html" ||
+            path === "useful.html" ||
+            path === "design.html"){
             window.addEventListener("load",show_video);
             return;
         }if(path == "index.html" && "/"){
@@ -39,7 +42,6 @@ const search = function(){
             document.querySelector(".search__text").innerText = "useful";
         }else if(path == "search.html"){
         }
-
         _filter();
     }
 
@@ -72,7 +74,6 @@ const search = function(){
 
         tags = document.querySelectorAll(".video__tag");
         item = document.querySelectorAll(".video__box");
-
         if(path == "dev.html"){
             pathName = "DEV";
             let devJson = jsonFilter(pathName);
@@ -123,7 +124,7 @@ const search = function(){
         const img = document.createElement("img");
         img.classList.add("video__img");
         
-        img.setAttribute("src","../images/common/thumbnail/"+name+"-thumbnail.png");
+        img.setAttribute("src","./images/common/thumbnail/"+name+"-thumbnail.png");
         img.setAttribute("alt",name+"-thumbnail");
         a.setAttribute("href",link);
         siteName.innerText = name;

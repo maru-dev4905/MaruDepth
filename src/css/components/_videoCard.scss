@@ -54,11 +54,11 @@
                 background-color: $white-2;
                 padding: 0 5%;
                 h4 {
-                    @include font($size:16px,$letter:2px,$family:TmonBold,$align:center,$transform:uppercase);
+                    @include font($size:19px,$letter:2px,$align:center,$transform:uppercase,$weight:600);
                     margin-top: 25px;
                 }
                 p {
-                    @include font($size:13px,$letter:0.3px,$family:SCD3,$align:center,$color:$gray,$height:20px,$break:keep-all);
+                    @include font($size:15px,$letter:0.3px,$align:center,$color:$gray,$height:20px,$break:keep-all);
                     margin-top: 10px;
                 }
             }
