@@ -84,10 +84,9 @@
         @include flex($dir:row,$jusCon:center,$aliItem:center);
         @include font($size:15px,$letter:0.5px,$color:$gray,$family:SCD5);
         opacity: 0.5;
-        &::before{
+        span{
             @include image($url:"../images/icon/arrow-black.png",$pos:center,$size:10px,$rep:no-repeat);
             @include border($border: 1.8px solid $gray, $radius:50%);
-            content: "";
             width: 20px;
             height: 20px;
             margin-right: 10px;
@@ -95,7 +94,7 @@
         }
         &:hover{
             opacity: 1;
-            &::before{
+            span{
                 opacity: 1;
             }
         }

@@ -8,13 +8,8 @@
     height: auto;
     outline: 1px solid $white-2;
     outline-offset: -15px;
-    &:before{
-        @include position($pos:absolute,$l:0,$t:0,$z:-1);
-        @include image($url:"../images/common/trend-bg.jpg",$size:cover,$rep:no-repeat,$pos:center);
-        content: "";
-        width: 100%;
-        height: 100%;
-    }
+    @include image($url:"../images/common/trend-bg.jpg",$size:cover,$rep:no-repeat,$pos:center);
+
     .trend__container{
         @extend %trendContainer;
     }

@@ -1,10 +1,12 @@
 const showVideo = function(){
     let
         path,
+        localPath,
         tags;
 
     const initModule = function(){
         path = window.location.pathname.split("/").pop().toLowerCase();
+        localPath = window.location.href.indexOf("localhost");
         
         if(path == "video.html"){
             _addEventHandlers();
@@ -42,7 +44,7 @@ const showVideo = function(){
                 const img = document.createElement("img");
                 img.classList.add("video__img");
                 
-                img.setAttribute("src","../images/common/thumbnail/"+name+"-thumbnail.png");
+                img.setAttribute("src","./images/common/thumbnail/"+name+"-thumbnail.png");
                 img.setAttribute("alt",name+"-thumbnail");
                 a.setAttribute("href",link);
                 siteName.innerText = name;
