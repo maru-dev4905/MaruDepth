@@ -60,6 +60,7 @@ table {
 }
 a{
 	text-decoration: none;
+	cursor: pointer;
 	&:focus{
 		outline: none;
 		border: none;
