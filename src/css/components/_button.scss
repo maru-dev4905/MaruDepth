@@ -67,15 +67,15 @@
         @include border($radius:50%,$border: 1.5px solid $bgC,$shadow:2px 3px 5px $opBlack-3);
         background-color: $white-2;
         @if $bgC == $purple{
-            @include image($url:"../images/icon/next-purple.png",$size:20px,$rep:no-repeat,$pos:center);
+            @include image($url:"./images/icon/next-purple.png",$size:20px,$rep:no-repeat,$pos:center);
             &:hover{
-                background-image: url("../images/icon/next-white.png");
+                background-image: url("./images/icon/next-white.png");
                 background-color: $bgC;
             }
         }@else if $bgC == $black{
-            @include image($url:"../images/icon/next-black.png",$size:20px,$rep:no-repeat,$pos:center);
+            @include image($url:"./images/icon/next-black.png",$size:20px,$rep:no-repeat,$pos:center);
             &:hover{
-                background-image: url("../images/icon/next-white.png");
+                background-image: url("./images/icon/next-white.png");
                 background-color: $bgC;
             }
         }
@@ -85,7 +85,7 @@
         @include font($size:15px,$letter:0.5px,$color:$gray,$family:SCD5);
         opacity: 0.5;
         &::before{
-            @include image($url:"../images/icon/arrow-black.png",$pos:center,$size:10px,$rep:no-repeat);
+            @include image($url:"./images/icon/arrow-black.png",$pos:center,$size:10px,$rep:no-repeat);
             @include border($border: 1.8px solid $gray, $radius:50%);
             content: "";
             width: 20px;
