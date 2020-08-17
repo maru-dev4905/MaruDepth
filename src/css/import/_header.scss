@@ -152,7 +152,7 @@
             
             a{
                 @include flex($jusCon:center,$aliItem:center);
-                @include font($size:15px,$color:$white-1,$align:center,$letter:1.2px,$family:SCD4);
+                @include font($size:16px,$color:$white-1,$align:center,$letter:1.2px, $weight:400);
                 position: relative;
                 padding: 0 20px;
                 width: 100%;

@@ -3,7 +3,6 @@
 @import "../common/animation";
 @import "../components/button";
 @import "../components/title";
-@import "../components/bgText";
 @import "../components/videoCard";
 
 $summaryNum: 4;
@@ -44,7 +43,6 @@ $summaryNum: 4;
             right: auto;
             transform: translateX(-50%);
         }
-        @include bgText($t:40%,$r:-45px);
     }
 }
 .useful__summary {
@@ -76,12 +74,12 @@ $summaryNum: 4;
         .summary__box__content {
             padding: 0 15px;
             strong {
-                @include font($size:16px,$transform:uppercase,$family:TmonBold,$letter:1.2px);
+                @include font($size:17px,$transform:uppercase,$letter:1.2px,$weight:600);
                 display: block;
                 margin-bottom: 10px;
             }
             p {
-                @include font($size:13px,$height:24px,$family:SCD4,$break:keep-all,$color:$gray);
+                @include font($size:14px,$height:24px,$break:keep-all,$color:$gray);
             }
         }
         &:nth-child(1) {

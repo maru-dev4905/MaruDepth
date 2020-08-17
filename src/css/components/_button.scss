@@ -70,7 +70,7 @@
             @include image($url:"../images/icon/next-purple.png",$size:20px,$rep:no-repeat,$pos:center);
             &:hover{
                 background-image: url("../images/icon/next-white.png");
-                background-color: $bgC;
+                background-color: $lightPurple;
             }
         }@else if $bgC == $black{
             @include image($url:"../images/icon/next-black.png",$size:20px,$rep:no-repeat,$pos:center);

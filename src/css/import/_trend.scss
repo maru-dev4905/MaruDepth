@@ -3,12 +3,16 @@
 @import "../components/button";
 
 .trend{
+    @include responsive("tablet"){
+        outline-offset: -10px;
+    }
     @include position($pos:relative,$z:15);
     @include image($url:"../images/common/trend-bg.jpg",$size:cover,$rep:no-repeat,$pos:center);
     width: 100vw;
     height: auto;
     outline: 1px solid $white-2;
     outline-offset: -15px;
+    padding: 15px;
 
     .trend__container{
         @extend %trendContainer;
