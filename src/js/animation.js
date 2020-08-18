@@ -114,15 +114,26 @@ const animation = function() {
             bannerContent.classList.add("fade");
             break;
         }  
-    
-        if(path == "dev.html" ||
-                path == "design.html" ||
-                path == "useful.html" ||
-                path == "Video.html" ||
-                path == "search.html"){
-
-            main.classList.add("up");
-            videoTitle.classList.add("fade");
+        switch (path) {
+            case "dev.html":
+                main.classList.add("up");
+                break;
+            case "design.html":
+                main.classList.add("up");
+                break;
+            case "useful.html":
+                main.classList.add("up");
+                break;
+            case "Video.html":
+                main.classList.add("up");
+                videoTitle.classList.add("fade");
+                break;
+            case "search.html":
+                main.classList.add("up");
+                videoTitle.classList.add("fade");
+                break;
+            default:
+                break;
         }
     }
     return {

@@ -14,7 +14,6 @@ const search = function(){
             params = (new URL(document.location)).searchParams;
             value = params.get("searchInput").toUpperCase();
         }
-
         _addEventHandlers();
     }
     
@@ -40,6 +39,7 @@ const search = function(){
         }else if(path == "useful.html"){
             document.querySelector(".search__text").innerText = "useful";
         }else if(path == "search.html"){
+            document.querySelector(".search__text").innerText = value;
         }
         _filter();
     }
@@ -50,14 +50,18 @@ const search = function(){
         for(item in json){
             for(let i = 0; i < json[item].length; i++){
 
+                let name = [];
+                name.push(json[item][i].siteName);
+                
                 json[item][i].siteTags.forEach(tags => {
                     tags = tags.toUpperCase();
-
                     if(tags === pathName){
                         jsonItem.push(json[item][i]);
-                    }else if(tags === pathName){
-                        jsonItem.push(json[item][i]);
-                    }else if(tags === pathName){
+                    }
+                });
+                name.forEach(names => {
+                    names = names.toUpperCase();
+                    if(names === pathName){
                         jsonItem.push(json[item][i]);
                     }
                 });
@@ -67,7 +71,6 @@ const search = function(){
     }
 
     const _filter = function(){
-
         const span = document.createElement("span");
         span.classList.add("video__tag");
 
@@ -111,6 +114,20 @@ const search = function(){
                         usefulItem.siteTags
                     )
                 });
+                break;
+            case "search.html":
+                pathName = "SEARCH";
+
+                let searchJson = jsonFilter(value);
+                searchJson.forEach(searchItem => {
+                    add_site_card(
+                        searchItem.siteName,
+                        searchItem.siteText,
+                        searchItem.siteLink,
+                        searchItem.siteTags
+                    )
+                })
+                break;
             default:
                 break;
         }
