@@ -46,6 +46,6 @@
 }
 .search__text{
     @include title;
-    @include font($size:2.5rem,$letter:1.2px, $family:TmonBold);
+    @include font($size:3rem,$letter:1.2px,$weight:700);
     margin-bottom: 30px;
 }

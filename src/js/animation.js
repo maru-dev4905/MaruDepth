@@ -114,12 +114,15 @@ const animation = function() {
             bannerContent.classList.add("fade");
             break;
         }  
-        
-        if(path == "Video.html" && "search.html"){
-            while( winH > mainTop){
-                videoTitle.classList.add("fade");
-                break;
-            }
+    
+        if(path == "dev.html" ||
+                path == "design.html" ||
+                path == "useful.html" ||
+                path == "Video.html" ||
+                path == "search.html"){
+
+            main.classList.add("up");
+            videoTitle.classList.add("fade");
         }
     }
     return {
