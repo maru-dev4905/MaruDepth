@@ -1,6 +1,5 @@
 const search = function(){
     let
-        i,
         path,
         params,
         value,
@@ -74,44 +73,59 @@ const search = function(){
 
         tags = document.querySelectorAll(".video__tag");
         item = document.querySelectorAll(".video__box");
-        if(path == "dev.html"){
-            pathName = "DEV";
-            let devJson = jsonFilter(pathName);
-
-            devJson.forEach(devItem => {
-                add_site_card(devItem.siteName, devItem.siteText, devItem.siteLink);
-            });
-
-        }else if(path == "design.html"){
-            pathName = "DESIGN";
+        switch (path) {
+            case "dev.html":
+                pathName = "DEV";
+                let devJson = jsonFilter(pathName);
+                devJson.forEach(devItem => {
+                    add_site_card(
+                        devItem.siteName,
+                        devItem.siteText,
+                        devItem.siteLink,
+                        devItem.siteTags
+                    )
+                });
+                break;
+            case "design.html":
+                pathName = "DESIGN";
             
-            let designJson = jsonFilter(pathName);
-            designJson.forEach(designItem => {
-                add_site_card(designItem.siteName, designItem.siteText, designItem.siteLink);
-            });
-        }else if(path == "useful.html"){
-            pathName = "USEFUL";
-            
-            let usefulJson = jsonFilter(pathName);
-            usefulJson.forEach(usefulItem => {
-                add_site_card(usefulItem.siteName, usefulItem.siteText, usefulItem.siteLink);
-            });
-        }else if(path == "index.html"){
-            return;
-        }else if(path == "search.html"){
-            // document.querySelector(".search__text").innerText = "#" + value;
-            // searchText.innerText = "검색 정보가 없습니다."
+                let designJson = jsonFilter(pathName);
+                designJson.forEach(designItem => {
+                    add_site_card(
+                        designItem.siteName, 
+                        designItem.siteText, 
+                        designItem.siteLink,
+                        designItem.siteTags
+                    )
+                });
+                break;
+            case "useful.html":
+                pathName = "USEFUL";
+                
+                let usefulJson = jsonFilter(pathName);
+                usefulJson.forEach(usefulItem => {
+                    add_site_card(
+                        usefulItem.siteName, 
+                        usefulItem.siteText, 
+                        usefulItem.siteLink,
+                        usefulItem.siteTags
+                    )
+                });
+            default:
+                break;
         }
     }
-    const add_site_card = function(name,text,link){
+    const add_site_card = function(name,text,link,tags){
         const siteGroup = document.querySelector(".video__site");
-        
         const box = document.createElement("div");
         box.classList.add("video__box");
         
         const a = document.createElement("a");
         a.classList.add("video__link");
         a.setAttribute("target","_blank");
+
+        const span = document.createElement("span");
+        span.classList.add("video__tag");
 
         const boxContent = document.createElement("div");
         boxContent.classList.add("video__content");
@@ -127,11 +141,13 @@ const search = function(){
         img.setAttribute("src","./images/common/thumbnail/"+name+"-thumbnail.png");
         img.setAttribute("alt",name+"-thumbnail");
         a.setAttribute("href",link);
+        span.innerText = tags;
         siteName.innerText = name;
         siteText.innerText = text;
         
         boxContent.appendChild(siteName);
         boxContent.appendChild(siteText);
+        box.appendChild(span);
         box.appendChild(img);
         box.appendChild(boxContent);
         box.appendChild(a);
