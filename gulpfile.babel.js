@@ -54,7 +54,7 @@ const gulp_js = () =>
                 ["uglifyify",{global:true}]
             ]})
         )
-        // .pipe(concat("all.js"))
+        .pipe(concat("all.js"))
         .pipe(gulp.dest(paths.pub.js))
 
 const gulp_json = () =>
