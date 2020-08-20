@@ -41,7 +41,7 @@ const animation = function() {
         bannerContent = document.querySelector(".banner__content");
         menuItem = document.querySelectorAll(".menu__item");
         
-        if(path == "index.html" && "/"){
+        if(path == "index.html" || path == "/" || path == ""){
             // useful section
             usefulBox = document.querySelectorAll(".useful__summary__box");
             usefulTitle = document.querySelector(".useful__title");
@@ -70,7 +70,7 @@ const animation = function() {
     
     const _checkPosition = function() {                
 
-        if(path == "index.html" && "/"){
+        if(path == "index.html" || path == "/" || path == ""){
             
             summaryTop = summary.getBoundingClientRect().top;
             usefulTitleTop = usefulTitle.getBoundingClientRect().top;

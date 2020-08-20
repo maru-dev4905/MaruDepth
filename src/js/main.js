@@ -35,4 +35,12 @@ window.addEventListener("load", () => {
     }else{
         return false;
     }
+
+    
+});
+const submitBtn = document.querySelector("#submit--btn");
+const alertMessage = "지금은 사용하실 수 없습니다. 문의사항이 있다면 메일로 보내주세요."
+
+submitBtn.addEventListener("click",()=>{
+    alert(alertMessage);
 });

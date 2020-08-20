@@ -109,7 +109,7 @@
     @include position($pos:fixed,$t:0,$l:0);
     width: 100vw;
     height: 100vh;
-    transition: 0.5s ease-out;
+    transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1);
     [class*="menu__bg"] {
         @include position($pos:absolute,$t:0,$l:0);
         transform: skew(-45deg);
@@ -121,7 +121,7 @@
             position: relative;
             @for $i from 1 to $menuNum {
                 &:nth-child(#{$i}){
-                    animation-delay: $i * 0.25s;
+                    animation-delay: $i * 0.20s;
                 }
             }
         }

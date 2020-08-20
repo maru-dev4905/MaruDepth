@@ -15,16 +15,16 @@ section.contact
             method="POST"
         )
             .contact__content__row
-                select#select-kind(name="kind")
+                select#select-kind(name="kind" disabled)
                     option(value="Video") Video
                     option(value="Inquiry") Inquiry
                     option(value="Errors") Errors
                     option(value="Other") Other
             .contact__content__column
-                input(type="text" placeholder="name")
-                input(type="text" placeholder="email")
+                input(type="text" placeholder="name" disabled)
+                input(type="text" placeholder="email" disabled)
             .contact__content__row
-                textarea#textarea-text(name="text", cols="50", rows="10" placeholder="text")
+                textarea#textarea-text(name="text", cols="50", rows="10" placeholder="text" disabled)
             .contact__content__row
-                button(type="submit" name="contact-button")
+                button#submit--btn(type="button" name="contact-button")
                     span send

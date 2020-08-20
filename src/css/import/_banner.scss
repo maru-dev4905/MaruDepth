@@ -40,6 +40,7 @@
     p{
         @include responsive("tablet-l"){
             line-height: 20px;
+            font-size: 14px;
         }
         @include font($size:16px,$height:26px,$break:keep-all,$weight:400);
     }

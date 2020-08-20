@@ -14,7 +14,7 @@
         height: auto;
     }
     @include flex($dir:column,$jusCon:center,$aliItem:center);
-    @include position($pos:fixed,$t:0,$z:93);
+    @include position($pos:fixed,$t:0,$z:92);
     width: 100vw;
     height: 225px;
     i img{

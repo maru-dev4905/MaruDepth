@@ -25,8 +25,8 @@
     }
     @include flex($dir:column,$jusCon:center);
     grid-column: 1/8;
-    font-family: TmonBold;
     height: 100%;
+    font-weight: bold;
     p{
         @include font($size:2rem,$letter:1px,$color:$white-2);
         text-shadow: 5px 5px 5px $opBlack-5;
