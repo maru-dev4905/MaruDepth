@@ -1,179 +1,59 @@
-@import "../common/mixin";
-@import "../common/variable";
-@import "../common/animation";
-@import "../components/input";
+header#header{
+    @include grid($tCol:repeat(12,1fr),$cGap:30px);
+    width: 100%;
+}
 
-.header.show{
-    animation: headerShow 0.3s forwards;
-}
-.header.hide{
-    animation: headerHide 0.3s forwards;
-}
-.header{
-    @include responsive("tablet"){
-        height: auto;
-    }
-    @include flex($dir:column,$jusCon:center,$aliItem:center);
-    @include position($pos:fixed,$t:0,$z:93);
-    width: 100vw;
-    height: 225px;
-    i img{
-        width: 24px;
-    }
-}
-.header__info{
-    @include responsive("tablet"){
-        display: none;
-    }
-    @include flex($jusCon:center,$aliItem:center);
-    width: 100%;
-    height: 50px;
-    background-color: $white-2;
-    border-bottom: 1px solid $lightGray;
-    .header__info__container{
-        @extend %headerContainer;
-    }
-    .header__contact{
-        display: flex;
-        li{
-            @include flex($jusCon:center,$aliItem:center);
-            height: 100%;
-            margin-right: 35px;
-            i{
-                margin-right: 10px;
-            }
-            span{
-                @include font($size:12px,$letter:0.5px,$color:$darkGray,$family:SCD5);
-                height: 100%;
+// nav sns
+nav#snb-sns{
+    grid-column: 1/-1;
+    background-color: $black;
+    padding: 10px 0;
+
+    ul{
+        @include flex($jusCon:flex-end);
+        margin-right: 80px;
+    
+        a{
+            padding: 0 12px;
+            opacity: 0.5;
+            transition: 0.2s;
+        
+            &:hover{
+                opacity: 1;
             }
         }
-    }
-    .header__sns{
-        @include border($border-l:0.5px solid $opBlack-1,$border-r:0.5px solid $opBlack-1);
-        display: flex;
-        height: 100%;
-        padding: 0 10px;
-        li{
-            height: 100%;
-            width: 50px;
-            margin-right: 5%;
-            &:last-child{
-                margin-right: 0;
-            }
-            a{
-                display: block;
-                width: 100%;
-                height: 100%;
-                opacity: 0.4;
-                transition: 0.3s;
-                &:hover{
-                    opacity: 1;
-                }
-                i{
-                    @include flex($jusCon:center,$aliItem:center);
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-        }
-    }
-}
-.header__surf{
-    @include flex($jusCon:center,$aliItem:center);
-    @include border($border-b:1px solid $lightGray,$shadow:0 10px 10px $opBlack-1);
-    width: 100%;
-    height: 120px;
-    background-color: $white-1;
-    .header__surf__container{
-        @extend %headerContainer;
-        .logo{
-            img{
-                @include responsive("iphone-l"){
-                    width: 52px;
-                    margin-right: 10px;
-                }
-                @include responsive("tablet"){
-                    width: 62px;
-                }
-                width: 72px;
-            }
-        }
-        form{
-            @include flex($jusCon:center,$aliItem:center);
-            width: 100%;
-            position: relative;
-            button{
-                @include responsive("iphone"){
-                    right: 5%;
-                }
-                @include responsive("iphone-l"){
-                    right: 10%;
-                }
-                @include image($url:"./images/icon/search.png",$pos:center,$size:contain,$rep:no-repeat);
-                @include position($pos:absolute,$r:15%);
-                width: 26px;
-                height: 26px;
-                opacity: 0.7;
-            }
-        }
-        input{
-            @include responsive("iphone-l"){
-                @include input($kind:"search",$width:100%,$height:50px,$padding: 0 20px);
-            }
-            @include input($kind:"search",$width:80%,$height:50px,$padding: 0 40px);
+
+        img{
+            width: 20px;
         }
     }
 }
 
-.header__nav{
-    @include responsive("iphone"){
-        display: none;
+#header-content{
+    @include flex($jusCon:space-between,$aliItem:center);
+    grid-column: 1/-1;
+    padding: 25px 20px;
+    border-bottom: 1px solid #e3e3e3;
+
+    h1.header-logo img{
+        width: 456px;
     }
-    @include border($radius:0 0 10px 10px,$shadow: 0 3px 3px $opBlack-2);
-    background-color: $purple;
-    max-width: 80%;
-    width: 1000px;
-    .menu{
-        @include flex($jusCon:space-around,$aliItem:center);
-        height: 55px;
-        .menu__item.fade{
-            @include fade($kind:"fade-left");
-            position: relative;
-            @for $i from 1 to $menuNum {
-                &:nth-child(#{$i}){
-                    animation-delay: $i * 0.25s;
-                }
-            }
+
+    nav#gnb ul{
+        display: flex;
+        
+        li{
+            margin-right: 50px;
         }
-        .menu__item{
-            width: 100px;
-            height: 100%;
-            opacity: 0;
-            
-            a{
-                @include flex($jusCon:center,$aliItem:center);
-                @include font($size:15px,$color:$white-1,$align:center,$letter:1.2px,$family:SCD4);
-                position: relative;
-                padding: 0 20px;
-                width: 100%;
-                height: 100%;
-                transition: 0.3s;
-                
-                &::before{
-                    @include position($pos:absolute,$b:10px,$l:0);
-                    content: "";
-                    display: block;
-                    width: 0;
-                    height: 1.5px;
-                    transition: 0.3s;
-                    background-color: $white-1;
-                }
-                &:hover{
-                    opacity: 0.5;
-                    &::before{
-                        width: 100%;
-                    }
-                }
+
+        a{
+            @include font($weight: 800, $family: 'Nanum Gothic' sans-serif);
+            display: block;
+            padding: 15px;
+            transition: 0.2s;
+
+            &:hover{
+                color: $gray;
             }
         }
     }

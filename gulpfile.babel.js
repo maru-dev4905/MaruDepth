@@ -34,7 +34,7 @@ const paths = {
          ,"img"  : PUB_SRC + "/images"
          ,"font" : PUB_SRC + "/fonts"
          ,"html" : PUB_SRC + "/"
-         ,"favicons" : PUB_SRC + "/favicons"
+         ,"favicons" : PUB_SRC + "/"
     },
     "watch" : {
           "js"   : DEV_SRC + "/js/*.js"

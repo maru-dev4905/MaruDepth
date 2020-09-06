@@ -1,22 +1,39 @@
 include ../common/mixin
 include ../common/variable
-include ../components/input
 
-header.header
-    .header__info
-        .header__info__container
-            ul.header__contact
-                +headerItem("contact","call","010-2269-0763")
-                +headerItem("contact","mail","marudev4905@gmail.com")
-            ul.header__sns
-                +headerItem("sns","kakao","kakaotalk","https://open.kakao.com/o/sWmoRNBb")
-                +headerItem("sns","instagram","instagram","https://www.instagram.com/maru_dev49/?hl=ko")
-                +headerItem("sns","facebook","facebook","https://www.facebook.com/profile.php?id=100016921872562")
-                +headerItem("sns","github","github","https://github.com/maru-dev4905")
-    .header__surf
-        .header__surf__container
-            h1.logo
-                a(href="./index.html")
-                    img(src="./images/logo/logo.png", alt="marudepth-logo")
-            +input("search")
-    include ../components/nav
+header#header
+    nav#snb-sns
+        ul
+            li
+                a(href="#" target="_blank")
+                    i
+                        img(src="./images/icon/sns/github-icon.png", alt="github-icon")
+            li
+                a(href="#" target="_blank")
+                    i
+                        img(src="./images/icon/sns/kakaotalk-icon.png", alt="kakaotalk-icon")
+            li
+                a(href="#" target="_blank")
+                    i
+                        img(src="./images/icon/sns/email-icon.png", alt="email-icon")
+            li
+                a(href="#" target="_blank")
+                    i
+                        img(src="./images/icon/sns/instagram-icon.png", alt="instagram-icon")
+            li
+                a(href="#" target="_blank")
+                    i
+                        img(src="./images/icon/sns/facebook-icon.png", alt="facebook-icon")
+    #header-content
+        h1.header-logo
+            img(src="./images/logo/logo-text.png", alt="logo-text-img")
+        nav#gnb
+            ul
+                li
+                    a(href="#") About
+                li
+                    a(href="#") Update
+                li
+                    a(href="#") Contact
+                li
+                    a(href="#") FAQ

@@ -7,7 +7,6 @@ const search = function(){
         item,
         tags,
         pathName;
-    
 
     const initModule = function(){
         path = window.location.pathname.split("/").pop().toLowerCase();

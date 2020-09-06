@@ -5,36 +5,9 @@ $maxTablet: 768px;
 $maxTablet-l: 1024px;
 
 // color variable
-$purple:            #5758BB;
-$purple-2:          #7B7BC0;
-$purple-3:          #B0B0CA;
-$lightPurple:       #EFEFFF;
-$white-1:           #FFFBFF;
-$white-2:           #FFF8FF;
-$lightGray:         #F3F3F3;
-$gray:              #655F65;
-$darkGray:          #4B4B4B;
-$black:             #3D3D3D;
-$red:               #FF3838;
-$blue:              #17C0EB;
-
-$i : 0;
-$menuNum: 6;
-
-$hamburgerMenu:
-    125vh $purple,
-    133vh #7B7BC0,
-    141vh #B0B0CA,
-    149vh #CECECE;
-
-// opacity color variable
-$opBlack-1:            rgba($color:$black, $alpha:0.1);
-$opBlack-2:            rgba($color:$black, $alpha:0.2);
-$opBlack-3:            rgba($color:$black, $alpha:0.3);
-$opBlack-4:            rgba($color:$black, $alpha:0.4);
-$opBlack-5:            rgba($color:$black, $alpha:0.5);
-
-$opPurple-3:           rgba($color:$purple, $alpha:0.3);
-
-$opWhite-4:            rgba($color:$white-1, $alpha:0.4);
-$opWhite-8:            rgba($color:$white-1, $alpha:0.8);
+$white      :       #FFF8FF;
+$black      :       #3D3D3D;
+$gray       :       #636E72;
+$gray-1     :       #B2BEC3;
+$blue       :       #6C5CE7;
+$blue-1     :       #A29BFE;

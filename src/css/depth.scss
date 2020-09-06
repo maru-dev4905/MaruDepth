@@ -2,17 +2,11 @@
 @import "./common/reset";
 @import "./common/font";
 @import "./common/animation";
-@import "./common/layout";
+@import "./common/mixin";
+@import "./common/variable";
+// @import "./common/layout";
 
 // import
 @import "./import/header";
-@import "./import/banner";
 @import "./import/main";
-@import "./import/useful";
-@import "./import/trend";
-@import "./import/kind";
-@import "./import/contact";
 @import "./import/footer";
-@import "./import/hamburger";
-
-@import "./import/video";
