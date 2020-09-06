@@ -5,11 +5,11 @@
     @include flex($dir:column,$jusCon:center,$aliItem:center);
     grid-column: 1/-1;
     padding-bottom: 70px;
-    h2{
-        @include font($size:2rem,$letter:1.2px,$family:TmonBold);
+    h3{
+        @include font($size:3rem,$letter:1.2px,$weight:bold);
         padding-bottom: 10px;
     }
     p{
-        @include font($size:14px,$family:SCD4,$letter:0.5px,$color:$gray);
+        @include font($size:17px,$letter:0.5px,$color:$gray);
     }
 }

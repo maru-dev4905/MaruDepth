@@ -41,7 +41,7 @@ const animation = function() {
         bannerContent = document.querySelector(".banner__content");
         menuItem = document.querySelectorAll(".menu__item");
         
-        if(path == "index.html" && "/"){
+        if(path == "index.html" || path == "/" || path == ""){
             // useful section
             usefulBox = document.querySelectorAll(".useful__summary__box");
             usefulTitle = document.querySelector(".useful__title");
@@ -70,7 +70,7 @@ const animation = function() {
     
     const _checkPosition = function() {                
 
-        if(path == "index.html" && "/"){
+        if(path == "index.html" || path == "/" || path == ""){
             
             summaryTop = summary.getBoundingClientRect().top;
             usefulTitleTop = usefulTitle.getBoundingClientRect().top;
@@ -114,12 +114,26 @@ const animation = function() {
             bannerContent.classList.add("fade");
             break;
         }  
-        
-        if(path == "Video.html" && "search.html"){
-            while( winH > mainTop){
+        switch (path) {
+            case "dev.html":
+                main.classList.add("up");
+                break;
+            case "design.html":
+                main.classList.add("up");
+                break;
+            case "useful.html":
+                main.classList.add("up");
+                break;
+            case "Video.html":
+                main.classList.add("up");
                 videoTitle.classList.add("fade");
                 break;
-            }
+            case "search.html":
+                main.classList.add("up");
+                videoTitle.classList.add("fade");
+                break;
+            default:
+                break;
         }
     }
     return {

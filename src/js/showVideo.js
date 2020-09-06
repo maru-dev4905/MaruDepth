@@ -1,10 +1,12 @@
 const showVideo = function(){
     let
         path,
+        localPath,
         tags;
 
     const initModule = function(){
         path = window.location.pathname.split("/").pop().toLowerCase();
+        localPath = window.location.href.indexOf("localhost");
         
         if(path == "video.html"){
             _addEventHandlers();
@@ -21,12 +23,16 @@ const showVideo = function(){
                 let name = json[key][i].siteName;
                 let text = json[key][i].siteText;
                 let link = json[key][i].siteLink;
+                let tags = json[key][i].siteTags;
 
                 const siteGroup = document.querySelector(".video__site");
         
                 const box = document.createElement("div");
                 box.classList.add("video__box");
                 
+                const span = document.createElement("span");
+                span.classList.add("video__tag");
+
                 const a = document.createElement("a");
                 a.classList.add("video__link");
                 a.setAttribute("target","_blank");
@@ -42,14 +48,16 @@ const showVideo = function(){
                 const img = document.createElement("img");
                 img.classList.add("video__img");
                 
-                img.setAttribute("src","../images/common/thumbnail/"+name+"-thumbnail.png");
+                img.setAttribute("src","./images/common/thumbnail/"+name+"-thumbnail.png");
                 img.setAttribute("alt",name+"-thumbnail");
                 a.setAttribute("href",link);
                 siteName.innerText = name;
                 siteText.innerText = text;
+                span.innerText = tags;
                 
                 boxContent.appendChild(siteName);
                 boxContent.appendChild(siteText);
+                box.appendChild(span);
                 box.appendChild(img);
                 box.appendChild(boxContent);
                 box.appendChild(a);
