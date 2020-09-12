@@ -1,0 +1,12 @@
+#footer{
+    background-color: $gray;
+    padding: 22px 0;
+    p{
+        @include font(
+            $color: $white,
+            $weight: 400,
+            $align: center,
+            $family: 'Roboto'
+        );
+    }
+}

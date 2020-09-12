@@ -1,0 +1,11 @@
+@import "../components/siteCard";
+
+#site{
+    padding: 60px 50px;
+
+    .site__container{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        grid-column-gap: 30px;
+    }
+}
