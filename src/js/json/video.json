@@ -235,142 +235,16 @@
             ,"siteTags" : ["useful","free","music","youtube","install","무료","설치","유튜브","음악","노래"]
         },
         {
-             "siteName" : "w3s"
-            ,"siteLink" : "html5, css3, js, jquery를 공부할 수 있는 공식 사이트"
-            ,"siteText" : "https://www.w3schools.com"
-            ,"siteTags" : ["dev","develop","study","html","css","javascript","jquery","개발","공부","자바스크립트"]
-        },
-        {
-             "siteName" : "csstricks"
-            ,"siteLink" : "https://css-tricks.com/"
-            ,"siteText" : "css3 tricks 들을 찾아볼 수 있는 사이트"
-            ,"siteTags" : ["dev","develop","study","css","tricks","개발","공부"]
-        },
-        {
-             "siteName" : "javascriptinfo"
-            ,"siteLink" : "https://javascript.info/"
-            ,"siteText" :"modern javascript를 공부할 수 있는 사이트"
-            ,"siteTags" : ["dev","develop","study","modern","vanaillra","javascript","개발","공부","모던","바닐라","자바스크립트"]
-        },
-        {
-             "siteName" : "jakeseoblog"
-            ,"siteLink" : "https://velog.io/@jakeseo_me/2019-03-15-2303-%EC%9E%91%EC%84%B1%EB%90%A8-rmjta5a3xh"
-            ,"siteText" : "자바스크립트 개발자라면 꼭 알아야할 33가지"
-            ,"siteTags" : ["dev","develop","study","javascript","개발","공부","자바스크립트"]
-        },
-        {
-             "siteName" : "bem"
-            ,"siteLink" : "http://getbem.com/"
-            ,"siteText" : "bem 방법론 사이트"
-            ,"siteTags" : ["dev","develop","개발","공부","방법론"]
-        },
-        {
-             "siteName" : "heropyblog"
-            ,"siteLink" : "https://heropy.blog/2018/01/31/sass/"
-            ,"siteText" : "sass(scss) 완벽 공략 블로그"
-            ,"siteTags" : ["dev","develop","scss","css","sass","blog","개발","공부"]
-        },
-        {
-             "siteName" : "opentutorials"
-            ,"siteLink" : "https://opentutorials.org/course/1"
-            ,"siteText" : "생활코딩의 코딩 강의 사이트"
-            ,"siteTags" : ["dev","develop","개발","공부","생활코딩"]
-        },
-        {
-             "siteName" : "querytool"
-            ,"siteLink" : "https://aquerytool.com/"
-            ,"siteText" : "데이터베이스 시뮬레이팅 사이트"
-            ,"siteTags" : ["dev","develop","db","database","query","데이터베이스","디비","쿼리"]
-        },
-        {
-             "siteName" : "nomadcoders"
-            ,"siteLink" : "https://academy.nomadcoders.co/"
-            ,"siteText" : "니콜라스 쌤의 프론트엔드 완벽 강의 사이트"
-            ,"siteTags" : ["dev","develop","study","nomadcoders","front","개발","공부","노마드코더"]
-        },
-        {
-             "siteName" : "programmers"
-            ,"siteLink" : "https://programmers.co.kr/"
-            ,"siteText" : "개발자 채용, 코딩 테스트 등 개발자라면 알아야할 사이트"
-            ,"siteTags" : ["dev","develop","study","test","coding","개발","공부","코딩","테스트"]
-        },
-        {
              "siteName" : "iconmoon"
             ,"siteLink" : "https://icomoon.io/"
             ,"siteText" : "아이콘을 무료로 만들 수 있는 사이트"
             ,"siteTags" : ["dev","develop","icon","create","icon","개발","아이콘","만들기"]
         },
         {
-             "siteName" : "soen"
-            ,"siteLink" : "http://www.soen.kr/"
-            ,"siteText" : "C를 공부할 수 있는 커뮤니티 사이트"
-            ,"siteTags" : ["dev","develop","community","c","c++","c#","study","개발","공부","커뮤니티"]
-        },
-        {
-             "siteName" : "dbsarang"
-            ,"siteLink" : "http://database.sarang.net/"
-            ,"siteText" : "db를 사랑하는 사람들의 커뮤니티 사이트"
-            ,"siteTags" : ["dev","develop","community","db","database","study","디비","데이터베이스","커뮤니티"]
-        },
-        {
-             "siteName" : "gurubee"
-            ,"siteLink" : "http://www.gurubee.net/"
-            ,"siteText" : "db 커뮤니티 사이트"
-            ,"siteTags" : ["dev","develop","community","db","database","study","디비","데이터베이스","커뮤니티"]
-        },
-        {
-             "siteName" : "phpschool"
-            ,"siteLink" : "https://www.phpschool.com/"
-            ,"siteText" : "php를 공부할 수 있는 사이트"
-            ,"siteTags" : ["dev","develop","php","study","community","개발","공부","커뮤니티"]
-        },
-        {
-             "siteName" : "jsonfomatter"
-            ,"siteLink" : "https://jsonformatter.curiousconcept.com/"
-            ,"siteText" : "json을 시뮬레이팅할 수 있는 사이트"
-            ,"siteTags" : ["dev","develop","json","fomatter","개발"]
-        },
-        {
              "siteName" : "placeimg"
             ,"siteLink" : "https://placeimg.com/"
             ,"siteText" : "크기별로 이미지를 찾을 수 있는 사이트"
             ,"siteTags" : ["dev","develop","이미지","useful","image","유용","개발"]
-        },
-        {
-             "siteName" : "hangulthefron"
-            ,"siteLink" : "http://hangul.thefron.me/"
-            ,"siteText" : "lorem처럼 한글을 무작위 텍스트로 만들어주는 사이트"
-            ,"siteTags" : ["dev","develop","useful","hangul","한글","유용","개발"]
-        },
-        {
-             "siteName" : "websiteplanet"
-            ,"siteLink" : "https://www.websiteplanet.com/ko/webtools/lorem-ipsum/?count=3&current_lang=ko&type=paragraphs&direction=ltr&view=text"
-            ,"siteText" : "영문을 무작위 텍스트로 만들어주는 사이트"
-            ,"siteTags" : ["dev","develop","lorem","useful","영어","유용","개빌"]
-        },
-        {
-             "siteName" : "codepen"
-            ,"siteLink" : "https://codepen.io/"
-            ,"siteText" : "IDE가 없어도 웹에서 코딩을 할 수 있는 사이트"
-            ,"siteTags" : ["dev","develop","free","coding","개발","코딩","무료","개발"]
-        },
-        {
-             "siteName" : "entitycode"
-            ,"siteLink" : "https://entitycode.com/"
-            ,"siteText" : "html 특수문자 사이트"
-            ,"siteTags" : ["dev","develop","entity","useful","coding","html","엔티티","유용","코딩","개발"]
-        },
-        {
-             "siteName" : "velopert"
-            ,"siteLink" : "https://velopert.com/"
-            ,"siteText" : "velopert의 프론트엔드 강좌 사이트"
-            ,"siteTags" :  ["dev","develop","front","blog","프론트","개발"]
-        },
-        {
-             "siteName" : "geeksforgeeks"
-            ,"siteLink" : "https://www.geeksforgeeks.org/"
-            ,"siteText" : "개발자 강좌 및 외국 커뮤니티 사이트"
-            ,"siteTags" : ["dev","develop","개발","커뮤니티","community"]
         }
     ]
 }

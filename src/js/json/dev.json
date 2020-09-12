@@ -1,0 +1,154 @@
+{
+    "categorys":[
+        {
+            "study" : [
+                {
+                     "siteName" : "w3s"
+                    ,"siteLink" : "https://www.w3schools.com"
+                    ,"siteDesc" : "html5, css3, js, jquery를 공부할 수 있는 공식 사이트"
+                    ,"siteTags" : ["dev","study","html","css","js","jquery","개발","공부","자바스크립트"]
+                },
+                {
+                     "siteName" : "javascript info"
+                    ,"siteLink" : "https://javascript.info/"
+                    ,"siteDesc" : "modern javascript를 공부할 수 있는 사이트"
+                    ,"siteTags" : ["dev","study","modern","js","개발","공부","자바스크립트"]
+                },
+                {
+                     "siteName" : "css tricks"
+                    ,"siteLink" : "https://css-tricks.com/"
+                    ,"siteDesc" : "css3 tricks들을 찾아볼 수 있는 사이트"
+                    ,"siteTags" : ["dev","study","css","개발","공부"]
+                },
+                {
+                     "siteName" : "open tutorials"
+                    ,"siteLink" : "https://opentutorials.org/course/1"
+                    ,"siteDesc" : "생활코딩의 코딩 강의 사이트"
+                    ,"siteTags" : ["dev","study","생활코딩","개발","공부"]
+                },
+                {
+                     "siteName" : "nomadcoders"
+                    ,"siteLink" : "https://academy.nomadcoders.co/"
+                    ,"siteDesc" : "니콜라스 쌤의 프론트엔드 완벽 강의 사이트"
+                    ,"siteTags" : ["dev","study","nomadcoders","front-end","개발","공부","노마드코더","프론트엔드"]
+                },
+                {
+                     "siteName" : "velopert"
+                    ,"siteLink" : "https://velopert.com/"
+                    ,"siteText" : "velopert님의 프론트엔드 강좌 사이트"
+                    ,"siteTags" : ["dev","study","velopert","front-end","개발","공부","벨로퍼트","프론트엔드"]
+                }
+            ]
+        },
+        {
+            "community" : [
+                {
+                     "siteName" : "geeksforgeeks"
+                    ,"siteLink" : "https://www.geeksforgeeks.org/"
+                    ,"siteText" : "개발좌 강좌 및 외국 커뮤니티 사이트"
+                    ,"siteTags" : ["dev","community","개발","커뮤니티"]
+                },
+                {
+                     "siteName" : "php school"
+                    ,"siteLink" : "https://www.phpschool.com/"
+                    ,"siteText" : "php를 공부할 수 있는 커뮤니티 사이트"
+                    ,"siteTags" : ["dev","community","php","개발","커뮤니티"]
+                },
+                {
+                     "siteName" : "gurubee"
+                    ,"siteLink" : "http://www.gurubee.net/"
+                    ,"siteText" : "db 커뮤니티 사이트"
+                    ,"siteTags" : ["dev","community","db","개발","커뮤니티","데이터베이스"]
+                },
+                {
+                     "siteName" : "db sarang"
+                    ,"siteLink" : "http://database.sarang.net/"
+                    ,"siteText" : "db를 사랑하는 사람들의 커뮤니티 사이트"
+                    ,"siteTags" : ["dev","community","db","개발","커뮤니티","데이터베이스"]
+                },
+                {
+                     "siteName" : "soen"
+                    ,"siteLink" : "https://www.soen.kr/"
+                    ,"siteText" : "C를 공부할 수 있는 커뮤니티 사이트"
+                    ,"siteTags" : ["dev","community","C","C++","C#","개발","커뮤니티"]
+                }
+            ]
+        },
+        {
+            "simulatinh" : [
+                {
+                     "siteName" : "json fomatter"
+                    ,"siteLink" : "https://jsonformatter.curiousconcept.com/"
+                    ,"siteText" : "json을 시뮬레이팅할 수 있는 사이트"
+                    ,"siteTags" : ["dev","json","fomatter","개발","시뮬레이팅"]
+                },
+                {
+                     "siteName" : "querytool"
+                    ,"siteLink" : "https://aquerytool.com/"
+                    ,"siteText" : "데이터베이스 시뮬레이팅 사이트"
+                    ,"siteTags" : ["dev","db","query","개발","데이터베이스","쿼리","시뮬레이팅"]
+                }
+            ]
+        },
+        {
+            "blog" : [
+                {
+                     "siteName" : "heropy blog"
+                    ,"siteLink" : "https://heropy.blog/2018/01/31/sass/"
+                    ,"siteText" : "코딩 완벽 공략 블로그"
+                    ,"siteTags" : ["dev","blog","scss","css","sass","blog","개발","블로그"]
+                },
+                {
+                     "siteName" : "jakeseo blog"
+                    ,"siteLink" : "https://velog.io/@jakeseo_me/2019-03-15-2303-%EC%9E%91%EC%84%B1%EB%90%A8-rmjta5a3xh"
+                    ,"siteText" : "자바스크립트 개발자라면 꼭 알아야할 33가지"
+                    ,"siteTags" : ["dev","javascript","개발","자바스크립트"]
+                }
+            ]
+        },
+        {
+            "tip" : [
+                {
+                     "siteName" : "codepen"
+                    ,"siteLink" : "https://codepen.io/"
+                    ,"siteText" : "IDE가 없어도 웹에서 코딩을 할 수 있는 사이트"
+                    ,"siteTags" : ["dev","tip","개발","팁"]
+                },
+                {
+                     "siteName" : "websiteplanet"
+                    ,"siteLink" : "https://www.websiteplanet.com/ko/webtools/lorem-ipsum/?count=3&current_lang=ko&type=paragraphs&direction=ltr&view=text"
+                    ,"siteText" : "영문을 무작위로 만들어주는 사이트"
+                    ,"siteTags" : ["dev","tip","lorem","개발","팁"]
+                },
+                {
+                     "siteName" : "hangulthefron"
+                    ,"siteLink" : "http://hangul.thefron.me/"
+                    ,"siteText" : "한글을 무작위로 만들어주는 사이트"
+                    ,"siteTags" : ["dev","tip","lorem","개발","팁"]
+                },
+                {
+                     "siteName" : "programmers"
+                    ,"siteLink" : "https://programmers.co.kr/"
+                    ,"siteText" : "개발자 채용, 코딩 테스트 등 개발자라면 알아야할 사이트"
+                    ,"siteTags" : ["dev","tip","개발","팁"]
+                }
+            ]
+        },
+        {
+            "etc" : [
+                {
+                     "siteName" : "entitycode"
+                    ,"siteLink" : "https://entitycode.com/"
+                    ,"siteText" : "html 특수문자 사이트"
+                    ,"siteTags" : ["dev","entity","tip","개발","엔티티","팁"]
+                },
+                {
+                     "siteName" : "bem"
+                    ,"siteLink" : "https://getbem.com/"
+                    ,"siteText" : "bem 방법론 사이트"
+                    ,"siteTags" : ["dev","방법론","개발"]
+                }
+            ]
+        }
+    ]
+}
