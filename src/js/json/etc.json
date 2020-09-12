@@ -1,0 +1,98 @@
+{
+    "ppt" : [
+        {
+             "siteName" : "adstore"
+            ,"siteLink" : "https://adstorepost.com/"
+            ,"siteText" : "심플, 감각적인 피피티가 많은 사이트"
+            ,"siteTags" : ["ppt","simple","template","피피티","심플","템플릿"]
+        },
+        {
+             "siteName" : "canva"
+            ,"siteLink" : "https://www.canva.com/ko_kr/create/business-cards/"
+            ,"siteText" : "웹에서 피피티를 제작할 수 있는 사이트"
+            ,"siteTags" : ["ppt","피피티"]
+        },
+        {
+             "siteName" : "ppt magazine"
+            ,"siteLink" : "https://www.presentationmagazine.com/ppt-templates"
+            ,"siteText" : "무료 피피티 템플릿 6만개 이상 보유 사이트"
+            ,"siteTags" : ["ppt","template","피피티","템플릿"]
+        },
+        {
+             "siteName" : "pptmoa"
+            ,"siteLink" : "https://pptmoa.com/"
+            ,"siteText" : "고품질 피피티 템플릿 사이트"
+            ,"siteTags" : ["ppt","template","피피티","템플릿"]
+        },
+        {
+             "siteName" : "showeet"
+            ,"siteLink" : "https://www.showeet.com/"
+            ,"siteText" : "적지만 퀄리티 좋은 템플릿 사이트"
+            ,"siteTags" : ["ppt","template","피피티","템플릿"]
+        },
+        {
+             "siteName" : "sb blog"
+            ,"siteLink" : "https://m.blog.naver.com/PostView.nhn?blogId=seiru523&logNo=220430114342&proxyReferer=https:%2F%2Fwww.google.com%2F"
+            ,"siteText" : "피피티 꿀팁, 색상별 피피티 등이 있는 새별님 블로그"
+            ,"siteTags" : ["ppt","blog","피피티","블로그"]
+        }
+    ],
+    "music" : [
+        {
+             "siteName" : "grdnrush"
+            ,"siteLink" : "https://www.youtube.com/c/grdnrushmusic"
+            ,"siteText" : "브이로그에 사용하기 좋은 음악이 많은 유튜브 채널"
+            ,"siteTags" : ["music","youtube","vlog","음악","유튜브","브이로그"]
+        },
+        {
+             "siteName" : "ncs"
+            ,"siteLink" : "https://www.ncs.go.kr/index.do"
+            ,"siteText" : "저작권 없는 사운드 많은 유튜브 채널"
+            ,"siteTags" : ["music","youtube","sound","음악","유튜브","사운드"]
+        },
+        {
+             "siteName" : "youtube audio"
+            ,"siteLink" : "https://www.youtube.com/audiolibrary/music?nv=1"
+            ,"siteText" : "다양한 무료 음악과 음향 효과 설치 사이트"
+            ,"siteTags" : ["music","youtube","음악","유튜브"]
+        }
+    ],
+    "tip" : [
+        {
+             "siteName" : "gallup"
+            ,"siteLink" : "https://www.gallup.com/home.aspx"
+            ,"siteText" : "설문조사 확인 사이트"
+            ,"siteTags" : ["tip","survey","팁","설문조사"]
+        },
+        {
+             "siteName" : "kosis"
+            ,"siteLink" : "http://kosis.kr/index/index.do"
+            ,"siteText" : "국가 통계 포털 사이트"
+            ,"siteTags" : ["tip","a numerical statement","팁","통계"]
+        },
+        {
+             "siteName" : "kriss"
+            ,"siteLink" : "https://www.kriss.re.kr/index.do"
+            ,"siteText" : "무료 논문 확인 사이트"
+            ,"siteTags" : ["tip","theasis","팁","논문"]
+        },
+        {
+             "siteName" : "riss"
+            ,"siteLink" : "https://www.riss.kr/index.do"
+            ,"siteText" : "학위논문, 강의자료, 연구자료 등 무료 열람 사이트"
+            ,"siteTags" : ["tip","theasis","material","팁","논문","자료"]
+        },
+        {
+             "siteName" : "slide share"
+            ,"siteLink" : "https://www.slideshare.net/"
+            ,"siteText" : "슬라이드 쉐어 무료 사이트"
+            ,"siteTags" : ["tip","slide","share","팁","슬라이드","쉐어"]
+        },
+        {
+             "siteName" : "open office"
+            ,"siteLink" : "https://www.openoffice.org/"
+            ,"siteText" : "워드, P.P, 엑셀 프로그램이 없을 때 사용하는 사이트"
+            ,"siteTags" : ["tip","office","word","ppt","excel","팁","오피스"]
+        }
+    ]
+}

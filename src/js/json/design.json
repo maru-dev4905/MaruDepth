@@ -145,6 +145,12 @@
             ,"siteLink" : "https://foodpic.net/"
             ,"siteText" : "음식 보정 사이트"
             ,"siteTags" : ["design","tip","food","디자인","팁","음식"]
+        },
+        {
+             "siteName" : "hatchful"
+            ,"siteLink" : "https://hatchful.shopify.com/"
+            ,"siteText" : "무료 로고 만들기 사이트"
+            ,"siteTags" : ["design","tip","logo","디자인","팁","로고"]
         }
     ]
 }
