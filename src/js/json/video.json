@@ -1,52 +1,10 @@
 {
     "sites": [
         {
-             "siteName" : "flaticon"
-            ,"siteLink" : "https://www.flaticon.com/"
-            ,"siteText" : "무료 아이콘 설치 사이트"
-            ,"siteTags" : ["icon","design","free","install","무료","아이콘","설치"]
-        },
-        {
-             "siteName" : "rempx"
-            ,"siteLink" : "https://nekocalc.com/px-to-rem-converter"
-            ,"siteText" : "px to rem 계산해주는 사이트"
-            ,"siteTags" : ["dev","px","rem","calculator","계산기","단위"]
-        },
-        {
-             "siteName" : "unsplash"
-            ,"siteLink" : "https://unsplash.com/"
-            ,"siteText" : "무료 이미지 설치 사이트"
-            ,"siteTags" : ["image","free","design","install","무료","이미지","설치"]
-        },
-        {
-             "siteName" : "adobecolor"
-            ,"siteLink" : "https://color.adobe.com/ko/create/color-wheel"
-            ,"siteText" : "어도비 무료 색상 배합 사이트"
-            ,"siteTags" : ["color","adobe","design","어도비","색상","색","조합"]
-        },
-        {
              "siteName" : "adstore"
             ,"siteLink" : "https://adstorepost.com/"
             ,"siteText" : "심플, 감각적인 피피티가 많은 사이트"
             ,"siteTags" : ["useful","simple","ppt","tamplet","install","피피티","심플","템플릿","무료","설치"]
-        },
-        {
-             "siteName" : "asiafont"
-            ,"siteLink" : "http://www.asiafont.com/"
-            ,"siteText" : "깔끔한 폰트를 원하는 사람들에게 강력 추천"
-            ,"siteTags" : ["useful","font","install","free","폰트","무료","설치"]
-        },
-        {
-             "siteName" : "blend"
-            ,"siteLink" : "http://www.colinkeany.com/blend/"
-            ,"siteText" : "그라데이션을 만들어주는 사이트"
-            ,"siteTags" : ["blend","gradient","color","design","그라데이션","블렌드","컬러","디자인"]
-        },
-        {
-             "siteName" : "bm"
-            ,"siteLink" : "https://www.woowahan.com/"
-            ,"siteText" : "배달의 민족 폰트 사이트"
-            ,"siteTags" : ["useful","bm","font","free","install","폰트","배달의민족","무료","설치"]
         },
         {
              "siteName" : "canva"
@@ -55,40 +13,10 @@
             ,"siteTags" : ["useful","ppt","free","create","피피티","무료","제작"]
         },
         {
-             "siteName" : "colorlover"
-            ,"siteLink" : "https://www.colourlovers.com/"
-            ,"siteText" : "색상 조합 사이트"
-            ,"siteTags" : ["color","design","combination","색상","색","조합","디자인"]
-        },
-        {
-             "siteName" : "dafont"
-            ,"siteLink" : "https://www.dafont.com/"
-            ,"siteText" : "무료 폰트 설치 사이트"
-            ,"siteTags" : ["useful","font","install","free","폰트","무료","설치"]
-        },
-        {
-             "siteName" : "fontspace"
-            ,"siteLink" : "https://www.fontspace.com/"
-            ,"siteText" : "약 30000종 이상의 영문 폰트 보유 사이트"
-            ,"siteTags" : ["useful","font","install","free","폰트","무료","설치"]
-        },
-        {
-             "siteName" : "foodpic"
-            ,"siteLink" : "http://foodpic.net/"
-            ,"siteText" : "음식 보정 사이트"
-            ,"siteTags" : ["useful","food","correction","음식","보정"]
-        },
-        {
              "siteName" : "gallup"
             ,"siteLink" : "https://www.gallup.com/home.aspx"
             ,"siteText" : "설문조사 확인 사이트"
             ,"siteTags" : ["useful","check","survey","설문조사","확인"]
-        },
-        {
-             "siteName" : "gratisography"
-            ,"siteLink" : "https://gratisography.com/"
-            ,"siteText" : "피피티에 포인트 주기 좋은 사진이 많은 사이트"
-            ,"siteTags" : ["useful","ppt","image","install","free","point","피피티","이미지","포인트","무료","설치"]
         },
         {
              "siteName" : "grdnrush"
@@ -103,12 +31,6 @@
             ,"siteTags" : ["logo","free","install","design","create","로고","무료","설치","디자인","제작"]
         },
         {
-             "siteName" : "iconmonstr"
-            ,"siteLink" : "https://iconmonstr.com/"
-            ,"siteText" : "무료 아이콘 설치 사이트"
-            ,"siteTags" : ["icon","free","install","design","아이콘","무료","설치","디자인"]
-        },
-        {
              "siteName" : "kosis"
             ,"siteLink" : "http://kosis.kr/index/index.do"
             ,"siteText" : "국가 통계 포털 사이트"
@@ -121,21 +43,9 @@
             ,"siteTags" : ["useful","free","thesis","무료","논문"]
         },
         {
-             "siteName" : "naverfont"
-            ,"siteLink" : "https://software.naver.com/software/fontList.nhn?categoryId=I0000000"
-            ,"siteText" : "네이버 무료 폰트"
-            ,"siteTags" : ["useful","font","install","naver","free","폰트","설치","네이버","무료"]
-        },
-        {
              "siteName" : "ncs"
             ,"siteLink" : "https://www.ncs.go.kr/index.do"
             ,"siteText" : "저작권 없는 사운드 많은 채널"
-            ,"siteTags" : ["useful","basic","install","font","free","베이직","폰트","설치","무료"]
-        },
-        {
-             "siteName" : "noonnu"
-            ,"siteLink" : "https://noonnu.cc/"
-            ,"siteText" : "다양하고 베이직한 폰트가 많은 사이트"
             ,"siteTags" : ["useful","basic","install","font","free","베이직","폰트","설치","무료"]
         },
         {
@@ -143,30 +53,6 @@
             ,"siteLink" : "https://www.openoffice.org/"
             ,"siteText" : "워드,P.P,엑셀 프로그램이 없을 때 사용하는 사이트"
             ,"siteTags" : ["useful","office","free","word","ppt","excel","오피스","무료","워드","피피티","엑셀"]
-        },
-        {
-             "siteName" : "pexels"
-            ,"siteLink" : "https://www.pexels.com/ko-kr/"
-            ,"siteText" : "빈티지한 사진과 인물 사진이 많은 사이트"
-            ,"siteTags" : ["design","people","image","free","install","인물","사람","사진","이미지","무료","설치"]
-        },
-        {
-             "siteName" : "pinterest"
-            ,"siteLink" : "https://www.pinterest.co.kr/"
-            ,"siteText" : "디자인 참고 사이트"
-            ,"siteTags" : ["design","image","useful","free","디자인","이미지","유용"]
-        },
-        {
-             "siteName" : "pixabay"
-            ,"siteLink" : "https://pixabay.com/ko/"
-            ,"siteText" : "무료 이미지 설치 사이트"
-            ,"siteTags" : ["design","image","free","install","무료","이미지","사진","설치"]
-        },
-        {
-             "siteName" : "pixler"
-            ,"siteLink" : "https://pixlr.com/kr/"
-            ,"siteText" : "웹에서 포토샵처럼 사용 가능한 사이트"
-            ,"siteTags" : ["useful","photoshop","free","포토샵","무료"]
         },
         {
              "siteName" : "pptmagazine"
@@ -181,22 +67,10 @@
             ,"siteTags" : ["useful","ppt","free","install","tamplet","피피티","템플릿","무료","설치"]
         },
         {
-             "siteName" : "removebg"
-            ,"siteLink" : "https://www.remove.bg/"
-            ,"siteText" : "이미지 배경 자동 제거 사이트"
-            ,"siteTags" : ["useful","remove","image","background","free","auto","delete","배경","이미지","자동","제거"]
-        },
-        {
              "siteName" : "riss"
             ,"siteLink" : "http://www.riss.kr/index.do"
             ,"siteText" : "학위논문, 강의자료, 연구자료 등 무료 열람 사이트"
             ,"siteTags" : ["useful","thesis","material","free","논문","자료","무료"]
-        },
-        {
-             "siteName" : "rwdb"
-            ,"siteLink" : "http://rwdb.kr/"
-            ,"siteText" : "디자인 및 인터렉션 무료 소스 공유 사이트"
-            ,"siteTags" : ["dev","develop","design","interaction","source","free","개발","무료","디자인","소스","상호작용","인터렉션"]
         },
         {
              "siteName" : "sbblog"
@@ -223,28 +97,10 @@
             ,"siteTags" : ["useful","idea","아이디어","유용"]
         },
         {
-             "siteName" : "uigradients"
-            ,"siteLink" : "https://uigradients.com/#BacktotheFuture"
-            ,"siteText" : "그라데이션 배합 사이트"
-            ,"siteTags" : ["design","gradient","color","색","색상","디자인","그라데이션"]
-        },
-        {
              "siteName" : "youtubeaudio"
             ,"siteLink" : "https://www.youtube.com/audiolibrary/music?nv=1"
             ,"siteText" : "다양한 무료 음악과 음향 효과 설치 사이트"
             ,"siteTags" : ["useful","free","music","youtube","install","무료","설치","유튜브","음악","노래"]
-        },
-        {
-             "siteName" : "iconmoon"
-            ,"siteLink" : "https://icomoon.io/"
-            ,"siteText" : "아이콘을 무료로 만들 수 있는 사이트"
-            ,"siteTags" : ["dev","develop","icon","create","icon","개발","아이콘","만들기"]
-        },
-        {
-             "siteName" : "placeimg"
-            ,"siteLink" : "https://placeimg.com/"
-            ,"siteText" : "크기별로 이미지를 찾을 수 있는 사이트"
-            ,"siteTags" : ["dev","develop","이미지","useful","image","유용","개발"]
         }
     ]
 }
