@@ -1,0 +1,52 @@
+aside#menu{
+    width: 250px;
+    min-height: 100vh;
+    height: auto;
+    background-color: $blue;
+    padding: 30px;
+
+    h1.menu-logo a{
+        display: block;
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+#category{
+    margin-top: 80px;
+    
+    li.category__list_title{
+        @include font(
+            $size:20px,
+            $color:$white,
+            $weight:600,
+            $family:"Noto Sans KR"
+        );
+        margin-bottom: 30px;
+    }
+    ul.category__sublist{
+        padding: 10px;
+
+        
+        li.category__item{
+            button{
+                @include font(
+                    $size: 16px,
+                    $color: rgba($color: $white, $alpha:0.6),
+                    $weight: 400,
+                    $family: "Roboto",
+                    $align:left
+                );
+                width: 100%;
+                padding: 2px 0;
+                transition: 0.2s;
+            }  
+            &:hover button{
+                color: rgba($color: $white, $alpha: 1.0);
+                text-shadow: 0px 0px 10px $black;
+                transform: translateX(5px);
+            }
+        } 
+    }
+}
