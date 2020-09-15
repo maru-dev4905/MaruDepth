@@ -1,6 +1,7 @@
 #footer{
     background-color: $gray;
     padding: 22px 0;
+    margin-top: 60px;
     p{
         @include font(
             $color: $white,
