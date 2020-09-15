@@ -69,7 +69,7 @@
             ,"siteTags" : ["dev","community","C","C++","C#","개발","커뮤니티"]
         }
     ],
-    "simulatinh" : [
+    "simulation" : [
         {
              "siteName" : "json fomatter"
             ,"siteLink" : "https://jsonformatter.curiousconcept.com/"
