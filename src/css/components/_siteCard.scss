@@ -9,11 +9,16 @@ li.site-item{
     box-shadow: 0px 1px 4px rgba($color: $black, $alpha: 0.25);
     border-radius: 5px;
     margin: 30px 10px;
+    transition: 0.2s;
+    
+    &:hover, &:focus{
+        box-shadow: 0px 1px 8px rgba($color: $black, $alpha: 0.5);
 
-    &:hover img{
-        transform: scale(1.1);
-    }
-
+        img{
+            transform: scale(1.2);
+        }
+    }   
+    
     .site__img{
         overflow: hidden;
         border-radius: 5px;
