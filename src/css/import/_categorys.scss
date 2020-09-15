@@ -1,0 +1,45 @@
+aside#side{
+    @include position($pos:fixed, $t:0, $l:0);
+    width: 250px;
+    min-height: 100vh;
+    height: auto;
+    background-color: $blue;
+    padding: 30px;
+    
+    h1#logo{
+        text-align: center;
+        border-bottom: 1px solid rgba($color: $white, $alpha: 0.5);
+        padding-bottom: 30px;
+    }
+}
+nav#categorys{
+    padding-top: 30px;
+    font-family: 'Roboto',sans-serif;
+
+    ul.categorys__list{
+        padding-bottom: 40px;
+        color: $white;
+        li.categorys__list__title{
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+    ul.categorys__list__item{
+        padding: 5px 10px;
+        li{
+            font-size: 16px;
+            font-weight: 400;
+            a{
+                padding-top: 3px;
+                display: block;
+                color: rgba($color: $white, $alpha: 0.7);
+                transition: 0.2s;
+
+                &:hover{
+                    color: rgba($color: $white, $alpha: 1);
+                    transform: translateX(10px);
+                }
+            }
+        }
+    }
+}

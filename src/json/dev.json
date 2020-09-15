@@ -3,31 +3,31 @@
         {
              "siteName" : "w3s"
             ,"siteLink" : "https://www.w3schools.com"
-            ,"siteDesc" : "html5, css3, js, jquery를 공부할 수 있는 공식 사이트"
+            ,"siteText" : "html5, css3, js, jquery를 공부할 수 있는 공식 사이트"
             ,"siteTags" : ["dev","study","html","css","js","jquery","개발","공부","자바스크립트"]
         },
         {
              "siteName" : "javascript info"
             ,"siteLink" : "https://javascript.info/"
-            ,"siteDesc" : "modern javascript를 공부할 수 있는 사이트"
+            ,"siteText" : "modern javascript를 공부할 수 있는 사이트"
             ,"siteTags" : ["dev","study","modern","js","개발","공부","자바스크립트"]
         },
         {
              "siteName" : "css tricks"
             ,"siteLink" : "https://css-tricks.com/"
-            ,"siteDesc" : "css3 tricks들을 찾아볼 수 있는 사이트"
+            ,"siteText" : "css3 tricks들을 찾아볼 수 있는 사이트"
             ,"siteTags" : ["dev","study","css","개발","공부"]
         },
         {
              "siteName" : "open tutorials"
             ,"siteLink" : "https://opentutorials.org/course/1"
-            ,"siteDesc" : "생활코딩의 코딩 강의 사이트"
+            ,"siteText" : "생활코딩의 코딩 강의 사이트"
             ,"siteTags" : ["dev","study","생활코딩","개발","공부"]
         },
         {
              "siteName" : "nomadcoders"
             ,"siteLink" : "https://academy.nomadcoders.co/"
-            ,"siteDesc" : "니콜라스 쌤의 프론트엔드 완벽 강의 사이트"
+            ,"siteText" : "니콜라스 쌤의 프론트엔드 완벽 강의 사이트"
             ,"siteTags" : ["dev","study","nomadcoders","front-end","개발","공부","노마드코더","프론트엔드"]
         },
         {
