@@ -1,3 +1,5 @@
+const path = window.location.pathname.split("/").pop().toLowerCase();
+
 const devJson = require("../js/json/dev.json");
 
 const devStudyBtn = document.getElementById("devStudyBtn");
@@ -9,14 +11,18 @@ const devEtcBtn = document.getElementById("devEtcBtn");
 
 // dev
 devStudyBtn.addEventListener("click",()=>{
-    remove__card();
-    for(let i = 0; i < devJson.study.length; i++){
-        let name = devJson.study[i].siteName;
-        let text = devJson.study[i].siteText;
-        let link = devJson.study[i].siteLink;
-        let tags = devJson.study[i].siteTags;
-
-        create__card(name,text,link,tags);
+    if(path === "index.html"){
+        remove__card();
+        for(let i = 0; i < devJson.study.length; i++){
+            let name = devJson.study[i].siteName;
+            let text = devJson.study[i].siteText;
+            let link = devJson.study[i].siteLink;
+            let tags = devJson.study[i].siteTags;
+    
+            create__card(name,text,link,tags);
+        }
+    }else{
+        window.location.href = "index.html"
     }
 });
 

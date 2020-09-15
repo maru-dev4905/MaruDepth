@@ -20,7 +20,7 @@ const PUB_SRC = "dest";
 const paths = {
     "dev" : {
          "js"  : DEV_SRC + "/js/*.js"
-        ,"json": DEV_SRC + "/json/*.json"
+        ,"json": DEV_SRC + "/js/json/*.json"
         ,"css" : DEV_SRC + "/css/depth.scss"
         ,"img" : DEV_SRC + "/images/**/**"
         ,"font": DEV_SRC + "/fonts/**"
@@ -29,7 +29,7 @@ const paths = {
     },
     "pub" : {
           "js"   : PUB_SRC + "/js"
-         ,"json" : PUB_SRC + "/json"
+         ,"json" : PUB_SRC + "/js/json"
          ,"css"  : PUB_SRC + "/css"
          ,"img"  : PUB_SRC + "/images"
          ,"font" : PUB_SRC + "/fonts"
@@ -38,7 +38,7 @@ const paths = {
     },
     "watch" : {
           "js"   : DEV_SRC + "/js/*.js"
-         ,"json" : DEV_SRC + "/json/*.json"
+         ,"json" : DEV_SRC + "/js/json/*.json"
          ,"css"  : DEV_SRC + "/css/**/**/*.scss"
          ,"img"  : DEV_SRC + "/images/**"
          ,"html" : DEV_SRC + "/html/**/**/*.pug"
