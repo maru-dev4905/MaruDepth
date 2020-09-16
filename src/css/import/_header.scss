@@ -1,6 +1,7 @@
 header#header{
     @include grid($tCol:repeat(12,1fr),$cGap:30px);
     width: 100%;
+    position: relative;
 }
 
 // nav sns
@@ -34,6 +35,7 @@ nav#snb-sns{
     grid-column: 1/-1;
     padding: 25px 50px;
     border-bottom: 1px solid #e3e3e3;
+    background-color: #fff;
 
     h2.header-logo img{
         width: 456px;
@@ -55,6 +57,61 @@ nav#snb-sns{
             &:hover{
                 color: $gray;
             }
+        }
+    }
+}
+
+#header-foot{
+    grid-column: 1/-1;
+    padding: 0 50px;
+
+    form.search-form.open{
+        @include position($pos:absolute,$t:141px,$z:-1);
+        width: 900px;
+        height: 100px;
+        transition: 0.3s;
+
+        input{
+            @include font(
+                $size:40px,
+                $color:$black-1,
+                $weight:400,
+                $family: "Noto Sans KR"
+            );
+            background-color: $black;
+            width: 100%;
+            height: 100%;
+            border: none;
+            padding: 0 20px;
+        }
+    }
+
+    form.search-form.close{
+        @include position($pos:absolute,$t:40px,$z:-1);
+        width: 900px;
+        height: 100px;
+        transition: 0.3s;
+        
+        input{
+            @include font(
+                $size:40px,
+                $color:$black-1,
+                $weight:400,
+                $family: "Noto Sans KR"
+            );
+            background-color: $black;
+            width: 100%;
+            height: 100%;
+            border: none;
+            padding: 0 20px;
+        }
+    }
+    button.search__open-btn{
+        position: absolute;
+        right: 60px;
+        margin-top: 10px;
+        img{
+            width: 32px;
         }
     }
 }

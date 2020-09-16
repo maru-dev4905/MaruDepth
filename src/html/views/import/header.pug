@@ -35,3 +35,10 @@ header#header
                     a(href="./update.html") Update
                 li
                     a(href="mailto:marudev4905@gmail.com") Contact
+    #header-foot
+        form.search-form.close(name="searchForm" action="search.html" method="GET")
+            label.sr(for="search-input") 검색창
+            input#search-input(type="text" placeholder="search ..." name="search")
+            button(type="submit")
+        button.search__open-btn(type="button")
+            img(src="./images/icon/search.png", alt="search-icon")
