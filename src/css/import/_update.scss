@@ -1,0 +1,66 @@
+section#update{
+    @include grid($tCol:repeat(12,1fr), $cGap:30px, $jusCon:center);
+    padding: 120px 50px;
+    min-height: calc(100vh - 201px);
+    height: auto;
+
+    h2{
+        @include font(
+            $size:54px,
+            $color:$black,
+            $weight:900,
+            $family:"Roboto",
+            $align:center
+        );
+        grid-column: 1/13;
+        margin-bottom: 160px;
+    }
+
+    table{
+        grid-column: 1/13;
+        width: 100%;
+
+        td,th{
+            border-bottom: 1px solid $gray;
+            padding: 20px 50px;
+            text-align: center;
+        }
+
+        td{
+            @include font(
+                $size:16px,
+                $weight:400,
+                $color:$black,
+                $family:"Noto Sans KR"
+            );
+        }
+
+        tr.table_head{
+            background-color: $black;
+            border-top: 1px solid $gray;
+
+            th{
+                @include font(
+                    $size:20px,
+                    $weight:400,
+                    $color:$white,
+                    $family:"Roboto"
+                );
+            }
+        }
+        tr.table_item{
+            transition: 0.2s;
+
+            &:hover,
+            &:focus{
+                background-color: rgba($color:$blue-1, $alpha: 0.3);
+            }
+        }
+        .table__number{
+            text-align: left;
+        }
+        .table__date{
+            text-align: right;
+        }
+    }
+}

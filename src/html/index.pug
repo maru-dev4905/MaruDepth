@@ -2,15 +2,10 @@
 html(lang="ko")
     include ./views/partials/head
     body
-        include ./views/import/header
-        include ./views/import/banner
-        main.main
-            include ./views/import/useful
-            include ./views/import/trend
-            include ./views/import/kind
-            include ./views/import/contact
-        include ./views/import/footer
-        include ./views/import/hamburger
-        include ./views/import/scroll
-        
+        include ./views/import/category
+        #container
+            include ./views/import/header
+            main#main
+                include ./views/import/site
+            include ./views/import/footer
         include ./views/partials/script

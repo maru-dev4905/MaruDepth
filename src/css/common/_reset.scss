@@ -29,10 +29,11 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	overflow-x: hidden;
+	
 }
-::-webkit-scrollbar{
-	display: none;
-}
+// ::-webkit-scrollbar{
+// 	display: none;
+// }
 html{
 	@include responsive("tablet-l"){
 		font-size: 14px;
@@ -62,6 +63,7 @@ table {
 a{
 	text-decoration: none;
 	cursor: pointer;
+	color: $gray-1;
 	&:focus{
 		outline: none;
 		border: none;

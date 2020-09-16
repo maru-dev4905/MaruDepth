@@ -1,0 +1,159 @@
+{
+    "image" : [
+        {
+             "siteName" : "unsplash"
+            ,"siteLink" : "https://unsplash.com/"
+            ,"siteText" : "무료 이미지 설치 사이트"
+            ,"siteTags" : ["design","image","디자인","이미지"]
+        },
+        {
+             "siteName" : "pexels"
+            ,"siteLink" : "https://www.pexels.com/ko-kr/"
+            ,"siteText" : "빈티지한 사진과 인물 사진이 많은 사이트"
+            ,"siteTags" : ["design","image","디자인","이미지"]
+        },
+        {
+             "siteName" : "pixabay"
+            ,"siteLink" : "https://pixabay.com/ko/"
+            ,"siteText" : "무료 이미지 설치 사이트"
+            ,"siteTags" : ["design","image","디자인","이미지"]
+        },
+        {
+             "siteName" : "placeImg"
+            ,"siteLink" : "https://placeimg.com/"
+            ,"siteText" : "크기별로 이미지를 찾을 수 있는 사이트"
+            ,"siteTags" : ["design","image","디자인","이미지"]
+        },
+        {
+             "siteName" : "gratisography"
+            ,"siteLink" : "https://gratisography.com/"
+            ,"siteText" : "피피티에 포인트 주기 좋은 사진이 많은 사이트"
+            ,"siteTags" : ["design","image","디자인","이미지"]
+        }
+    ],
+    "icon" : [
+        {
+             "siteName" : "iconmoon"
+            ,"siteLink" : "https://iconmoon.io/"
+            ,"siteText" : "아이콘을 무료로 만들 수 있는 사이트"
+            ,"siteTags" : ["design","icon","디자인","아이콘"]
+        },
+        {
+             "siteName" : "iconmonstr"
+            ,"siteLink" : "https://iconmonstr.com/"
+            ,"siteText" : "무료 아이콘 설치 사이트"
+            ,"siteTags" : ["design","icon","디자인","아이콘"]
+        },
+        {
+             "siteName" : "flaticon"
+            ,"siteLink" : "https://www.flaticon.com/"
+            ,"siteText" : "무료 아이콘 설치 사이트"
+            ,"siteTags" : ["design","icon","디자인","아이콘"]
+        }
+    ],
+    "color" : [
+        {
+             "siteName" : "adobe color"
+            ,"siteLink" : "https://color.adobe.com/ko/create/color-wheel"
+            ,"siteText" : "어도비 무료 색상 배합 사이트"
+            ,"siteTags" : ["design","color","adobe","디자인","어도비","색상"]
+        },
+        {
+             "siteName" : "color lover"
+            ,"siteLink" : "https://www.colourlovers.com/"
+            ,"siteText" : "색상 조합 사이트"
+            ,"siteTags" : ["design","color","디자인","색상"]
+        },
+        {
+             "siteName" : "blend"
+            ,"siteLink" : "https://www.colinkeany.com/blend/"
+            ,"siteText" : "그라데이션을 만들어주는 사이트"
+            ,"siteTags" : ["design","color","gradient","디자인","색상","그라데이션"]
+        },
+        {
+             "siteName" : "uigradients"
+            ,"siteLink" : "https://uigradients.com/#BacktotheFuture"
+            ,"siteText" : "그라데이션 배합 사이트"
+            ,"siteTags" : ["design","color","gradient","디자인","색상","그라데이션"]
+        }
+    ],
+    "font" : [
+        {
+             "siteName" : "asiafont"
+            ,"siteLink" : "https://www.asiafont.com/"
+            ,"siteText" : "깔끔한 폰트를 원하는 사람들에게 강력 추천"
+            ,"siteTags" : ["design","font","디자인","폰트"]
+        },
+        {
+             "siteName" : "bm"
+            ,"siteLink" : "https://www.woowahan.com/"
+            ,"siteText" : "배달의 민족 폰트 사이트"
+            ,"siteTags" : ["design","font","bm","디자인","폰트","배달의민족"]
+        },
+        {
+             "siteName" : "dafont"
+            ,"siteLink" : "https://www.dafont.com/"
+            ,"siteText" : "무료 폰트 설치 사이트"
+            ,"siteTags" : ["design","font","디자인","폰트"]
+        },
+        {
+             "siteName" : "fontspace"
+            ,"siteLink" : "https://www.fontspace.com/"
+            ,"siteText" : "약 30000종 이상의 영문 폰트 보유 사이트"
+            ,"siteTags" : ["design","font","디자인","폰트"]
+        },
+        {
+             "siteName" : "naverfont"
+            ,"siteLink" : "https://software.naver.com/software/fontList.nhn?categoryId=I0000000"
+            ,"siteText" : "네이버 무료 폰트 사이트"
+            ,"siteTags" : ["design","font","naver","디자인","폰트","네이버"]
+        },
+        {
+             "siteName" : "noonnu"
+            ,"siteLink" : "https://noonnu.cc/"
+            ,"siteText" : "다양하고 베이직한 폰트가 많은 사이트"
+            ,"siteTags" : ["design","font","디자인","폰트"]
+        }
+    ],
+    "tip" : [
+        {
+             "siteName" : "pinterest"
+            ,"siteLink" : "https://www.pinterest.co.kr/"
+            ,"siteText" : "디자인 참고 사이트"
+            ,"siteTags" : ["design","tip","디자인","팁"]
+        },
+        {
+             "siteName" : "pixler"
+            ,"siteLink" : "https://pixlr.com/kr/"
+            ,"siteText" : "웹에서 포토샵처럼 사용 가능한 사이트"
+            ,"siteTags" : ["design","tip","photoshop","디자인","팁","포토샵"]
+        },
+        {
+             "siteName" : "removebg"
+            ,"siteLink" : "https://www.remove.bg/"
+            ,"siteText" : "이미지 배경 자동 제거 사이트"
+            ,"siteTags" : ["design","tip","image","디자인","팁","이미지"]
+        },
+        {
+             "siteName" : "rwdb"
+            ,"siteLink" : "https://rwdb.kr/"
+            ,"siteText" : "디자인 및 인터렉션 무료 소스 공유 사이트"
+            ,"siteTags" : ["design","tip","디자인","팁"]
+        },
+        {
+             "siteName" : "foodpic"
+            ,"siteLink" : "https://foodpic.net/"
+            ,"siteText" : "음식 보정 사이트"
+            ,"siteTags" : ["design","tip","food","디자인","팁","음식"]
+        },
+        {
+             "siteName" : "hatchful"
+            ,"siteLink" : "https://hatchful.shopify.com/"
+            ,"siteText" : "무료 로고 만들기 사이트"
+            ,"siteTags" : ["design","tip","logo","디자인","팁","로고"]
+        }
+    ],
+    "etc" : [
+        
+    ]
+}

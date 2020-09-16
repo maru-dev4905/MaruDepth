@@ -1,27 +1,13 @@
-@import "../common/mixin";
-@import "../common/variable";
-
-.footer{
-    @include position($pos:relative,$b:0,$z:91);
-    width: 100vw;
-    height: 100px;
-    background-color: $white-1;
-    .footer__container{
-        @extend %footerContainer;
-    }
-    .footer__copy{
-        @include flex($aliItem:center);
-        @include font($size:13px,$letter:1.1px,$family:SCD5);
-        grid-column: 1/-2;
-        height: 100%;
-    }
-    .footer__logo{
-        @include flex($aliItem:center);
-        grid-column: -1;
-        height: 100%;
-        img{
-            width: 70px;
-            filter: grayscale(100%);
-        }
+#footer{
+    background-color: $gray;
+    padding: 22px 0;
+    margin-top: 60px;
+    p{
+        @include font(
+            $color: $white,
+            $weight: 400,
+            $align: center,
+            $family: 'Roboto'
+        );
     }
 }

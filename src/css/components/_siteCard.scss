@@ -1,0 +1,101 @@
+ul.site__rows{
+    @include flex($jusCon:space-around,$wrap:wrap);
+    grid-column: 1/-1;
+}
+li.site-item{
+    background-color: $white;
+    max-width: 350px;
+    min-width: 250px;
+    box-shadow: 0px 1px 4px rgba($color: $black, $alpha: 0.25);
+    border-radius: 5px;
+    margin: 30px 10px;
+    transition: 0.2s;
+    
+    &:hover, &:focus{
+        box-shadow: 0px 1px 8px rgba($color: $black, $alpha: 0.5);
+
+        img{
+            transform: scale(1.2);
+        }
+    }   
+    
+    .site__img{
+        overflow: hidden;
+        border-radius: 5px;
+        .site--img{
+            width: 100%;
+            height: 100%;
+            transition: 0.2s;
+        }
+    }
+
+    .site__content{
+        padding: 15px 17px;
+        font-family: 'Roboto',sans-serif;
+        .site--title{
+            @include font($size:20px,$weight:bold,$color:$blue);
+            &::after{
+                display: block;
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: rgba($color: $gray, $alpha: 0.3);
+                margin: 10px 0;
+            }
+        }
+        .site--desc{
+            @include font(
+                $size:14px,
+                $weight:400,
+                $height:20px,
+                $letter:-1px,
+                $break:keep-all,
+                $color:$gray
+            );
+        }
+        .site--link{
+            @include font(
+                $size:13px,
+                $align:right,
+                $color:$blue,
+                $weight:700,
+            );
+            display: block;
+            margin-top: 30px;
+            opacity: 0.5;
+            transition: 0.2s;
+            &::after{
+                @include image(
+                    $url:"../images/icon/arrow-purple.png",
+                    $size:contain,
+                    $rep:no-repeat,
+                    $pos:center
+                );
+                content: "";
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                margin-left: 5px;
+            }
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+    ul.site--tag{
+        background-color: $gray-1;
+        padding: 10px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        li{
+            @include font(
+                $size:14px,
+                $color:$black,
+                $weight:600
+            );
+            padding: 0 10px;
+            margin: 5px 0;
+            display: inline-block;
+        }
+    }
+}

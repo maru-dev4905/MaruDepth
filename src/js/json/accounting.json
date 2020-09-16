@@ -1,0 +1,44 @@
+{
+    "RelevantData" : [
+        {
+             "siteName" : "인사총무전문가들의모임"
+            ,"siteLink" : "https://cafe.naver.com/managers"
+            ,"siteText" : "회계사들의 관련자료 및 커뮤니티 사이트"
+            ,"siteTags" : ["accounting","community","relevantdata","회계","커뮤니티","관련자료"]
+        },
+        {
+             "siteName" : "경리나라"
+            ,"siteLink" : "http://cafe.naver.com/serplove"
+            ,"siteText" : "회계사들의 관련자료 및 커뮤니티 사이트"
+            ,"siteTags" : ["accounting","community","relevantdata","회계","커뮤니티","관련자료"]
+        },
+        {
+             "siteName" : "경리, 회계 직장인글의 쉼터"
+            ,"siteLink" : "http://cafe.naver.com/aclove"
+            ,"siteText" : "회계사들의 관련자료 및 커뮤니티 사이트"
+            ,"siteTags" : ["accounting","community","relevantdata","회계","커뮤니티","관련자료"]
+        },
+        {
+             "siteName" : "회계경리인들의모임"
+            ,"siteLink" : "http://cafe.naver.com/dz4u"
+            ,"siteText" : "회계사들의 관련자료 및 커뮤니티 사이트"
+            ,"siteTags" : ["accounting","community","relevantdata","회계","커뮤니티","관련자료"]
+        }
+    ],
+    "study" : [
+        {
+             "siteName" : "박쌤전산회계"
+            ,"siteLink" : "https://m.cafe.naver.com/ca-fe/parksamaccount"
+            ,"siteText" : "동영상 강의, 질문답변, 기출문제 전산회계 완벽 강의"
+            ,"siteTags" : ["accounting","study","회계","공부"]
+        }
+    ],
+    "etc" : [
+        {
+             "siteName" : "어카운트피플"
+            ,"siteLink" : "www.accountingpeople.co.kr"
+            ,"siteText" : "전산회계 채용사이트"
+            ,"siteTags" : ["accounting","recruitment","회계","채용"]
+        }
+    ]
+}
