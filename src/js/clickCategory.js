@@ -213,6 +213,60 @@ designEtcBtn.addEventListener("click",()=>{
     }
 });
 
+const accountJson = require("../js/json/accounting.json");
+
+const accountRelvantDataBtn = document.getElementById("accountRelvantDataBtn");
+const accountStudyBtn = document.getElementById("accountStudyBtn");
+const accountEtcBtn = document.getElementById("accountEtcBtn");
+
+accountRelvantDataBtn.addEventListener("click",()=>{
+    if(path === "index.html"){
+        remove__card();
+        for(let i = 0; i < accountJson.RelevantData.length; i++){
+            let name = accountJson.RelevantData[i].siteName;
+            let text = accountJson.RelevantData[i].siteText;
+            let link = accountJson.RelevantData[i].siteLink;
+            let tags = accountJson.RelevantData[i].siteTags;
+    
+            create__card(name,text,link,tags);
+        }
+    }else{
+        window.location.href = "index.hmtl";
+    }
+});
+
+accountStudyBtn.addEventListener("click",()=>{
+    if(path === "index.html"){
+        remove__card();
+        for(let i = 0; i < accountJson.study.length; i++){
+            let name = accountJson.study[i].siteName;
+            let text = accountJson.study[i].siteText;
+            let link = accountJson.study[i].siteLink;
+            let tags = accountJson.study[i].siteTags;
+    
+            create__card(name,text,link,tags);
+        }
+    }else{
+        window.location.href = "index.hmtl";
+    }
+});
+
+accountEtcBtn.addEventListener("click",()=>{
+    if(path === "index.html"){
+        remove__card();
+        for(let i = 0; i < accountJson.etc.length; i++){
+            let name = accountJson.etc[i].siteName;
+            let text = accountJson.etc[i].siteText;
+            let link = accountJson.etc[i].siteLink;
+            let tags = accountJson.etc[i].siteTags;
+    
+            create__card(name,text,link,tags);
+        }
+    }else{
+        window.location.href = "index.hmtl";
+    }
+});
+
 // etc
 const etcJson = require("../js/json/etc.json");
 
