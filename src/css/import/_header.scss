@@ -32,6 +32,7 @@ nav#snb-sns{
 
 #header-content{
     @include flex($jusCon:space-between,$aliItem:center);
+    @include position($pos:relative,$z:15);
     grid-column: 1/-1;
     padding: 25px 50px;
     border-bottom: 1px solid #e3e3e3;
@@ -66,7 +67,7 @@ nav#snb-sns{
     padding: 0 50px;
 
     form.search-form.open{
-        @include position($pos:absolute,$t:141px,$z:-1);
+        @include position($pos:absolute,$t:141px);
         width: 900px;
         height: 100px;
         transition: 0.3s;
@@ -87,7 +88,7 @@ nav#snb-sns{
     }
 
     form.search-form.close{
-        @include position($pos:absolute,$t:40px,$z:-1);
+        @include position($pos:absolute,$t:40px);
         width: 900px;
         height: 100px;
         transition: 0.3s;
