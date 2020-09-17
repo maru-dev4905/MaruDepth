@@ -19,11 +19,29 @@ section#update{
     table{
         grid-column: 1/13;
         width: 100%;
-
+        @include responsive("iphone"){
+            tr{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 1px solid $black;
+            }
+            td,th{
+                border: none;
+            }
+        }
         td,th{
             border-bottom: 1px solid $gray;
             padding: 20px 50px;
             text-align: center;
+            @include responsive("tablet"){
+                padding: 20px;
+                border: none;
+            }
+            @include responsive("iphone"){
+                padding: 10px;
+            }
         }
 
         td{
@@ -33,8 +51,8 @@ section#update{
                 $color:$black,
                 $family:"Noto Sans KR"
             );
-        }
 
+        }
         tr.table_head{
             background-color: $black;
             border-top: 1px solid $gray;
