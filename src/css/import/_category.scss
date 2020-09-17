@@ -1,23 +1,59 @@
-aside#menu{
+#category--open-btn{
+    @include image(
+        $url: "../images/icon/arrow-white.png",
+        $size: 50%,
+        $pos: center,
+        $rep: no-repeat
+    );
+    width: 50px;
+    height: 70px;
+    background-color: $blue;
     position: fixed;
     left: 0;
+    border-radius: 0px 5px 5px 0px;
+    transition: 0.2s;
+}
+#category--open-btn.open{
+    left: 250px;
+}
+#category--open-btn.close{
+    left: 0;
+}
+
+aside#menu{
+    position: fixed;
+    left: -250px;
     top: 0;
     bottom: 0;
+    z-index: 100;
     width: 250px;
     background-color: $blue;
     padding: 30px;
     min-height: 100vh;
     overflow-y: scroll;
-    overflow-x: hidden;
-    
+    transition: 0.2s;
+
+    @include responsive("tablet"){
+        left: -250px;
+    }
+
     h1.menu-logo a{
         display: block;
         text-align: center;
         padding-bottom: 20px;
         border-bottom: 1px solid #ccc;
     }
+    
+    &::-webkit-scrollbar{
+        display: none;
+    }
 }
-
+aside#menu.open{
+    left: 0;
+}
+aside#menu.close{
+    left: -250px;
+}
 #category{
     margin-top: 80px;
     

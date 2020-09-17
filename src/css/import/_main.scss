@@ -1,5 +1,5 @@
 div#container{
     @include position($pos:absolute, $r:0, $t:0);
-    width: calc( 100vw - 250px);
+    width: 100vw;
     height: auto;
 }

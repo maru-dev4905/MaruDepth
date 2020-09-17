@@ -401,3 +401,29 @@ function create__card(name, text, link, tags) {
 
     siteGroup.appendChild(li);
 }
+
+// open category
+const categoryBtn = document.getElementById("category--open-btn");
+const category = document.getElementById("menu");
+
+let openCheck = false;
+
+categoryBtn.addEventListener("click",()=>{
+    if(openCheck == false){
+        category.classList.add("open");
+        category.classList.remove("close");
+        
+        categoryBtn.classList.add("open");
+        categoryBtn.classList.remove("close");
+        
+        openCheck = true;
+    }else{
+        category.classList.add("close");
+        category.classList.remove("open");
+
+        categoryBtn.classList.add("close");
+        categoryBtn.classList.remove("open");
+
+        openCheck = false;
+    }
+})

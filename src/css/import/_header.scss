@@ -38,6 +38,12 @@ nav#snb-sns{
     border-bottom: 1px solid #e3e3e3;
     background-color: #fff;
 
+    @include responsive("pc-1"){
+        flex-direction: column;
+        padding: 10px 50px;
+    }
+
+
     h2.header-logo img{
         width: 456px;
     }
@@ -47,6 +53,10 @@ nav#snb-sns{
         
         li{
             margin-right: 50px;
+            
+            &:last-child{
+                margin-right: 0;
+            }
         }
 
         a{
@@ -68,10 +78,13 @@ nav#snb-sns{
 
     form.search-form.open{
         @include position($pos:absolute,$t:141px);
-        width: 900px;
+        width: 700px;
         height: 100px;
         transition: 0.3s;
 
+        @include responsive("pc-1"){
+            width: 500px;
+        }
         input{
             @include font(
                 $size:40px,
@@ -89,10 +102,13 @@ nav#snb-sns{
 
     form.search-form.close{
         @include position($pos:absolute,$t:40px);
-        width: 900px;
+        width: 700px;
         height: 100px;
         transition: 0.3s;
-        
+
+        @include responsive("pc-1"){
+            width: 500px;
+        }
         input{
             @include font(
                 $size:40px,
