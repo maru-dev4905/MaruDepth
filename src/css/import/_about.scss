@@ -3,10 +3,6 @@ section#about{
     padding: 120px 50px;
     // min-height: calc(100vh - 201px);
     height: auto;
-    
-    @include responsive("pc-1"){
-
-    }
 
     h2{
         @include font(

@@ -12,6 +12,9 @@ section#update{
             $family:"Roboto",
             $align:center
         );
+        @include responsive("tablet"){
+            font-size: 44px;
+        }
         grid-column: 1/13;
         margin-bottom: 160px;
     }
