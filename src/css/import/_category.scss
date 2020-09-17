@@ -5,12 +5,10 @@
         $pos: center,
         $rep: no-repeat
     );
+    @include position($pos:fixed,$t:100px,$l:0);
     width: 50px;
     height: 70px;
     background-color: $blue;
-    position: fixed;
-    top: 100px;
-    left: 0;
     border-radius: 0px 5px 5px 0px;
     transition: 0.2s;
 
@@ -31,11 +29,7 @@
 }
 
 aside#menu{
-    position: fixed;
-    left: -250px;
-    top: 0;
-    bottom: 0;
-    z-index: 100;
+    @include position($pos:fixed,$t:0,$b:0,$l:-250px,$z:100);
     width: 250px;
     background-color: $blue;
     padding: 30px;

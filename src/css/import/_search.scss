@@ -3,7 +3,9 @@
 #searchSite{
     padding: 100px 50px;
     min-height: calc(100vh - 201px);
-
+    @include responsive("iphone-l"){
+        padding: 50px 10px;
+    }
     .site__container{
         @include grid($tCol:repeat(12,1fr), $cGap:30px);
         
@@ -17,6 +19,9 @@
             );
             grid-column: 1/13;
             margin-bottom: 160px;
+            @include responsive("tablet"){
+                margin-bottom: 50px;
+            }
         }
     }
 }
