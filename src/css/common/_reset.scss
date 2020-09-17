@@ -35,12 +35,6 @@ body {
 // 	display: none;
 // }
 html{
-	@include responsive("tablet-l"){
-		font-size: 14px;
-	}
-	@include responsive("iphone"){
-		font-size: 11px;
-	}
 	overflow-x: hidden;
 	font-family: "Noto Sans",sans-serif;
 

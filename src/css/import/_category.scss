@@ -9,12 +9,22 @@
     height: 70px;
     background-color: $blue;
     position: fixed;
+    top: 100px;
     left: 0;
     border-radius: 0px 5px 5px 0px;
     transition: 0.2s;
+
+    @include responsive("iphone-l"){
+        width: 30px;
+        height: 50px;
+        top: 150px;
+    }
 }
 #category--open-btn.open{
     left: 250px;
+    @include responsive("tablet"){
+        left: 150px;
+    }
 }
 #category--open-btn.close{
     left: 0;
@@ -34,7 +44,9 @@ aside#menu{
     transition: 0.2s;
 
     @include responsive("tablet"){
-        left: -250px;
+        left: -150px;
+        width: 150px;
+        padding: 15px;
     }
 
     h1.menu-logo a{

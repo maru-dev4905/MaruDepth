@@ -3,6 +3,10 @@
 #site{
     padding: 100px 50px;
     min-height: calc(100vh - 201px);
+
+    @include responsive("iphone-l"){
+        padding: 50px 10px;
+    }
     .site__container{
         @include grid($tCol:repeat(12,1fr), $cGap:30px);
     }
