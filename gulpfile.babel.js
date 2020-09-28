@@ -24,7 +24,7 @@ const paths = {
         ,"css" : DEV_SRC + "/css/depth.scss"
         ,"img" : DEV_SRC + "/images/**/**"
         ,"html": DEV_SRC + "/html/*.pug"
-        ,"favicons" : DEV_SRC + "/favicons/**"
+        ,"favicons" : DEV_SRC + "/favicons/*.png"
     },
     "pub" : {
           "js"   : PUB_SRC + "/js"
@@ -32,7 +32,7 @@ const paths = {
          ,"css"  : PUB_SRC + "/css"
          ,"img"  : PUB_SRC + "/images"
          ,"html" : PUB_SRC + "/"
-         ,"favicons" : PUB_SRC + "/favicon"
+         ,"favicons" : PUB_SRC + "/images/favicon"
     },
     "watch" : {
           "js"   : DEV_SRC + "/js/*.js"

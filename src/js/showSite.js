@@ -4,6 +4,7 @@ window.addEventListener("load",()=>{
     if(path === "index.html"){
         const devJson = require("../js/json/dev.json");
         const designJson = require("../js/json/design.json");
+        const accountingJson = require("../js/json/accounting.json");
         const etcJson = require("../js/json/etc.json");
         
         const siteGroup = document.querySelector("ul.site__rows");
@@ -27,6 +28,18 @@ window.addEventListener("load",()=>{
                 let text = designJson[key][i].siteText;
                 let link = designJson[key][i].siteLink;
                 let tags = designJson[key][i].siteTags;
+        
+                create__card(name, text, link, tags);
+            }
+        }
+
+        for (const key in accountingJson) {
+            for (let i = 0; i < accountingJson[key].length; i++) {
+        
+                let name = accountingJson[key][i].siteName;
+                let text = accountingJson[key][i].siteText;
+                let link = accountingJson[key][i].siteLink;
+                let tags = accountingJson[key][i].siteTags;
         
                 create__card(name, text, link, tags);
             }
