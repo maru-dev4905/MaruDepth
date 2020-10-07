@@ -30,6 +30,7 @@ if(path === "search.html"){
 
     const devJson = require("../js/json/dev.json");
     const designJson = require("../js/json/design.json");
+    const accountJson = require("../js/json/accounting.json");
     const etcJson = require("../js/json/etc.json");
     
     let jsonItem = [];
@@ -62,6 +63,25 @@ if(path === "search.html"){
                 tags = tags.toUpperCase();
                 if(tags === value){
                     jsonItem.push(designJson[item][i]);
+                }
+            });
+            name.forEach(names => {
+                names = names.toUpperCase();
+                if(names === value){
+                    jsonItem.push(json[item][i]);
+                }
+            })
+        }
+    }
+    for(const item in accountJson){
+        for(let i = 0; i < accountJson[item].length; i++){
+            let name = [];
+            name.push(accountJson[item][i].siteName);
+
+            accountJson[item][i].siteTags.forEach(tags => {
+                tags = tags.toUpperCase();
+                if(tags === value){
+                    jsonItem.push(accountJson[item][i]);
                 }
             });
             name.forEach(names => {

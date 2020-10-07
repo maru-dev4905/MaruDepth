@@ -1,4 +1,3 @@
-
 window.addEventListener("load",()=>{
     const path = window.location.pathname.split("/").pop();
     if(path === "index.html"){
