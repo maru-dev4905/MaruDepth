@@ -5,6 +5,7 @@ window.addEventListener("load",()=>{
         const devJson = require("../js/json/dev.json");
         const designJson = require("../js/json/design.json");
         const accountingJson = require("../js/json/accounting.json");
+        const marketerJson = require("../js/json/marketer.json");
         const etcJson = require("../js/json/etc.json");
         
         const siteGroup = document.querySelector("ul.site__rows");
@@ -45,6 +46,18 @@ window.addEventListener("load",()=>{
             }
         }
         
+        for (const key in marketerJson) {
+            for (let i = 0; i < marketer[key].length; i++) {
+        
+                let name = marketer[key][i].siteName;
+                let text = marketer[key][i].siteText;
+                let link = marketer[key][i].siteLink;
+                let tags = marketer[key][i].siteTags;
+        
+                create__card(name, text, link, tags);
+            }
+        }
+
         for (const key in etcJson) {
             for (let i = 0; i < etcJson[key].length; i++) {
         

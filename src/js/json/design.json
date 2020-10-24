@@ -154,6 +154,11 @@
         }
     ],
     "etc" : [
-        
+        {
+             "siteName" : "notefolio"
+            ,"siteLink" : "https://notefolio.net"
+            ,"siteText" : "디자인 작품 공개 사이트"
+            ,"siteTags" : ["design","tip","디자인","작품"]
+        }
     ]
 }

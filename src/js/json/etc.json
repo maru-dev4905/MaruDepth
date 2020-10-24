@@ -57,6 +57,64 @@
             ,"siteTags" : ["music","youtube","음악","유튜브"]
         }
     ],
+    "recruitment" : [
+        {
+             "siteName" : "worknet"
+            ,"siteLink" : "www.work.go.kr"
+            ,"siteText" : "구인구직 사이트"
+            ,"siteTags" : ["recruitment","채용","구인","구직"]
+        },
+        {
+             "siteName" : "jobkorean"
+            ,"siteLink" : "www.jobkorea.co.kr"
+            ,"siteText" : "구인구직 사이트"
+            ,"siteTags" : ["recruitment","채용","구인","구직"]
+        },
+        {
+             "siteName" : "saramin"
+            ,"siteLink" : "www.saramin.co.kr"
+            ,"siteText" : "구인구직 사이트"
+            ,"siteTags" : ["recruitment","채용","구인","구직"]
+        },
+        {
+             "siteName" : "대체인력뱅크"
+            ,"siteLink" : "http//matchingbank.career.co.kr"
+            ,"siteText" : "구인구직 사이트"
+            ,"siteTags" : ["recruitment","채용","구인","구직"]
+        },
+        {
+             "siteName" : "인니드"
+            ,"siteLink" : "https://kr.indeed.com"
+            ,"siteText" : "구인구직 사이트"
+            ,"siteTags" : ["recruitment","채용","구인","구직"]
+        },
+        {
+             "siteName" : "프리몬"
+            ,"siteLink" : "https://www.freemon.co.kr"
+            ,"siteText" : "구인구직 사이트"
+            ,"siteTags" : ["recruitment","프리랜서","채용","구인","구직"]
+        },
+        {
+             "siteName" : "디자이너잡"
+            ,"siteLink" : "www.designerjob.co.kr"
+            ,"siteText" : "디자이너 구인구직 사이트"
+            ,"siteTags" : ["recruitment","designer","디자이너","채용","구인","구직"]
+        }
+    ],
+    "certificate" : [
+        {
+            "siteName" : "자격증기출문제"
+           ,"siteLink" : "https://www.comcbt.com"
+           ,"siteText" : "자격증 기출문제 사이트"
+           ,"siteTags" : ["certificate","자격증","기출문제"]
+        },
+        {
+            "siteName" : "한국생산성본부"
+           ,"siteLink" : "https://license.kpc.or.kr/kpc/qualfAthrz/index.do"
+           ,"siteText" : "itq자격증 사이트"
+           ,"siteTags" : ["certificate","자격증","기출문제"]
+       }
+    ],
     "tip" : [
         {
              "siteName" : "gallup"
@@ -93,6 +151,30 @@
             ,"siteLink" : "https://www.openoffice.org/"
             ,"siteText" : "워드, P.P, 엑셀 프로그램이 없을 때 사용하는 사이트"
             ,"siteTags" : ["tip","office","word","ppt","excel","팁","오피스"]
+        },
+        {
+             "siteName" : "공유마당"
+            ,"siteLink" : "https://gongu.copyright.or.kr"
+            ,"siteText" : "저작물 공유 사이트"
+            ,"siteTags" : ["tip","work","저작물","공유"]
+        },
+        {
+             "siteName" : "공공누리"
+            ,"siteLink" : "http://www.kogl.or.kr"
+            ,"siteText" : "저작물 공유 사이트"
+            ,"siteTags" : ["tip","work","저작물","공유"]
+        },
+        {
+             "siteName" : "inflearn"
+            ,"siteLink" : "https://www.inflearn.com"
+            ,"siteText" : "온라인 학습 사이트"
+            ,"siteTags" : ["tip","online","study","팁","온라인","공부","학습"]
+        },
+        {
+             "siteName" : "디비컷"
+            ,"siteLink" : "http://www.dbcut.com/bbs/index.php"
+            ,"siteText" : "여러가지 사이트를 볼 수 있는 사이트"
+            ,"siteTags" : ["tip","site","사이트"]
         }
     ]
 }

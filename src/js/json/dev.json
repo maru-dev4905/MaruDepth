@@ -127,6 +127,12 @@
             ,"siteLink" : "https://programmers.co.kr/"
             ,"siteText" : "개발자 채용, 코딩 테스트 등 개발자라면 알아야할 사이트"
             ,"siteTags" : ["dev","tip","개발","팁"]
+        },
+        {
+             "siteName" : "코딩도장"
+            ,"siteLink" : "http://codingdojang.com"
+            ,"siteText" : "코딩테스트 사이트"
+            ,"siteTags" : ["dev","test","coding","개발","테스트","코딩"]
         }
     ],
     "etc" : [
